@@ -1,0 +1,22 @@
+{
+  "checkedAt": "2026-08-07T22:22:58.120Z",
+  "workflowId": "21f30a93-e0fb-43d3-a620-e2065174cec5",
+  "workflow": "workflows/nano-banana-pro-full-localizer.api.json",
+  "productionNodes": 22,
+  "presentationNodes": 28,
+  "perMarketGraphs": 10,
+  "checks": [
+    "node counts and required inputs",
+    "all graph references resolve",
+    "one CITY input feeds a localization-strategist LLM",
+    "structured JSON routes detailed prompts to skyline and fictional-runner generators",
+    "Recraft mask polarity is explicit for PNG alpha and compositing",
+    "Kling 3.0 receives only the isolated runner layer",
+    "Bria replaces the temporary video background with the locked city plate",
+    "the motion branch terminates in an MP4 SaveVideo output",
+    "the strategist payload terminates in a JSON agent-handoff output",
+    "three final-poster preview pairs are wired"
+  ],
+  "status": "PASS",
+  "errors": []
+}

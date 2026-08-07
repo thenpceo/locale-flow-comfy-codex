@@ -1,0 +1,121 @@
+{
+  "project": "Nike Run Club city-localization interview prototype",
+  "authorization": "Independent prototype using user-supplied reference assets; not Nike-authorized",
+  "status": "three-market production proof plus completed New York Kling 3.0 motion-isolation run",
+  "deliverable": "native-ratio localized poster system, visible Comfy generation graph, isolated-runner motion proof, and interview presentation",
+  "canvas": {
+    "name": "native-poster",
+    "width": 1055,
+    "height": 1491,
+    "ratio": "custom 1055:1491",
+    "color": "sRGB"
+  },
+  "style": {
+    "dominant": "Brutalism",
+    "secondary": "Modular Typography",
+    "voice": ["severe", "kinetic", "direct"],
+    "thesis": "Protect one campaign system while localizing one skyline window and one language layer."
+  },
+  "fingerprint": {
+    "canvasRatio": "custom",
+    "grid": "layered-field",
+    "dominantMass": "image",
+    "headlineBehavior": "constructed",
+    "imageBehavior": "composited",
+    "informationPlacement": "edge",
+    "densityMap": "center-loaded",
+    "orientationSet": "orthogonal",
+    "typeScalePattern": "extreme-contrast",
+    "paletteLogic": "one-signal",
+    "surfaceProcess": "photocopy",
+    "edgeBehavior": "framed",
+    "signatureDevice": "Two controlled generative branches localize the city and cast a new fictional runner while protected brand structure and deterministic type stay reviewable."
+  },
+  "assets": [
+    {
+      "path": "assets/source/campaign-background.png",
+      "source": "user supplied",
+      "sha256": "33fa0472b36d306fed932221c1a4ba9ec758d787d68227a3d173a6f5d266405d",
+      "role": "protected campaign background and authentic supplied mark",
+      "rights": "prototype use only; external campaign rights not established"
+    },
+    {
+      "path": "assets/source/runner-cutout.png",
+      "source": "user supplied",
+      "sha256": "a24a04e8fae8a895c037a592e3635af8483787b96221bcf8732c30f343b1e6de",
+      "role": "transparent runner cutout",
+      "rights": "prototype use only; model and campaign release not established"
+    },
+    {
+      "path": "assets/source/runner-greenscreen.png",
+      "source": "user supplied",
+      "sha256": "717fa3da59bdf613e845df330b5efc815f690ce55fef024ceb737768d54bf71c",
+      "role": "chroma-key fallback",
+      "rights": "prototype use only; not used in primary render"
+    },
+    {
+      "path": "references/final-poster-reference.png",
+      "source": "user supplied",
+      "sha256": "bdcf53c4173a413f54f8a4972d6850230977125da0d1273df25c715e8b39e272",
+      "role": "hierarchy and composition reference",
+      "rights": "reference only"
+    }
+  ],
+  "generation": {
+    "provider": "Comfy Cloud",
+    "workflow": "https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5",
+    "workflowId": "21f30a93-e0fb-43d3-a620-e2065174cec5",
+    "workflowFilename": "nike-run-localizer-one-city-strategist-demo.json",
+    "apiWorkflow": "workflows/nano-banana-pro-full-localizer.api.json",
+    "model": "Nano Banana Pro / gemini-3-pro-image-preview",
+    "state": "completed and saved as version 7 in a dedicated workflow record; one CITY input feeds a Gemini localization strategist, JSON prompt routing, two Nano Banana Pro branches, Recraft still-alpha extraction, compositing, Kling 3.0 runner-only animation, Bria locked-plate video replacement, a machine-readable agent handoff, and three completed reference previews; 22-node executable localizer plus 28-node interview graph",
+    "spendApproved": true,
+    "completedMarkets": ["paris-fr", "london-en", "tokyo-ja", "new-york-en-motion-proof"],
+    "estimatedCreditsPerMarket": 58,
+    "motion": {
+      "model": "Kling 3.0 / kling-v3",
+      "resolution": "1080p request; 1204 × 1720 encoded output",
+      "durationSeconds": 5.041667,
+      "fps": 24,
+      "audio": false,
+      "promptId": "c13b648a-8c74-470f-ba4f-4a57ccd9687d",
+      "completedAt": "2026-08-07T21:30:56Z",
+      "output": "assets/generated/new-york-en/runner-warmup.mp4",
+      "sha256": "ae12fd624848e0d386844f5396f7979d576b22f637981bf7fe25f4c39a8af931",
+      "isolationContract": "Kling receives only the Recraft-isolated runner. Bria receives the Kling video plus the locked city plate after generation; the poster is not an input to Kling."
+    },
+    "protectedRegion": {"x": 100, "y": 1030, "width": 570, "height": 365},
+    "skylineExclusions": "no generated text, logos, marks, gradients, photography, texture, flags, cultural costume, or postcard collage",
+    "runnerGuardrail": "preserve the supplied NIKE garment treatment only; add no new text, logos, flags, costumes, or caricature"
+  },
+  "copy": {
+    "source": "data/localizations.json",
+    "status": "creative draft; native-speaker and legal review required",
+    "locationData": "explicitly fictional placeholders"
+  },
+  "fonts": [
+    {
+      "role": "Outer-edge display",
+      "family": "Six Caps",
+      "file": "assets/fonts/SixCaps.ttf",
+      "source": "Google Fonts repository",
+      "license": "SIL Open Font License 1.1; license bundled at assets/fonts/SixCaps-OFL.txt"
+    },
+    {
+      "role": "Latin display and utility",
+      "family": "system condensed sans fallback",
+      "license": "system availability only; select and license a production family before delivery"
+    },
+    {
+      "role": "CJK and Arabic",
+      "family": "macOS system locale fallbacks",
+      "license": "system availability only; regional teams must select approved production fonts"
+    }
+  ],
+  "assumptions": [
+    "Each featured market uses a newly generated fictional adult runner rather than changing the supplied person's race or ethnicity.",
+    "Casting prompts are draft creative hypotheses and require local-market human review before any real campaign use.",
+    "City plates and translations remain REVIEW until a local human approves cultural specificity and language.",
+    "The New York MP4 is a motion-layer proof of the Comfy image composite, not a final typeset campaign deliverable; deterministic localized typography remains downstream."
+  ]
+}

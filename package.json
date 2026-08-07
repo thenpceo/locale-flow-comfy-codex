@@ -1,0 +1,15 @@
+{
+  "name": "nike-run-localization-prototype",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "assets:presentation": "node scripts/build-presentation-assets.mjs",
+    "build:workflow": "node scripts/build-nano-banana-workflow.mjs && node scripts/build-presentation-workflow.mjs",
+    "pipeline:plan": "node scripts/create-run.mjs",
+    "validate:workflow": "node scripts/validate-comfy-workflow.mjs",
+    "render": "node scripts/render.mjs",
+    "qa": "node scripts/qa.mjs",
+    "test": "node --test tests/*.test.mjs",
+    "proof": "npm run assets:presentation && npm run build:workflow && npm run validate:workflow && npm test && npm run render && npm run qa"
+  }
+}

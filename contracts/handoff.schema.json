@@ -1,0 +1,62 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/nrc-localization-handoff.schema.json",
+  "title": "NRC locale handoff",
+  "type": "object",
+  "required": ["schemaVersion", "runId", "localeId", "city", "locale", "status", "comfy", "copy", "assets", "review"],
+  "properties": {
+    "schemaVersion": {"const": 1},
+    "runId": {"type": "string", "minLength": 1},
+    "localeId": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+    "city": {"type": "string", "minLength": 1},
+    "locale": {"type": "string", "minLength": 2},
+    "status": {"enum": ["planned", "comfy-submitted", "comfy-complete", "static-complete", "motion-complete", "review"]},
+    "comfy": {
+      "type": "object",
+      "required": ["workflowId", "workflowVersion", "batchId", "promptId", "completed"],
+      "properties": {
+        "workflowId": {"type": "string"},
+        "workflowVersion": {"type": ["integer", "null"]},
+        "batchId": {"type": ["string", "null"]},
+        "promptId": {"type": ["string", "null"]},
+        "completed": {"type": "boolean"},
+        "completedAt": {"type": ["string", "null"]}
+      },
+      "additionalProperties": true
+    },
+    "copy": {
+      "type": "object",
+      "required": ["headline", "supporting", "edgeCopy", "locationLine"],
+      "properties": {
+        "headline": {"type": "string"},
+        "supporting": {"type": "string"},
+        "edgeCopy": {"type": "string"},
+        "locationLine": {"type": "string"}
+      },
+      "additionalProperties": true
+    },
+    "assets": {
+      "type": "object",
+      "required": ["cityPlate", "runnerAlpha", "composite", "runnerRaw", "warmupVideo", "strategistJson"],
+      "additionalProperties": {
+        "type": ["object", "null"],
+        "properties": {
+          "path": {"type": "string"},
+          "sha256": {"type": ["string", "null"]},
+          "sourceNodeId": {"type": "string"}
+        },
+        "required": ["path", "sha256", "sourceNodeId"],
+        "additionalProperties": true
+      }
+    },
+    "review": {
+      "type": "object",
+      "required": ["language", "culture", "casting", "landmarks", "brand", "rights"],
+      "additionalProperties": {"enum": ["pending", "pass", "review", "fail"]}
+    },
+    "static": {"type": "object", "additionalProperties": true},
+    "motion": {"type": "object", "additionalProperties": true}
+  },
+  "additionalProperties": true
+}
+

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=1055, initial-scale=1" />
+  <style>
+    @font-face {
+      font-family: "Six Caps";
+      src: url("../assets/fonts/SixCaps.ttf") format("truetype");
+      font-style: normal;
+      font-weight: 400;
+      font-display: block;
+    }
+    :root {
+      --ink: #050505;
+      --paper: #f5f5f2;
+      --signal: #ff1616;
+      --frame: #1c1c1c;
+      --display: "Arial Narrow", "Helvetica Neue", "PingFang SC", "Hiragino Sans", "Geeza Pro", sans-serif;
+      --edge-face: "Six Caps", "Arial Narrow", "Helvetica Neue Condensed", "PingFang SC", "Hiragino Sans", sans-serif;
+      --utility: "Helvetica Neue", "PingFang SC", "Hiragino Sans", "Geeza Pro", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    html, body { width: 1055px; height: 1491px; margin: 0; overflow: hidden; background: var(--frame); }
+    body { color: var(--paper); font-family: var(--utility); }
+    #poster { position: relative; width: 1055px; height: 1491px; overflow: hidden; isolation: isolate; background: var(--frame); }
+    .plate, .runner { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; user-select: none; }
+    .plate { z-index: 0; }
+    .type-back { position: absolute; inset: 0; z-index: 1; pointer-events: none; }
+    .runner {
+      z-index: 2;
+      transform: scale(1.13) translateY(1.1%);
+      transform-origin: 50% 100%;
+      filter: contrast(1.04);
+    }
+    .type-front { position: absolute; inset: 0; z-index: 3; pointer-events: none; }
+    .edge {
+      position: absolute;
+      top: 20px;
+      height: 1448px;
+      width: 66px;
+      overflow: hidden;
+      color: var(--paper);
+      font: 400 34px/.84 var(--edge-face);
+      font-synthesis: none;
+      letter-spacing: .015em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      opacity: .98;
+    }
+    .edge.left { left: 22px; transform: rotate(180deg); }
+    .edge.right { right: 22px; }
+    .topline {
+      position: absolute;
+      top: 27px;
+      left: 92px;
+      width: 871px;
+      text-align: center;
+      white-space: nowrap;
+      overflow: hidden;
+      font: 400 40px/.82 var(--edge-face);
+      font-synthesis: none;
+      letter-spacing: .015em;
+      transform: scaleX(.86);
+      transform-origin: 50% 50%;
+      text-transform: uppercase;
+    }
+    .runwild {
+      position: absolute;
+      left: 176px;
+      top: 348px;
+      width: 302px;
+      height: 430px;
+      overflow: visible;
+    }
+    .runwild text {
+      fill: var(--paper);
+      font: 900 148px/.8 var(--display);
+      letter-spacing: -.08em;
+      text-transform: uppercase;
+    }
+    .go {
+      position: absolute;
+      left: 634px;
+      top: 226px;
+      color: transparent;
+      -webkit-text-stroke: 2px rgba(245,245,242,.95);
+      font: 900 287px/.8 var(--display);
+      letter-spacing: -.15em;
+      transform: scaleX(.66);
+      transform-origin: 0 0;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .rtl-headline {
+      display: none;
+      position: absolute;
+      left: 145px;
+      top: 365px;
+      width: 350px;
+      color: var(--paper);
+      direction: rtl;
+      text-align: right;
+      font: 900 84px/.92 var(--display);
+      letter-spacing: 0;
+    }
+    .city-lockup {
+      position: absolute;
+      right: 102px;
+      top: 675px;
+      width: 260px;
+      text-align: right;
+      text-transform: uppercase;
+      filter: drop-shadow(0 2px 0 #000);
+    }
+    .city-lockup .city {
+      color: var(--signal);
+      font: 900 37px/.9 var(--display);
+      letter-spacing: -.04em;
+    }
+    .city-lockup .support {
+      margin-top: 8px;
+      color: var(--paper);
+      font: 750 14px/1.05 var(--utility);
+      letter-spacing: .04em;
+    }
+    .bottom-meta {
+      position: absolute;
+      left: 106px;
+      bottom: 26px;
+      width: 843px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      font: 700 11px/1.05 var(--utility);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .bottom-meta .location { max-width: 690px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .status {
+      flex: none;
+      padding: 5px 7px 4px;
+      color: #080808;
+      background: var(--signal);
+      letter-spacing: .03em;
+    }
+    .rtl .city-lockup { text-align: right; direction: rtl; }
+    .rtl .runwild { display: none; }
+    .rtl .rtl-headline { display: block; }
+    .rtl .topline { direction: rtl; }
+    .cjk .runwild text { font-size: 92px; letter-spacing: -.02em; }
+    .cjk .city-lockup .city { letter-spacing: .02em; }
+  </style>
+</head>
+<body>
+  <main id="poster" aria-label="Localized running poster prototype">
+    <img id="plate" class="plate" alt="Campaign background plate" />
+    <section class="type-back" aria-hidden="true">
+      <svg class="runwild" viewBox="0 0 320 430" preserveAspectRatio="xMinYMin meet">
+        <defs>
+          <filter id="wave" x="-20%" y="-10%" width="140%" height="120%">
+            <feTurbulence type="fractalNoise" baseFrequency="0.013 0.045" numOctaves="1" seed="11" result="noise" />
+            <feDisplacementMap in="SourceGraphic" in2="noise" scale="19" xChannelSelector="R" yChannelSelector="G" />
+          </filter>
+        </defs>
+        <text id="line1" x="0" y="139" filter="url(#wave)">RUN</text>
+        <text id="line2" x="0" y="288" filter="url(#wave)">WILD</text>
+      </svg>
+      <div id="rtl-headline" class="rtl-headline"></div>
+      <div id="go" class="go">GO</div>
+    </section>
+    <img id="runner" class="runner" alt="Runner cutout" />
+    <section class="type-front">
+      <div id="topline" class="topline"></div>
+      <div id="edge-left" class="edge left"></div>
+      <div id="edge-right" class="edge right"></div>
+      <div class="city-lockup">
+        <div id="city" class="city"></div>
+        <div id="support" class="support"></div>
+      </div>
+      <div class="bottom-meta">
+        <div id="location" class="location"></div>
+        <div id="status" class="status"></div>
+      </div>
+    </section>
+  </main>
+  <script>
+    const params = new URLSearchParams(location.search);
+    const bytes = Uint8Array.from(atob(params.get('payload') || ''), c => c.charCodeAt(0));
+    const data = JSON.parse(new TextDecoder().decode(bytes));
+    const poster = document.querySelector('#poster');
+    if (data.direction === 'rtl') poster.classList.add('rtl');
+    if (/^(ja|zh)/.test(data.locale)) poster.classList.add('cjk');
+    document.documentElement.lang = data.locale;
+    document.querySelector('#plate').src = data.plate;
+    document.querySelector('#runner').src = data.runner;
+    document.querySelector('#topline').textContent = `NIKE.COM — ${data.edgeCopy}`;
+    const edge = Array(7).fill(`NIKE.COM — ${data.edgeCopy}`).join('   ');
+    document.querySelector('#edge-left').textContent = edge;
+    document.querySelector('#edge-right').textContent = edge;
+    document.querySelector('#city').textContent = data.city;
+    document.querySelector('#support').textContent = data.supporting;
+    document.querySelector('#location').textContent = data.locationLine;
+    document.querySelector('#status').textContent = data.statusLabel;
+    document.querySelector('#rtl-headline').textContent = data.headline;
+    const words = data.headline.trim().split(/\s+/);
+    const split = words.length > 1 ? Math.ceil(words.length / 2) : 1;
+    document.querySelector('#line1').textContent = words.slice(0, split).join(' ');
+    document.querySelector('#line2').textContent = words.slice(split).join(' ') || data.city;
+  </script>
+</body>
+</html>

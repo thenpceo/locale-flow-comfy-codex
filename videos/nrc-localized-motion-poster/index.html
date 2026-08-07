@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" data-resolution="portrait">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=1204, height=1720" />
+    <title>NRC New York Localized Motion Poster</title>
+    <style>
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html,
+      body,
+      #root,
+      #motion-poster-host {
+        width: 1204px;
+        height: 1720px;
+        margin: 0;
+        overflow: hidden;
+        background: #080808;
+      }
+
+      #root {
+        position: relative;
+      }
+
+      #motion-poster-host {
+        position: absolute;
+        inset: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <main
+      id="root"
+      data-hf-id="nrc-localized-motion-poster-root"
+      data-composition-id="main"
+      data-start="0"
+      data-duration="5.041667"
+      data-fps="24"
+      data-width="1204"
+      data-height="1720"
+      data-no-timeline
+    >
+      <div
+        id="motion-poster-host"
+        class="clip"
+        data-hf-id="nrc-static-faithful-motion"
+        data-composition-id="nrc-static-faithful-motion"
+        data-composition-src="compositions/index.html"
+        data-start="0"
+        data-duration="5.041667"
+        data-track-index="1"
+        data-width="1204"
+        data-height="1720"
+      ></div>
+    </main>
+  </body>
+</html>

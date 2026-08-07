@@ -1,0 +1,98 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "1f9c5ed325dfbc5169a37f5e8fdbb340d9b3eb52847eaec2f0ebcd44bf3103c0.png"
+    },
+    "_meta": { "title": "Protected campaign background" }
+  },
+  "2": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "image": ["1", 0],
+      "width": 570,
+      "height": 365,
+      "x": 100,
+      "y": 1030
+    },
+    "_meta": { "title": "Crop only the skyline module" }
+  },
+  "3": {
+    "class_type": "GeminiImage2Node",
+    "inputs": {
+      "images": ["2", 0],
+      "prompt": "Edit only the flat red Seattle skyline silhouette in this crop. Replace it with an unmistakable Paris skyline led by the Eiffel Tower with a restrained Montparnasse Tower counterpoint. Use the exact same graphic language: pure signal-red flat vector silhouette anchored to the bottom edge, pure black background, hard clean edges. Preserve all existing white grid lines and the red circular arc exactly. Do not add text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, or postcard motifs. Return one clean edited image.",
+      "model": "gemini-3-pro-image-preview",
+      "seed": 498017,
+      "aspect_ratio": "auto",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "system_prompt": "You are editing one protected module inside a larger campaign composition. Follow the requested landmark substitution literally. Preserve every non-skyline pixel and do not create typography or brand marks. Always return an image."
+    },
+    "_meta": { "title": "Nano Banana Pro · city skyline edit" }
+  },
+  "4": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": ["3", 0],
+      "upscale_method": "lanczos",
+      "width": 570,
+      "height": 365,
+      "crop": "disabled"
+    },
+    "_meta": { "title": "Return generated module to exact source size" }
+  },
+  "5": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": ["1", 0],
+      "source": ["4", 0],
+      "x": 100,
+      "y": 1030,
+      "resize_source": false
+    },
+    "_meta": { "title": "Reinsert skyline into untouched campaign background" }
+  },
+  "6": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["5", 0],
+      "filename_prefix": "NRC_LOCALIZE/PARIS_CITY_PLATE"
+    },
+    "_meta": { "title": "Save clean text-free city plate" }
+  },
+  "7": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "d6a8dec1b76bc367b3d6f03080a5da8f8059db0b2936ec75a8e8ce302f7acb2a.png"
+    },
+    "_meta": { "title": "Supplied runner PNG with alpha" }
+  },
+  "8": {
+    "class_type": "InvertMask",
+    "inputs": {
+      "mask": ["7", 1]
+    },
+    "_meta": { "title": "Convert transparency to source opacity" }
+  },
+  "9": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": ["5", 0],
+      "source": ["7", 0],
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "mask": ["8", 0]
+    },
+    "_meta": { "title": "Alpha composite runner over localized background" }
+  },
+  "10": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": ["9", 0],
+      "filename_prefix": "NRC_LOCALIZE/PARIS_COMFY_PREVIEW"
+    },
+    "_meta": { "title": "Save Comfy preview without final typography" }
+  }
+}

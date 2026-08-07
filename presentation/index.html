@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="One Codex prompt fans a locale list into hundreds of inspectable static and motion campaign assets through Comfy and deterministic agent finishing.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff1616'/%3E%3Cpath d='M5 19h22v4H5zM5 10h4v9H5z' fill='%23080808'/%3E%3C/svg%3E">
+  <title>One prompt / Hundreds of localized assets — production graph</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="rail">
+    <a class="wordmark" href="#top" aria-label="Back to top">NRC / LOCALIZATION GRAPH</a>
+    <nav aria-label="Presentation sections">
+      <a href="#flow">Flow</a>
+      <a href="#inspect">Layers</a>
+      <a href="#outputs">Outputs</a>
+      <a href="#qa">QA</a>
+    </nav>
+    <a class="comfy-link" href="https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5" target="_blank" rel="noreferrer">OPEN LATEST COMFY WORKFLOW ↗</a>
+  </header>
+
+  <main id="main">
+    <section id="top" class="hero section-shell">
+      <div class="hero-copy">
+        <p class="disclosure">Independent interview prototype · not a Nike or Adobe-authorized campaign</p>
+        <h1>ONE PROMPT.<br><span>HUNDREDS OF<br>LOCAL ASSETS.</span></h1>
+        <p class="lede">Give Codex a list of locales once. It fans every city through the same inspectable Comfy graph, collects the layers, and finishes static and motion deliverables with exact campaign geometry and visible approval gates.</p>
+        <div class="prompt-card" aria-label="Example Codex localization prompt">
+          <div><span>CODEX / CAMPAIGN REQUEST</span><b>01 PROMPT</b></div>
+          <p>“Localize this campaign for <strong>New York, Dubai, Paris, Tokyo, São Paulo, Mexico City, London, Seoul, Lagos, and Sydney</strong>. Generate the city and runner layers, then finish every static and motion poster.”</p>
+          <ol aria-label="Prompt expansion">
+            <li><b>10</b><span>LOCALES</span></li>
+            <li><b>× 8</b><span>MEDIA ASSETS</span></li>
+            <li><b>80</b><span>DELIVERABLES</span></li>
+          </ol>
+        </div>
+        <div class="hero-actions">
+          <a class="button primary" href="#flow">Read the graph</a>
+          <a class="button secondary" href="https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5" target="_blank" rel="noreferrer">Open latest 28 nodes in Comfy ↗</a>
+        </div>
+      </div>
+      <div class="hero-output" aria-label="Three examples from an arbitrarily long locale batch">
+        <figure class="hero-card hero-card-paris"><img src="../exports/previews/paris-fr.png" alt="Final Paris localized poster"><figcaption>PARIS / fr-FR</figcaption></figure>
+        <figure class="hero-card hero-card-london"><img src="../exports/previews/london-en.png" alt="Final London localized poster"><figcaption>LONDON / en-GB</figcaption></figure>
+        <figure class="hero-card hero-card-tokyo"><img src="../exports/previews/tokyo-ja.png" alt="Final Tokyo localized poster"><figcaption>東京 / ja-JP</figcaption></figure>
+      </div>
+    </section>
+
+    <section class="scale-strip" aria-label="Campaign scale equation">
+      <div><span>ONE NATURAL-LANGUAGE REQUEST</span><b>→</b><strong>ANY LOCALE LIST</strong></div>
+      <div><span>25 LOCALES × 8 MEDIA ASSETS</span><b>=</b><strong>200 DELIVERABLES</strong></div>
+      <div><span>PLUS MANIFESTS + QA + RETRY STATE</span><b>→</b><strong>ONE REVIEW SYSTEM</strong></div>
+    </section>
+
+    <section id="flow" class="flow-section">
+      <div class="section-shell flow-intro">
+        <div>
+          <p class="flow-kicker">THE PRODUCTION MAP</p>
+          <h2>ONE LOCALE RECORD.<br>THREE PRODUCTION BRANCHES.</h2>
+        </div>
+        <p>Codex is the control plane. It expands the list into independent city jobs, batches them through Comfy, collects every intermediate, then routes stable layers to the static and HyperFrames finishing skills. One failed market retries without rerunning the other ninety-nine.</p>
+      </div>
+
+      <div class="market-tabs" role="tablist" aria-label="Select a market for the production graph">
+        <button id="market-tab-paris-fr" type="button" role="tab" aria-selected="true" aria-controls="production-graph market-viewer" tabindex="0" data-market="paris-fr">PARIS <small>fr-FR</small></button>
+        <button id="market-tab-london-en" type="button" role="tab" aria-selected="false" aria-controls="production-graph market-viewer" tabindex="-1" data-market="london-en">LONDON <small>en-GB</small></button>
+        <button id="market-tab-tokyo-ja" type="button" role="tab" aria-selected="false" aria-controls="production-graph market-viewer" tabindex="-1" data-market="tokyo-ja">東京 <small>ja-JP</small></button>
+      </div>
+
+      <div id="production-graph" class="graph-shell" aria-live="polite">
+        <div class="graph-header">
+          <span>ACTIVE MARKET / <b id="graph-market-city">PARIS</b></span>
+          <span>COMFY CLOUD / NANO BANANA PRO / RECRAFT / KLING 3.0 / BRIA / AGENT TYPE</span>
+        </div>
+
+        <div class="city-control" aria-label="Single city input drives both generative branches">
+          <span>00 · ONE RECORD FROM THE LOCALE LIST</span>
+          <div class="city-input-box"><small>CITY INPUT</small><strong id="graph-city-input">PARIS</strong></div>
+          <b class="city-arrow" aria-hidden="true">→</b>
+          <div class="strategy-box"><small>GEMINI PLANNING NODE</small><strong>LOCALIZATION STRATEGIST</strong><p>landmarks · locale · casting · exclusions · review gates</p></div>
+          <i aria-hidden="true">↙ &nbsp; ↘</i>
+        </div>
+
+        <div class="pipeline-lane lane-place">
+          <div class="lane-heading"><b>A</b><span>PLACE BRANCH</span><small>ONLY THE SKYLINE MODULE MAY CHANGE</small></div>
+          <article class="flow-node node-image">
+            <div class="node-top"><span>01A</span><b>LOCKED INPUT</b></div>
+            <img src="../assets/source/campaign-background.png" alt="Protected campaign background input">
+            <div class="node-bottom"><strong>Campaign plate</strong><small>1055 × 1491 · protected</small></div>
+          </article>
+          <div class="wire" aria-hidden="true"><span></span><i>crop</i></div>
+          <article class="flow-node node-image">
+            <div class="node-top"><span>02A</span><b>IMAGE CROP</b></div>
+            <img src="../assets/processed/skyline-module-input.png" alt="Original Seattle skyline module crop">
+            <div class="node-bottom"><strong>Skyline module</strong><small>570 × 365 · variable</small></div>
+          </article>
+          <div class="wire wire-hot" aria-hidden="true"><span></span><i>edit</i></div>
+          <article class="flow-node node-model">
+            <div class="node-top"><span>03A</span><b>NANO BANANA PRO</b></div>
+            <div class="model-mark">NB<br>PRO</div>
+            <p id="graph-skyline-prompt">Eiffel Tower + Montparnasse Tower</p>
+            <div class="node-bottom"><strong>Localized skyline</strong><small>prompted edit · 1K</small></div>
+          </article>
+          <div class="wire wire-hot" aria-hidden="true"><span></span><i>reinsert</i></div>
+          <article class="flow-node node-image node-output">
+            <div class="node-top"><span>04A</span><b>CITY PLATE</b></div>
+            <img id="graph-city" src="../assets/generated/paris-fr/city-plate.png" alt="Paris localized city plate">
+            <div class="node-bottom"><strong>Protected layout restored</strong><small>Comfy output A</small></div>
+          </article>
+        </div>
+
+        <div class="pipeline-lane lane-person">
+          <div class="lane-heading"><b>B</b><span>PERSON BRANCH</span><small>POSE + WARDROBE ARE THE REFERENCE</small></div>
+          <article class="flow-node node-image">
+            <div class="node-top"><span>01B</span><b>REFERENCE INPUT</b></div>
+            <img src="../assets/source/runner-cutout.png" alt="Supplied runner pose and wardrobe reference">
+            <div class="node-bottom"><strong>Pose + garment</strong><small>identity is not preserved</small></div>
+          </article>
+          <div class="wire wire-hot" aria-hidden="true"><span></span><i>generate</i></div>
+          <article class="flow-node node-model">
+            <div class="node-top"><span>02B</span><b>NANO BANANA PRO</b></div>
+            <div class="model-mark">NB<br>PRO</div>
+            <p id="graph-casting-brief">Casting brief: fictional Paris runner</p>
+            <div class="node-bottom"><strong>New fictional runner</strong><small>pose-controlled generation</small></div>
+          </article>
+          <div class="wire" aria-hidden="true"><span></span><i>save raw</i></div>
+          <article class="flow-node node-image">
+            <div class="node-top"><span>03B</span><b>RAW RUNNER</b></div>
+            <img id="graph-runner-raw" src="../assets/generated/paris-fr/runner-raw.png" alt="Raw Paris runner generation">
+            <div class="node-bottom"><strong>Unkeyed generation</strong><small>Comfy QA output</small></div>
+          </article>
+          <div class="wire wire-split" aria-hidden="true"><span></span><i>Recraft</i></div>
+          <article class="flow-node node-dual node-output">
+            <div class="node-top"><span>04B</span><b>RECRAFT + ALPHA</b></div>
+            <div class="dual-media">
+              <figure><img id="graph-mask" src="../assets/processed/paris-fr-alpha-mask.png" alt="Paris runner alpha mask"><figcaption>MASK</figcaption></figure>
+              <figure class="checker"><img id="graph-alpha" src="../assets/generated/paris-fr/runner-alpha.png" alt="Paris runner transparent alpha"><figcaption>RGBA</figcaption></figure>
+            </div>
+            <div class="node-bottom"><strong>Mask + runner alpha</strong><small>Comfy output B</small></div>
+          </article>
+        </div>
+
+        <div class="merge-bus" aria-label="City plate and runner alpha merge">
+          <span class="merge-source">CITY PLATE</span>
+          <i aria-hidden="true">+</i>
+          <span class="merge-source">RUNNER ALPHA</span>
+          <div class="merge-line" aria-hidden="true"></div>
+          <b>MERGE</b>
+        </div>
+
+        <div class="finish-lane">
+          <article class="flow-node node-image node-output">
+            <div class="node-top"><span>05</span><b>COMFY VALIDATION</b></div>
+            <img id="graph-composite" src="../assets/generated/paris-fr/comfy-composite.png" alt="Paris Comfy validation composite">
+            <div class="node-bottom"><strong>Image layers verified</strong><small>Comfy output C</small></div>
+          </article>
+          <div class="wire wire-hot" aria-hidden="true"><span></span><i>handoff</i></div>
+          <article class="flow-node node-agent">
+            <div class="node-top"><span>06</span><b>AGENT PRODUCTION</b></div>
+            <ol class="layer-stack" aria-label="Deterministic production layers">
+              <li><span>05</span>QA + provenance</li>
+              <li><span>04</span>Six Caps perimeter type</li>
+              <li><span>03</span>Localized headline + facts</li>
+              <li><span>02</span>Runner alpha</li>
+              <li><span>01</span>Localized city plate</li>
+            </ol>
+            <div class="node-bottom"><strong id="graph-headline">LIBRE DE COURIR</strong><small>deterministic HTML/SVG</small></div>
+          </article>
+          <div class="wire wire-hot" aria-hidden="true"><span></span><i>export</i></div>
+          <article class="flow-node node-image node-final">
+            <div class="node-top"><span>07</span><b>REVIEWABLE OUTPUT</b></div>
+            <img id="graph-final" src="../exports/previews/paris-fr.png" alt="Final Paris localized poster">
+            <div class="node-bottom"><strong>Native poster</strong><small>1055 × 1491 · sRGB</small></div>
+          </article>
+        </div>
+
+        <div class="motion-lane" aria-label="New York motion isolation proof">
+          <div class="lane-heading"><b>C</b><span>MOTION BRANCH</span><small>KLING NEVER RECEIVES THE POSTER</small></div>
+          <article class="flow-node node-image">
+            <div class="node-top"><span>08</span><b>ISOLATED SOURCE</b></div>
+            <img src="../assets/generated/new-york-en/runner-alpha.png" alt="New York fictional runner isolated from the poster">
+            <div class="node-bottom"><strong>Runner pixels only</strong><small>Recraft foreground output</small></div>
+          </article>
+          <div class="wire wire-motion" aria-hidden="true"><span></span><i>animate</i></div>
+          <article class="flow-node node-motion-model">
+            <div class="node-top"><span>09</span><b>KLING 3.0</b></div>
+            <div class="model-mark">K3<br>ONLY</div>
+            <p>Five-second locked-camera warm-up. Shoulder roll → standing side stretch → return toward hero pose.</p>
+            <div class="node-bottom"><strong>Moving runner layer</strong><small>1080p · 24 fps · no audio</small></div>
+          </article>
+          <div class="wire wire-motion" aria-hidden="true"><span></span><i>matte</i></div>
+          <article class="flow-node node-lock">
+            <div class="node-top"><span>10</span><b>BRIA RECOMPOSITE</b></div>
+            <div class="lock-diagram">
+              <figure><img src="../assets/generated/new-york-en/comfy-composite.png" alt=""><figcaption>MOVING FOREGROUND</figcaption></figure>
+              <b aria-hidden="true">+</b>
+              <figure><img src="../assets/generated/new-york-en/city-plate.png" alt=""><figcaption>LOCKED PLATE</figcaption></figure>
+            </div>
+            <div class="node-bottom"><strong>Background supplied after Kling</strong><small>poster pixels cannot be regenerated</small></div>
+          </article>
+          <div class="wire wire-motion" aria-hidden="true"><span></span><i>save mp4</i></div>
+          <article class="flow-node node-video node-output">
+            <div class="node-top"><span>11</span><b>COMFY VIDEO OUTPUT</b></div>
+            <video src="../assets/generated/new-york-en/runner-warmup.mp4" controls muted loop playsinline preload="metadata" aria-label="New York runner warm-up with locked poster background"></video>
+            <div class="node-bottom"><strong>Only the runner moves</strong><small>1204 × 1720 · 5.04 seconds</small></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="inspect" class="inspect-section section-shell">
+      <div class="inspect-heading">
+        <h2>INSPECT EVERY<br>HANDOFF.</h2>
+        <p>The same active market drives this viewer and the graph above. Nothing is hidden behind a single “generated” thumbnail.</p>
+      </div>
+      <div id="market-viewer" class="market-viewer" role="tabpanel" aria-labelledby="market-tab-paris-fr" tabindex="0">
+        <div class="stage-view">
+          <figure>
+            <img id="stage-image" src="../assets/generated/paris-fr/city-plate.png" alt="Paris generated city plate">
+            <figcaption><span id="stage-number">01 / 06</span><strong id="stage-title">Generated city plate</strong></figcaption>
+          </figure>
+        </div>
+        <div class="stage-controls">
+          <div class="market-meta">
+            <p id="market-locale">PARIS · FRANCE · fr-FR</p>
+            <h3 id="market-headline">LIBRE DE COURIR</h3>
+            <p id="market-description">Eiffel Tower + Montparnasse Tower. Casting brief: a fictional French runner of North African heritage. French draft copy awaiting local review.</p>
+          </div>
+          <div class="stage-buttons" aria-label="Select a production layer">
+            <button type="button" class="is-active" aria-pressed="true" aria-controls="stage-image" data-stage="city">City plate</button>
+            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="raw">Raw runner</button>
+            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="mask">Alpha mask</button>
+            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="runner">Runner RGBA</button>
+            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="composite">Comfy composite</button>
+            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="final">Final poster</button>
+          </div>
+          <p id="viewer-status" class="visually-hidden" aria-live="polite"></p>
+          <p id="stage-note" class="stage-note">Nano Banana Pro edits a protected 570 × 365 skyline crop and Comfy reinserts it into the untouched campaign plate.</p>
+          <a id="stage-download" class="text-link" href="../assets/generated/paris-fr/city-plate.png" download>Download this layer ↓</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="outputs" class="outputs-section section-shell">
+      <div class="outputs-heading"><h2>THREE SHOWN.<br>NO PRACTICAL LOCALE LIMIT.</h2><p>These are three rows from the same fan-out. Every locale remains linked to its source layers, workflow, copy draft, retry state, and human review status.</p></div>
+      <div class="poster-grid">
+        <figure><a href="../exports/previews/paris-fr.png" target="_blank"><img src="../exports/previews/paris-fr.png" alt="Paris final localized poster"></a><figcaption><b>PARIS</b><a href="../exports/previews/paris-fr.png" download>PNG ↓</a></figcaption></figure>
+        <figure><a href="../exports/previews/london-en.png" target="_blank"><img src="../exports/previews/london-en.png" alt="London final localized poster"></a><figcaption><b>LONDON</b><a href="../exports/previews/london-en.png" download>PNG ↓</a></figcaption></figure>
+        <figure><a href="../exports/previews/tokyo-ja.png" target="_blank"><img src="../exports/previews/tokyo-ja.png" alt="Tokyo final localized poster"></a><figcaption><b>東京</b><a href="../exports/previews/tokyo-ja.png" download>PNG ↓</a></figcaption></figure>
+      </div>
+      <a class="contact-sheet-link" href="../exports/city-localization-contact-sheet.png" target="_blank">Open the 1920 × 1200 review sheet ↗</a>
+      <div class="motion-proof">
+        <div>
+          <p class="flow-kicker">NEW YORK / MOTION PROOF</p>
+          <h3>MOVE THE HUMAN.<br>FREEZE THE SYSTEM.</h3>
+          <p>Kling receives only the isolated runner. HyperFrames reconstructs the approved static layer stack exactly, then animates the type reveals and perimeter marquee without redesigning the wavy headline, city lockup, or campaign geometry.</p>
+          <a class="button secondary" href="../videos/nrc-localized-motion-poster/renders/new-york-motion-poster.mp4" download>Download final MP4 ↓</a>
+        </div>
+        <figure>
+          <video src="../videos/nrc-localized-motion-poster/renders/new-york-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Final New York motion poster with isolated warm-up animation and static-faithful typography"></video>
+          <figcaption><span>FINAL MOTION OUTPUT</span><b>KLING 3.0 RUNNER → HYPERFRAMES STATIC-FAITHFUL TYPE</b></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="qa" class="qa-section">
+      <div class="section-shell qa-grid">
+        <div class="qa-thesis">
+          <h2>FAST DOES NOT<br>MEAN APPROVED.</h2>
+          <p>Mechanical validation happens automatically. Language, representation, landmark accuracy, anatomy, wardrobe, resemblance, rights, and campaign approval remain named human decisions.</p>
+          <a class="button secondary" href="../review/qa-report.md" target="_blank">Open QA report ↗</a>
+        </div>
+        <div class="ledger" role="table" aria-label="Quality assurance ledger">
+          <div role="row"><b role="cell">Final dimensions + sRGB</b><span role="cell" class="pass">PASS</span></div>
+          <div role="row"><b role="cell">Protected checksums</b><span role="cell" class="pass">PASS</span></div>
+          <div role="row"><b role="cell">Workflow package</b><span role="cell" class="pass">PASS</span></div>
+          <div role="row"><b role="cell">Copy + tone</b><span role="cell">HUMAN REVIEW</span></div>
+          <div role="row"><b role="cell">Culture + casting</b><span role="cell">HUMAN REVIEW</span></div>
+          <div role="row"><b role="cell">Anatomy + alpha</b><span role="cell">HUMAN REVIEW</span></div>
+          <div role="row"><b role="cell">Brand + rights + legal</b><span role="cell">HUMAN REVIEW</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="handoff section-shell">
+      <div>
+        <h2>THE 90-SECOND<br>INTERVIEW ROUTE.</h2>
+        <ol>
+          <li><b>Start with one request.</b> Paste a list of cities into Codex. Ten or one hundred locales use the same production contract.</li>
+          <li><b>Show the fan-out.</b> Codex turns the list into independent Comfy jobs with separate cost, retries, outputs, and QA state.</li>
+          <li><b>Open the strategist.</b> The LLM turns that city into a structured landmark, locale, casting, exclusion, and review brief.</li>
+          <li><b>Trace both branches.</b> JSON extractors route its detailed prompts into the skyline and fictional-runner generators.</li>
+          <li><b>Point to the mask.</b> The alpha pass makes the handoff editable instead of flattening it.</li>
+          <li><b>Prove motion isolation.</b> Kling sees only the runner; Bria reattaches the locked poster afterward.</li>
+          <li><b>Close on scale and governance.</b> One prompt can create hundreds of media pieces; humans still approve culture, language, landmark truth, and brand.</li>
+        </ol>
+      </div>
+      <aside>
+        <p>ONE PROMPT IN CODEX.<br>HUNDREDS OF ASSETS OUT.</p>
+        <span>Protected inputs · model nodes · inspectable intermediates · deterministic production · approval gates</span>
+        <a class="button primary" href="https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5" target="_blank" rel="noreferrer">Present the latest saved graph ↗</a>
+      </aside>
+    </section>
+
+    <section class="downloads section-shell">
+      <h2>EVERY FILE,<br>INSPECTABLE.</h2>
+      <div class="download-grid">
+        <div><h3>Workflow + Skills</h3><a href="../workflows/nike-run-localizer-codex-orchestrated-multi-locale-latest.json" download>28-node Comfy graph ↓</a><a href="../.agents/skills/nrc-campaign-localizer/SKILL.md" target="_blank">Orchestrator skill ↗</a><a href="../.agents/skills/nrc-static-finisher/SKILL.md" target="_blank">Static finisher skill ↗</a><a href="../.agents/skills/nrc-motion-finisher/SKILL.md" target="_blank">Motion finisher skill ↗</a><a href="../review/qa-report.md" target="_blank">QA report ↗</a><a href="../videos/nrc-localized-motion-poster/renders/new-york-motion-poster.mp4" download>Final motion poster ↓</a></div>
+        <div><h3>Paris</h3><a href="../assets/generated/paris-fr/city-plate.png" download>City plate ↓</a><a href="../assets/processed/paris-fr-alpha-mask.png" download>Alpha mask ↓</a><a href="../assets/generated/paris-fr/runner-alpha.png" download>Runner RGBA ↓</a><a href="../assets/generated/paris-fr/comfy-composite.png" download>Composite ↓</a><a href="../exports/previews/paris-fr.png" download>Final poster ↓</a></div>
+        <div><h3>London</h3><a href="../assets/generated/london-en/city-plate.png" download>City plate ↓</a><a href="../assets/processed/london-en-alpha-mask.png" download>Alpha mask ↓</a><a href="../assets/generated/london-en/runner-alpha.png" download>Runner RGBA ↓</a><a href="../assets/generated/london-en/comfy-composite.png" download>Composite ↓</a><a href="../exports/previews/london-en.png" download>Final poster ↓</a></div>
+        <div><h3>Tokyo</h3><a href="../assets/generated/tokyo-ja/city-plate.png" download>City plate ↓</a><a href="../assets/processed/tokyo-ja-alpha-mask.png" download>Alpha mask ↓</a><a href="../assets/generated/tokyo-ja/runner-alpha.png" download>Runner RGBA ↓</a><a href="../assets/generated/tokyo-ja/comfy-composite.png" download>Composite ↓</a><a href="../exports/previews/tokyo-ja.png" download>Final poster ↓</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <span>NRC CITY LOCALIZATION / INTERVIEW PROTOTYPE / 2026</span>
+    <span>Not authorized by Nike or Adobe</span>
+  </footer>
+</body>
+</html>

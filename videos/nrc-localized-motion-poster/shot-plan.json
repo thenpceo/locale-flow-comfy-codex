@@ -1,0 +1,406 @@
+{
+  "category": "kinetic-type",
+  "duration_s": 5.041667,
+  "fps": 24,
+  "canvas": {
+    "w": 1204,
+    "h": 1720,
+    "aspect": "1204:1720"
+  },
+  "style": "Dark campaign screening-room finish with hard editorial geometry: black media plate, paper-white condensed typography, signal-red accents, sharp corners, no shadows, no gradients, and deliberate type-over-subject occlusion. Organic runner motion contrasts with rigid deterministic typographic cadence.",
+  "palette": [
+    "#080808",
+    "#F5F5F2",
+    "#B6B5B0",
+    "#FF1616"
+  ],
+  "font": "Arial Narrow",
+  "beats": [
+    0.25,
+    0.625,
+    1.25,
+    2.5,
+    4.166667,
+    5.041667
+  ],
+  "export": "mp4",
+  "asset_needs": [],
+  "block": "caption-kinetic-slam",
+  "customize": {
+    "reuse_scope": "Reuse the catalog block's paused GSAP timeline, split-word and split-letter structure, clip-safe entrance mechanics, and deterministic seek behavior. Adapt it to one full-duration composition over the locked MP4 plate.",
+    "copy": {
+      "headline": [
+        "RUN",
+        "WILD"
+      ],
+      "supporting_line": "THE CITY RUNS WITH YOU",
+      "disclaimer": "FICTIONAL DEMO ROUTE · REPLACE BEFORE PRODUCTION"
+    },
+    "palette": [
+      "#080808",
+      "#F5F5F2",
+      "#B6B5B0",
+      "#FF1616"
+    ],
+    "font": "Arial Narrow",
+    "timing": "Use the frame-exact schedule in content.motion_system; 24 fps, no random stagger, no runtime-dependent measurements.",
+    "remove": [
+      "shake-on-land",
+      "bounce easing",
+      "text shadow",
+      "glow",
+      "gradient fill",
+      "sound"
+    ],
+    "hand_authored_gaps": [
+      "four-axis Six Caps perimeter marquee",
+      "locked full-frame video plate",
+      "bottom production disclaimer"
+    ]
+  },
+  "content": {
+    "shot_brief": "Across one uninterrupted 5.041667-second plate, the supplied New York Comfy runner warm-up remains pixel-for-pixel and is the only generative motion. Four Six Caps edge strips move continuously as a perimeter marquee while RUN and WILD arrive in staggered, forceful word-and-letter beats; THE CITY RUNS WITH YOU follows as the localized response, then the fictional-route disclaimer locks into a production-proof final hold. The single dominant motion idea is rigid typographic cadence set against the runner's organic warm-up, with every overlay deterministic, editable, sharp-edged, and unshadowed.",
+    "source_media": {
+      "path": "../../assets/generated/new-york-en/runner-warmup.mp4",
+      "role": "locked full-duration media plate",
+      "treatment": "Preserve pixel-for-pixel; no crop, retime, color treatment, replacement, or generated extension.",
+      "placement": {
+        "x": 0,
+        "y": 0,
+        "w": 1204,
+        "h": 1720,
+        "fit": "none",
+        "z": 0
+      }
+    },
+    "typography": {
+      "display_face": "Arial Narrow, Helvetica Neue Condensed, system sans-serif",
+      "perimeter_face": "../../assets/fonts/SixCaps.ttf",
+      "perimeter_license": "SIL OFL 1.1",
+      "headline": "RUN WILD",
+      "supporting_line": "THE CITY RUNS WITH YOU",
+      "disclaimer": "FICTIONAL DEMO ROUTE · REPLACE BEFORE PRODUCTION"
+    },
+    "perimeter_marquee": {
+      "strips": 4,
+      "copy": "NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT.",
+      "font": "Six Caps",
+      "font_path": "../../assets/fonts/SixCaps.ttf",
+      "font_size_px": 32,
+      "line_height": 0.86,
+      "letter_spacing_em": 0.02,
+      "color": "#F5F5F2",
+      "z": 20,
+      "track_construction": "Each strip contains two adjacent identical copies of one repeated phrase track. Animate exactly one copy length and wrap modulo 50 percent so the seam is never exposed.",
+      "clock": {
+        "start_frame": 0,
+        "end_frame_exclusive": 121,
+        "duration_s": 5.041667,
+        "ease": "none",
+        "repeat": 0,
+        "randomness": false
+      },
+      "strips_spec": [
+        {
+          "edge": "top",
+          "zone": {
+            "x": 86,
+            "y": 18,
+            "w": 1032,
+            "h": 40
+          },
+          "axis": "x",
+          "from_percent": 0,
+          "to_percent": -50,
+          "direction": "left"
+        },
+        {
+          "edge": "right",
+          "zone": {
+            "x": 1144,
+            "y": 72,
+            "w": 40,
+            "h": 1576
+          },
+          "axis": "y",
+          "from_percent": 0,
+          "to_percent": -50,
+          "direction": "down-to-up",
+          "writing_mode": "vertical-rl"
+        },
+        {
+          "edge": "bottom",
+          "zone": {
+            "x": 86,
+            "y": 1662,
+            "w": 1032,
+            "h": 40
+          },
+          "axis": "x",
+          "from_percent": -50,
+          "to_percent": 0,
+          "direction": "right"
+        },
+        {
+          "edge": "left",
+          "zone": {
+            "x": 20,
+            "y": 72,
+            "w": 40,
+            "h": 1576
+          },
+          "axis": "y",
+          "from_percent": -50,
+          "to_percent": 0,
+          "direction": "up-to-down",
+          "writing_mode": "vertical-rl",
+          "rotation_deg": 180
+        }
+      ],
+      "constraints": "Super-thin, highly condensed, single-line strips clipped to their own rails; no shadow, glow, gradient, acceleration, pause, or collision response. Opposing edge pairs travel in opposite directions for the full 121-frame composition."
+    },
+    "layout": {
+      "coordinate_space": "Absolute pixels from the 1204 x 1720 top-left origin.",
+      "z_order": [
+        "0 locked video plate",
+        "10 localized headline and supporting line",
+        "12 disclaimer",
+        "20 perimeter marquee"
+      ],
+      "content_safe_area": {
+        "x": 86,
+        "y": 72,
+        "w": 1032,
+        "h": 1576
+      },
+      "avoid_zones": [
+        {
+          "id": "runner-face-motion-envelope",
+          "x": 84,
+          "y": 330,
+          "w": 650,
+          "h": 575,
+          "rule": "No headline, support copy, disclaimer, or marquee may enter this region at any frame."
+        },
+        {
+          "id": "runner-torso-motion-envelope",
+          "x": 250,
+          "y": 680,
+          "w": 735,
+          "h": 850,
+          "rule": "No legible copy may cover the runner's chest, abdomen, or shorts; moving limbs may cross empty negative space only."
+        }
+      ],
+      "zones": {
+        "headline": {
+          "x": 760,
+          "y": 176,
+          "w": 344,
+          "h": 366,
+          "align": "left",
+          "anchor": "top-left",
+          "lines": [
+            "RUN",
+            "WILD"
+          ],
+          "font_size_px": 150,
+          "line_height": 0.78,
+          "letter_spacing_em": -0.055,
+          "color": "#F5F5F2"
+        },
+        "supporting_line": {
+          "x": 764,
+          "y": 560,
+          "w": 334,
+          "h": 64,
+          "align": "left",
+          "anchor": "top-left",
+          "font_size_px": 31,
+          "line_height": 1,
+          "letter_spacing_em": 0.025,
+          "color": "#F5F5F2",
+          "emphasis_color": "#FF1616"
+        },
+        "disclaimer": {
+          "x": 112,
+          "y": 1612,
+          "w": 780,
+          "h": 30,
+          "align": "left",
+          "anchor": "top-left",
+          "font_size_px": 13,
+          "line_height": 1,
+          "letter_spacing_em": 0.075,
+          "color": "#F5F5F2"
+        }
+      }
+    },
+    "motion_system": {
+      "timebase": "Frame-indexed at 24 fps. All GSAP positions are absolute seconds derived from integer frames; all tweens use explicit fromTo values and a paused master timeline.",
+      "dominant_motif": "Mechanical staggered type stops against continuous organic runner motion.",
+      "pattern_interrupt": "At frame 60, change only scale and cadence: the large two-line slam stops and the compact supporting line begins its word reveal.",
+      "primitives": [
+        {
+          "id": "run-entry",
+          "target": "RUN",
+          "primitive": "slide_left + word_reveal",
+          "start_frame": 6,
+          "end_frame": 18,
+          "from": {
+            "x_px": -180,
+            "autoAlpha": 0
+          },
+          "to": {
+            "x_px": 0,
+            "autoAlpha": 1
+          },
+          "letter_stagger_frames": 2,
+          "ease": "power4.out",
+          "hold_through_frame": 120
+        },
+        {
+          "id": "wild-entry",
+          "target": "WILD",
+          "primitive": "slam",
+          "start_frame": 30,
+          "end_frame": 48,
+          "from": {
+            "y_px": -240,
+            "autoAlpha": 0
+          },
+          "to": {
+            "y_px": 0,
+            "autoAlpha": 1
+          },
+          "letter_stagger_frames": 2,
+          "ease": "power4.out",
+          "landing": "One deterministic four-frame y settle from -8 px to 0; no shake, bounce, rotation, or elastic overshoot.",
+          "hold_through_frame": 120
+        },
+        {
+          "id": "support-entry",
+          "target": "THE CITY RUNS WITH YOU",
+          "primitive": "word_reveal + color_shift",
+          "start_frame": 60,
+          "end_frame": 84,
+          "from": {
+            "y_px": 42,
+            "autoAlpha": 0
+          },
+          "to": {
+            "y_px": 0,
+            "autoAlpha": 1
+          },
+          "word_stagger_frames": 3,
+          "ease": "power4.out",
+          "emphasis": "CITY shifts once to #FF1616 at frame 72; YOU remains paper white.",
+          "hold_through_frame": 120
+        },
+        {
+          "id": "disclaimer-entry",
+          "target": "FICTIONAL DEMO ROUTE · REPLACE BEFORE PRODUCTION",
+          "primitive": "bar_wipe",
+          "start_frame": 100,
+          "end_frame": 109,
+          "from": {
+            "clip_percent": 0,
+            "autoAlpha": 1
+          },
+          "to": {
+            "clip_percent": 100,
+            "autoAlpha": 1
+          },
+          "ease": "power4.out",
+          "hold_through_frame": 120
+        },
+        {
+          "id": "perimeter-motion",
+          "target": "four marquee tracks",
+          "primitive": "linear marquee translation",
+          "start_frame": 0,
+          "end_frame_exclusive": 121,
+          "ease": "none",
+          "details": "Use the exact axes and 0-to-50-percent translations in perimeter_marquee.strips_spec; no opacity animation."
+        }
+      ],
+      "exits": "None. Completed text remains locked and readable through frame 120; the source plate and marquee continue without a fade to black."
+    },
+    "proof_times_s": [
+      0,
+      0.75,
+      1.75,
+      3.25,
+      4.75
+    ],
+    "accessibility": {
+      "reduced_motion": "Freeze marquee at its frame-0 position and show all localized copy in its final layout; do not alter the locked source media.",
+      "contrast": "All type remains #F5F5F2 or #FF1616 against #080808 negative space; never place copy over the face or torso envelopes."
+    },
+    "scenes": [
+      {
+        "id": "hook-run",
+        "start": 0,
+        "end": 1.25,
+        "text": "RUN",
+        "emphasis_words": [
+          "RUN"
+        ],
+        "emotion": "Immediate, tense, athletic",
+        "motion": "Reveal RUN through a hard vertical crop, then stagger its letters two frames apart into a precise stop; no soft easing or decorative bounce.",
+        "beats": [
+          0.25,
+          0.625
+        ]
+      },
+      {
+        "id": "build-wild",
+        "start": 1.25,
+        "end": 2.5,
+        "text": "RUN WILD",
+        "emphasis_words": [
+          "WILD"
+        ],
+        "emotion": "Forceful acceleration",
+        "motion": "Keep RUN locked while WILD slams in on the opposing axis with a tightly staggered letter entrance and a four-frame mechanical settle.",
+        "beats": [
+          1.25,
+          1.583333,
+          2.166667
+        ]
+      },
+      {
+        "id": "punch-city",
+        "start": 2.5,
+        "end": 4.166667,
+        "text": "RUN WILD\nTHE CITY RUNS WITH YOU",
+        "emphasis_words": [
+          "CITY",
+          "YOU"
+        ],
+        "emotion": "Collective urban momentum",
+        "motion": "Hold the headline while THE CITY RUNS WITH YOU tracks on word-by-word in a compact secondary line, punctuated by a single signal-red emphasis rather than a new effect family.",
+        "beats": [
+          2.5,
+          2.916667,
+          3.5
+        ]
+      },
+      {
+        "id": "resolve-governance",
+        "start": 4.166667,
+        "end": 5.041667,
+        "text": "RUN WILD\nTHE CITY RUNS WITH YOU\nFICTIONAL DEMO ROUTE · REPLACE BEFORE PRODUCTION",
+        "emphasis_words": [
+          "REPLACE"
+        ],
+        "emotion": "Controlled, review-ready resolve",
+        "motion": "Maintain the completed headline and supporting line; reveal the disclaimer with one sharp linear wipe and hold the full deterministic type system through the final frame while the perimeter marquee continues.",
+        "beats": [
+          4.166667,
+          4.541667,
+          5.041667
+        ]
+      }
+    ]
+  }
+}

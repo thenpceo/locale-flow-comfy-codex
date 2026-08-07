@@ -1,0 +1,1484 @@
+{
+  "config": {},
+  "extra": {
+    "agentHandoff": "OUTPUT E saves the exact strategist JSON. OUTPUTS A-D have deterministic filename prefixes; the orchestrator combines them into one handoff manifest for the graphic-design and HyperFrames agents.",
+    "comfy_mcp": {
+      "description": "Latest 28-node interview workflow: one CITY input to strategist, localized skyline and fictional-person branches, Recraft alpha, still composite, Kling runner-only animation, Bria locked-plate recomposite, JSON agent handoff, and visible completed references. Codex owns multi-locale fan-out and deterministic static/motion finishing.",
+      "name": "Nike Run Localizer - Codex Orchestrated Multi-Locale - Latest"
+    },
+    "ds": {
+      "offset": [
+        120,
+        80
+      ],
+      "scale": 0.35
+    },
+    "instructions": "LATEST BUILD. For a live one-city demo, change only node 00. For real multi-locale production, ask Codex for city names; Codex clones and batches this graph, downloads all media plus JSON handoffs, and finishes static and motion outputs with the repository skills.",
+    "multiLocaleContract": "Parallel locale fan-out is intentionally outside the image graph so jobs remain separately retryable, attributable, and human-reviewable."
+  },
+  "groups": [
+    {
+      "bounding": [
+        -70,
+        -120,
+        1160,
+        500
+      ],
+      "color": "#ff1616",
+      "flags": {},
+      "font_size": 30,
+      "id": 1,
+      "title": "00 · TYPE ONE CITY → LLM BUILDS THE LOCALIZATION BRIEF"
+    },
+    {
+      "bounding": [
+        -70,
+        420,
+        2640,
+        580
+      ],
+      "color": "#c51422",
+      "flags": {},
+      "font_size": 24,
+      "id": 2,
+      "title": "A · STRUCTURED SKYLINE PROMPT → NANO BANANA PRO → PROTECTED CITY PLATE"
+    },
+    {
+      "bounding": [
+        -70,
+        1000,
+        3320,
+        620
+      ],
+      "color": "#c51422",
+      "flags": {},
+      "font_size": 24,
+      "id": 3,
+      "title": "B · STRUCTURED CASTING PROMPT → NEW FICTIONAL RUNNER → ALPHA → STILL COMPOSITE"
+    },
+    {
+      "bounding": [
+        -70,
+        1650,
+        1150,
+        600
+      ],
+      "color": "#d18a00",
+      "flags": {},
+      "font_size": 24,
+      "id": 4,
+      "title": "C · AGENT HANDOFF · STRATEGIST JSON + NAMED STATIC OUTPUTS → GRAPHIC-DESIGN SKILL"
+    },
+    {
+      "bounding": [
+        1450,
+        1650,
+        1490,
+        600
+      ],
+      "color": "#6f35cc",
+      "flags": {},
+      "font_size": 24,
+      "id": 5,
+      "title": "D · MOTION ISOLATION · KLING 3.0 RUNNER ONLY → BRIA LOCKED-PLATE RECOMPOSITE → MP4"
+    },
+    {
+      "bounding": [
+        -70,
+        2390,
+        2170,
+        570
+      ],
+      "color": "#4b4b4b",
+      "flags": {},
+      "font_size": 24,
+      "id": 6,
+      "title": "E · COMPLETED REFERENCE OUTPUTS · PARIS / LONDON / TOKYO"
+    }
+  ],
+  "id": "19e4982c-455d-459e-91cc-d5cbdcdc784b",
+  "last_link_id": 29,
+  "last_node_id": 28,
+  "links": [
+    [
+      1,
+      2,
+      0,
+      3,
+      0,
+      "IMAGE"
+    ],
+    [
+      2,
+      1,
+      0,
+      4,
+      0,
+      "STRING"
+    ],
+    [
+      3,
+      4,
+      0,
+      5,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      5,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      3,
+      0,
+      6,
+      1,
+      "IMAGE"
+    ],
+    [
+      6,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      7,
+      2,
+      0,
+      8,
+      0,
+      "IMAGE"
+    ],
+    [
+      8,
+      7,
+      0,
+      8,
+      1,
+      "IMAGE"
+    ],
+    [
+      9,
+      8,
+      0,
+      9,
+      0,
+      "IMAGE"
+    ],
+    [
+      10,
+      4,
+      0,
+      11,
+      0,
+      "STRING"
+    ],
+    [
+      11,
+      11,
+      0,
+      12,
+      0,
+      "STRING"
+    ],
+    [
+      12,
+      10,
+      0,
+      12,
+      1,
+      "IMAGE"
+    ],
+    [
+      13,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      14,
+      13,
+      1,
+      14,
+      0,
+      "MASK"
+    ],
+    [
+      15,
+      13,
+      0,
+      15,
+      0,
+      "IMAGE"
+    ],
+    [
+      16,
+      14,
+      0,
+      15,
+      1,
+      "MASK"
+    ],
+    [
+      17,
+      8,
+      0,
+      16,
+      0,
+      "IMAGE"
+    ],
+    [
+      18,
+      13,
+      0,
+      16,
+      1,
+      "IMAGE"
+    ],
+    [
+      19,
+      13,
+      1,
+      16,
+      2,
+      "MASK"
+    ],
+    [
+      20,
+      16,
+      0,
+      17,
+      0,
+      "IMAGE"
+    ],
+    [
+      21,
+      12,
+      0,
+      18,
+      0,
+      "IMAGE"
+    ],
+    [
+      22,
+      13,
+      0,
+      19,
+      0,
+      "IMAGE"
+    ],
+    [
+      23,
+      19,
+      0,
+      20,
+      0,
+      "VIDEO"
+    ],
+    [
+      24,
+      8,
+      0,
+      20,
+      1,
+      "IMAGE"
+    ],
+    [
+      25,
+      20,
+      0,
+      21,
+      0,
+      "VIDEO"
+    ],
+    [
+      26,
+      4,
+      0,
+      22,
+      0,
+      "STRING"
+    ],
+    [
+      27,
+      23,
+      0,
+      24,
+      0,
+      "IMAGE"
+    ],
+    [
+      28,
+      25,
+      0,
+      26,
+      0,
+      "IMAGE"
+    ],
+    [
+      29,
+      27,
+      0,
+      28,
+      0,
+      "IMAGE"
+    ]
+  ],
+  "nodes": [
+    {
+      "bgcolor": "#ff1616",
+      "color": "#ff1616",
+      "flags": {},
+      "id": 1,
+      "inputs": [],
+      "mode": 0,
+      "order": 0,
+      "outputs": [
+        {
+          "links": [
+            2
+          ],
+          "name": "STRING",
+          "slot_index": 0,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        0,
+        0
+      ],
+      "properties": {},
+      "size": [
+        430,
+        180
+      ],
+      "title": "00 · CITY INPUT · CHANGE ONLY THIS",
+      "type": "PrimitiveString",
+      "widgets_values": [
+        "NEW YORK"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 2,
+      "inputs": [],
+      "mode": 0,
+      "order": 1,
+      "outputs": [
+        {
+          "links": [
+            1,
+            7
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        510
+      ],
+      "properties": {},
+      "size": [
+        300,
+        420
+      ],
+      "title": "01A · LOCKED campaign background",
+      "type": "LoadImage",
+      "widgets_values": [
+        "1f9c5ed325dfbc5169a37f5e8fdbb340d9b3eb52847eaec2f0ebcd44bf3103c0.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 3,
+      "inputs": [
+        {
+          "link": 1,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 2,
+      "outputs": [
+        {
+          "links": [
+            5
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        350,
+        630
+      ],
+      "properties": {},
+      "size": [
+        290,
+        150
+      ],
+      "title": "02A · Isolate variable skyline module",
+      "type": "ImageCrop",
+      "widgets_values": [
+        570,
+        365,
+        100,
+        1030
+      ]
+    },
+    {
+      "color": "#c51422",
+      "flags": {},
+      "id": 4,
+      "inputs": [
+        {
+          "link": 2,
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 3,
+      "outputs": [
+        {
+          "links": [
+            3,
+            10,
+            26
+          ],
+          "name": "STRING",
+          "slot_index": 0,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        520,
+        -20
+      ],
+      "properties": {},
+      "size": [
+        500,
+        430
+      ],
+      "title": "01 · LOCALIZATION STRATEGIST LLM · City to structured brief",
+      "type": "GeminiNodeV2",
+      "widgets_values": [
+        "",
+        "Gemini 3.1 Flash-Lite",
+        "LOW",
+        0.2,
+        0.9,
+        4096,
+        44017,
+        "fixed",
+        "You are a localization strategist for a global running campaign. The user supplies only a city name. Return valid minified JSON and nothing else, with exactly these string keys: skyline_prompt, runner_prompt, locale, copy_direction, human_review. The skyline_prompt must identify one or two visually recognizable built landmarks that genuinely belong to the city, describe their silhouette relationship, and then require this fixed treatment: edit only the flat red skyline inside the protected crop; pure signal-red flat vector silhouette anchored to the bottom; pure black background; hard clean edges; preserve every white grid line and red circular arc; no text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, national symbols, costume, or postcard collage. The runner_prompt must create a NEW fictional adult runner with a credible contemporary local running-club casting direction. It must change identity and facial features rather than recoloring the reference, avoid guessing a single ethnicity from the city, and avoid stereotypes, national costume, flags, landmarks, souvenir styling, caricature, new text, extra logos, jewelry additions, extra limbs, or anatomy changes. It must preserve the exact front-facing hands-on-hips pose, camera angle, body scale, crop, centered silhouette, grayscale high-contrast halftone print texture, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment, against a plain neutral studio background. locale must be a likely BCP-47 locale for the city but acknowledge ambiguity in human_review when relevant. copy_direction must be a short locally appropriate creative direction, not final translated copy. human_review must name language, cultural, casting, landmark, brand, and rights checks. Do not use markdown fences."
+      ]
+    },
+    {
+      "flags": {},
+      "id": 5,
+      "inputs": [
+        {
+          "link": 3,
+          "name": "json_string",
+          "type": "STRING",
+          "widget": {
+            "name": "json_string"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 4,
+      "outputs": [
+        {
+          "links": [
+            4
+          ],
+          "name": "STRING",
+          "slot_index": 0,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        700,
+        630
+      ],
+      "properties": {},
+      "size": [
+        300,
+        170
+      ],
+      "title": "03A · Extract detailed skyline prompt",
+      "type": "JsonExtractString",
+      "widgets_values": [
+        "",
+        "skyline_prompt"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 6,
+      "inputs": [
+        {
+          "link": 4,
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "link": 5,
+          "name": "images",
+          "type": "IMAGE"
+        },
+        {
+          "link": null,
+          "name": "files",
+          "type": "GEMINI_INPUT_FILES"
+        }
+      ],
+      "mode": 0,
+      "order": 5,
+      "outputs": [
+        {
+          "links": [
+            6
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "name": "STRING",
+          "slot_index": 1,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1050,
+        500
+      ],
+      "properties": {},
+      "size": [
+        420,
+        430
+      ],
+      "title": "04A · NANO BANANA PRO · Strategist-directed skyline",
+      "type": "GeminiImage2Node",
+      "widgets_values": [
+        "",
+        "gemini-3-pro-image-preview",
+        498017,
+        "fixed",
+        "auto",
+        "1K",
+        "IMAGE",
+        "Execute the supplied structured skyline art direction literally. Preserve protected non-skyline pixels, never invent typography or logos, and always return an image."
+      ]
+    },
+    {
+      "flags": {},
+      "id": 7,
+      "inputs": [
+        {
+          "link": 6,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 6,
+      "outputs": [
+        {
+          "links": [
+            8
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1520,
+        630
+      ],
+      "properties": {},
+      "size": [
+        290,
+        150
+      ],
+      "title": "05A · Normalize generated skyline module",
+      "type": "ImageScale",
+      "widgets_values": [
+        "lanczos",
+        570,
+        365,
+        "disabled"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 8,
+      "inputs": [
+        {
+          "link": 7,
+          "name": "destination",
+          "type": "IMAGE"
+        },
+        {
+          "link": 8,
+          "name": "source",
+          "type": "IMAGE"
+        },
+        {
+          "link": null,
+          "name": "mask",
+          "type": "MASK"
+        }
+      ],
+      "mode": 0,
+      "order": 7,
+      "outputs": [
+        {
+          "links": [
+            9,
+            17,
+            24
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1850,
+        630
+      ],
+      "properties": {},
+      "size": [
+        290,
+        150
+      ],
+      "title": "06A · Reinsert into protected campaign plate",
+      "type": "ImageCompositeMasked",
+      "widgets_values": [
+        100,
+        1030,
+        false
+      ]
+    },
+    {
+      "flags": {},
+      "id": 9,
+      "inputs": [
+        {
+          "link": 9,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 8,
+      "outputs": [
+        {
+          "links": null,
+          "name": "images",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        2190,
+        630
+      ],
+      "properties": {},
+      "size": [
+        310,
+        150
+      ],
+      "title": "OUTPUT A · Dynamic localized city plate",
+      "type": "SaveImage",
+      "widgets_values": [
+        "NRC_LOCALIZE/CITY_INPUT_CITY_PLATE"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 10,
+      "inputs": [],
+      "mode": 0,
+      "order": 9,
+      "outputs": [
+        {
+          "links": [
+            12
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        1080
+      ],
+      "properties": {},
+      "size": [
+        300,
+        420
+      ],
+      "title": "01B · Supplied pose + wardrobe reference",
+      "type": "LoadImage",
+      "widgets_values": [
+        "d6a8dec1b76bc367b3d6f03080a5da8f8059db0b2936ec75a8e8ce302f7acb2a.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 11,
+      "inputs": [
+        {
+          "link": 10,
+          "name": "json_string",
+          "type": "STRING",
+          "widget": {
+            "name": "json_string"
+          }
+        }
+      ],
+      "mode": 0,
+      "order": 10,
+      "outputs": [
+        {
+          "links": [
+            11
+          ],
+          "name": "STRING",
+          "slot_index": 0,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        700,
+        1200
+      ],
+      "properties": {},
+      "size": [
+        300,
+        170
+      ],
+      "title": "03B · Extract detailed fictional-runner prompt",
+      "type": "JsonExtractString",
+      "widgets_values": [
+        "",
+        "runner_prompt"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 12,
+      "inputs": [
+        {
+          "link": 11,
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          }
+        },
+        {
+          "link": 12,
+          "name": "images",
+          "type": "IMAGE"
+        },
+        {
+          "link": null,
+          "name": "files",
+          "type": "GEMINI_INPUT_FILES"
+        }
+      ],
+      "mode": 0,
+      "order": 11,
+      "outputs": [
+        {
+          "links": [
+            13,
+            21
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "name": "STRING",
+          "slot_index": 1,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        1050,
+        1070
+      ],
+      "properties": {},
+      "size": [
+        420,
+        430
+      ],
+      "title": "04B · NANO BANANA PRO · Strategist-directed fictional runner",
+      "type": "GeminiImage2Node",
+      "widgets_values": [
+        "",
+        "gemini-3-pro-image-preview",
+        904221,
+        "fixed",
+        "auto",
+        "1K",
+        "IMAGE",
+        "Execute the supplied structured casting and art direction literally. Generate a new fictional adult runner while preserving pose, crop, garment structure, and graphic treatment from the reference. Avoid stereotypes. Always return an image."
+      ]
+    },
+    {
+      "flags": {},
+      "id": 13,
+      "inputs": [
+        {
+          "link": 13,
+          "name": "image",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 12,
+      "outputs": [
+        {
+          "links": [
+            15,
+            18,
+            22
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": [
+            14,
+            19
+          ],
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        1520,
+        1200
+      ],
+      "properties": {},
+      "size": [
+        290,
+        150
+      ],
+      "title": "05B · Remove generated studio background",
+      "type": "RecraftRemoveBackgroundNode"
+    },
+    {
+      "flags": {},
+      "id": 14,
+      "inputs": [
+        {
+          "link": 14,
+          "name": "mask",
+          "type": "MASK"
+        }
+      ],
+      "mode": 0,
+      "order": 13,
+      "outputs": [
+        {
+          "links": [
+            16
+          ],
+          "name": "MASK",
+          "slot_index": 0,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        1850,
+        1200
+      ],
+      "properties": {},
+      "size": [
+        290,
+        150
+      ],
+      "title": "06B · Convert removal mask to PNG alpha",
+      "type": "InvertMask"
+    },
+    {
+      "flags": {},
+      "id": 15,
+      "inputs": [
+        {
+          "link": 15,
+          "name": "images",
+          "type": "IMAGE"
+        },
+        {
+          "link": 16,
+          "name": "mask",
+          "type": "MASK"
+        }
+      ],
+      "mode": 0,
+      "order": 14,
+      "outputs": [],
+      "pos": [
+        2180,
+        1170
+      ],
+      "properties": {},
+      "size": [
+        310,
+        170
+      ],
+      "title": "OUTPUT B · Dynamic runner with alpha",
+      "type": "SaveImageWithAlpha",
+      "widgets_values": [
+        "NRC_LOCALIZE/CITY_INPUT_RUNNER_ALPHA"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 16,
+      "inputs": [
+        {
+          "link": 17,
+          "name": "destination",
+          "type": "IMAGE"
+        },
+        {
+          "link": 18,
+          "name": "source",
+          "type": "IMAGE"
+        },
+        {
+          "link": 19,
+          "name": "mask",
+          "type": "MASK"
+        }
+      ],
+      "mode": 0,
+      "order": 15,
+      "outputs": [
+        {
+          "links": [
+            20
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        2520,
+        1170
+      ],
+      "properties": {},
+      "size": [
+        310,
+        170
+      ],
+      "title": "07 · Composite dynamic persona over dynamic city",
+      "type": "ImageCompositeMasked",
+      "widgets_values": [
+        0,
+        0,
+        true
+      ]
+    },
+    {
+      "flags": {},
+      "id": 17,
+      "inputs": [
+        {
+          "link": 20,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 16,
+      "outputs": [
+        {
+          "links": null,
+          "name": "images",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        2860,
+        1170
+      ],
+      "properties": {},
+      "size": [
+        310,
+        170
+      ],
+      "title": "OUTPUT C · Dynamic Comfy composite",
+      "type": "SaveImage",
+      "widgets_values": [
+        "NRC_LOCALIZE/CITY_INPUT_COMFY_COMPOSITE"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 18,
+      "inputs": [
+        {
+          "link": 21,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 17,
+      "outputs": [
+        {
+          "links": null,
+          "name": "images",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1520,
+        1390
+      ],
+      "properties": {},
+      "size": [
+        290,
+        150
+      ],
+      "title": "QA · Raw dynamically generated runner",
+      "type": "SaveImage",
+      "widgets_values": [
+        "NRC_LOCALIZE/CITY_INPUT_RUNNER_RAW"
+      ]
+    },
+    {
+      "bgcolor": "#3c1d70",
+      "color": "#6f35cc",
+      "flags": {},
+      "id": 19,
+      "inputs": [
+        {
+          "link": 22,
+          "name": "start_frame",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 18,
+      "outputs": [
+        {
+          "links": [
+            23
+          ],
+          "name": "VIDEO",
+          "slot_index": 0,
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        1520,
+        1740
+      ],
+      "properties": {},
+      "size": [
+        470,
+        500
+      ],
+      "title": "08 · KLING 3.0 · Animate ONLY the isolated runner",
+      "type": "KlingVideoNode",
+      "widgets_values": [
+        "disabled",
+        "Animate only the isolated runner. Locked camera and locked framing. The runner performs a subtle pre-run warm-up: one controlled shoulder roll, a gentle standing side stretch, then returns to the original front-facing hands-on-hips pose. Preserve the same fictional identity, face, anatomy, body proportions, centered placement, crop, grayscale high-contrast halftone print treatment, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment. Keep motion natural, athletic, restrained, and continuous. Use a plain neutral temporary background. No environment, props, typography, new logos, wardrobe changes, scene changes, or camera movement.",
+        "background motion, moving poster, moving skyline, moving graphics, moving text, camera motion, zoom, pan, tilt, cuts, scene change, clothing change, logo change, text change, identity drift, face drift, extra people, extra limbs, missing limbs, anatomy distortion, leaving frame, jumping, running away, dramatic motion",
+        5,
+        false,
+        "kling-v3",
+        "1080p",
+        "9:16",
+        290317,
+        "fixed"
+      ]
+    },
+    {
+      "color": "#005c75",
+      "flags": {},
+      "id": 20,
+      "inputs": [
+        {
+          "link": 23,
+          "name": "video",
+          "type": "VIDEO"
+        },
+        {
+          "link": 24,
+          "name": "background_image",
+          "type": "IMAGE"
+        },
+        {
+          "link": null,
+          "name": "background_video",
+          "type": "VIDEO"
+        }
+      ],
+      "mode": 0,
+      "order": 19,
+      "outputs": [
+        {
+          "links": [
+            25
+          ],
+          "name": "VIDEO",
+          "slot_index": 0,
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        2050,
+        1850
+      ],
+      "properties": {},
+      "size": [
+        410,
+        190
+      ],
+      "title": "09 · BRIA VIDEO MATTE · Replace temporary BG with LOCKED city plate",
+      "type": "BriaVideoReplaceBackground",
+      "widgets_values": [
+        290318,
+        "fixed"
+      ]
+    },
+    {
+      "color": "#ff1616",
+      "flags": {},
+      "id": 21,
+      "inputs": [
+        {
+          "link": 25,
+          "name": "video",
+          "type": "VIDEO"
+        }
+      ],
+      "mode": 0,
+      "order": 20,
+      "outputs": [
+        {
+          "links": null,
+          "name": "video",
+          "slot_index": 0,
+          "type": "VIDEO"
+        }
+      ],
+      "pos": [
+        2520,
+        1850
+      ],
+      "properties": {},
+      "size": [
+        350,
+        210
+      ],
+      "title": "OUTPUT D · Locked-poster runner warm-up MP4",
+      "type": "SaveVideo",
+      "widgets_values": [
+        "NRC_LOCALIZE/CITY_INPUT_RUNNER_WARMUP",
+        "mp4",
+        "auto"
+      ]
+    },
+    {
+      "bgcolor": "#5b3b00",
+      "color": "#d18a00",
+      "flags": {},
+      "id": 22,
+      "inputs": [
+        {
+          "link": 26,
+          "name": "text",
+          "type": "STRING"
+        }
+      ],
+      "mode": 0,
+      "order": 21,
+      "outputs": [
+        {
+          "links": null,
+          "name": "text",
+          "slot_index": 0,
+          "type": "STRING"
+        }
+      ],
+      "pos": [
+        0,
+        1850
+      ],
+      "properties": {},
+      "size": [
+        500,
+        210
+      ],
+      "title": "OUTPUT E · Agent handoff JSON · prompts + locale + review",
+      "type": "SaveText",
+      "widgets_values": [
+        "NRC_LOCALIZE/CITY_INPUT_AGENT_HANDOFF",
+        "json"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 23,
+      "inputs": [],
+      "mode": 0,
+      "order": 22,
+      "outputs": [
+        {
+          "links": [
+            27
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        0,
+        2470
+      ],
+      "properties": {},
+      "size": [
+        300,
+        420
+      ],
+      "title": "AGENT RESULT · PARIS final localized poster",
+      "type": "LoadImage",
+      "widgets_values": [
+        "39f955f2a4628861c26b42a929b99f509c1b984d870f6d24389f97835639ca03.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 24,
+      "inputs": [
+        {
+          "link": 27,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 23,
+      "outputs": [
+        {
+          "links": null,
+          "name": "images",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        330,
+        2470
+      ],
+      "properties": {},
+      "size": [
+        300,
+        420
+      ],
+      "title": "PRESENTATION OUTPUT · PARIS",
+      "type": "PreviewImage"
+    },
+    {
+      "flags": {},
+      "id": 25,
+      "inputs": [],
+      "mode": 0,
+      "order": 24,
+      "outputs": [
+        {
+          "links": [
+            28
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        700,
+        2470
+      ],
+      "properties": {},
+      "size": [
+        300,
+        420
+      ],
+      "title": "AGENT RESULT · LONDON final localized poster",
+      "type": "LoadImage",
+      "widgets_values": [
+        "028b9a6d98b906b28f51123de203b28e6fe562a5aeb4bf7ccf6fa751b5e33814.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 26,
+      "inputs": [
+        {
+          "link": 28,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 25,
+      "outputs": [
+        {
+          "links": null,
+          "name": "images",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1030,
+        2470
+      ],
+      "properties": {},
+      "size": [
+        300,
+        420
+      ],
+      "title": "PRESENTATION OUTPUT · LONDON",
+      "type": "PreviewImage"
+    },
+    {
+      "flags": {},
+      "id": 27,
+      "inputs": [],
+      "mode": 0,
+      "order": 26,
+      "outputs": [
+        {
+          "links": [
+            29
+          ],
+          "name": "IMAGE",
+          "slot_index": 0,
+          "type": "IMAGE"
+        },
+        {
+          "links": null,
+          "name": "MASK",
+          "slot_index": 1,
+          "type": "MASK"
+        }
+      ],
+      "pos": [
+        1400,
+        2470
+      ],
+      "properties": {},
+      "size": [
+        300,
+        420
+      ],
+      "title": "AGENT RESULT · TOKYO final localized poster",
+      "type": "LoadImage",
+      "widgets_values": [
+        "d3de5794eded6d3044fce81bcbc37f1c004ae67498688d9946744679463a7c60.png"
+      ]
+    },
+    {
+      "flags": {},
+      "id": 28,
+      "inputs": [
+        {
+          "link": 29,
+          "name": "images",
+          "type": "IMAGE"
+        }
+      ],
+      "mode": 0,
+      "order": 27,
+      "outputs": [
+        {
+          "links": null,
+          "name": "images",
+          "slot_index": 0,
+          "type": "IMAGE"
+        }
+      ],
+      "pos": [
+        1730,
+        2470
+      ],
+      "properties": {},
+      "size": [
+        300,
+        420
+      ],
+      "title": "PRESENTATION OUTPUT · TOKYO",
+      "type": "PreviewImage"
+    }
+  ],
+  "version": 0.4
+}

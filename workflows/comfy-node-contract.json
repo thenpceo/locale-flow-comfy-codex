@@ -1,0 +1,197 @@
+{
+  "LoadImage": {
+    "required": [
+      "image"
+    ],
+    "optional": [],
+    "outputs": [
+      "IMAGE",
+      "MASK"
+    ]
+  },
+  "ImageCrop": {
+    "required": [
+      "image",
+      "width",
+      "height",
+      "x",
+      "y"
+    ],
+    "optional": [],
+    "outputs": [
+      "IMAGE"
+    ]
+  },
+  "FluxKontextImageScale": {
+    "required": [
+      "image"
+    ],
+    "optional": [],
+    "outputs": [
+      "IMAGE"
+    ]
+  },
+  "UNETLoader": {
+    "required": [
+      "unet_name",
+      "weight_dtype"
+    ],
+    "optional": [],
+    "outputs": [
+      "MODEL"
+    ]
+  },
+  "ModelSamplingAuraFlow": {
+    "required": [
+      "model",
+      "shift"
+    ],
+    "optional": [],
+    "outputs": [
+      "MODEL"
+    ]
+  },
+  "CFGNorm": {
+    "required": [
+      "model",
+      "strength"
+    ],
+    "optional": [
+      "pre_cfg"
+    ],
+    "outputs": [
+      "MODEL"
+    ]
+  },
+  "CLIPLoader": {
+    "required": [
+      "clip_name",
+      "type"
+    ],
+    "optional": [
+      "device"
+    ],
+    "outputs": [
+      "CLIP"
+    ]
+  },
+  "VAELoader": {
+    "required": [
+      "vae_name"
+    ],
+    "optional": [],
+    "outputs": [
+      "VAE"
+    ]
+  },
+  "TextEncodeQwenImageEditPlus": {
+    "required": [
+      "clip",
+      "prompt"
+    ],
+    "optional": [
+      "vae",
+      "image1",
+      "image2",
+      "image3"
+    ],
+    "outputs": [
+      "CONDITIONING"
+    ]
+  },
+  "FluxKontextMultiReferenceLatentMethod": {
+    "required": [
+      "conditioning",
+      "reference_latents_method"
+    ],
+    "optional": [],
+    "outputs": [
+      "CONDITIONING"
+    ]
+  },
+  "VAEEncode": {
+    "required": [
+      "pixels",
+      "vae"
+    ],
+    "optional": [],
+    "outputs": [
+      "LATENT"
+    ]
+  },
+  "KSampler": {
+    "required": [
+      "model",
+      "seed",
+      "steps",
+      "cfg",
+      "sampler_name",
+      "scheduler",
+      "positive",
+      "negative",
+      "latent_image",
+      "denoise"
+    ],
+    "optional": [],
+    "outputs": [
+      "LATENT"
+    ]
+  },
+  "VAEDecode": {
+    "required": [
+      "samples",
+      "vae"
+    ],
+    "optional": [],
+    "outputs": [
+      "IMAGE"
+    ]
+  },
+  "ImageScale": {
+    "required": [
+      "image",
+      "upscale_method",
+      "width",
+      "height",
+      "crop"
+    ],
+    "optional": [],
+    "outputs": [
+      "IMAGE"
+    ]
+  },
+  "ImageCompositeMasked": {
+    "required": [
+      "destination",
+      "source",
+      "x",
+      "y",
+      "resize_source"
+    ],
+    "optional": [
+      "mask"
+    ],
+    "outputs": [
+      "IMAGE"
+    ]
+  },
+  "SaveImage": {
+    "required": [
+      "images",
+      "filename_prefix"
+    ],
+    "optional": [],
+    "outputs": [
+      "IMAGE"
+    ]
+  },
+  "InvertMask": {
+    "required": [
+      "mask"
+    ],
+    "optional": [],
+    "outputs": [
+      "MASK"
+    ]
+  }
+}

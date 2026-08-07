@@ -1,0 +1,286 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "campaign-background.png"
+    },
+    "_meta": {
+      "title": "Protected campaign background"
+    }
+  },
+  "2": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "width": 570,
+      "height": 365,
+      "x": 100,
+      "y": 1030
+    },
+    "_meta": {
+      "title": "Crop skyline window only"
+    }
+  },
+  "3": {
+    "class_type": "FluxKontextImageScale",
+    "inputs": {
+      "image": [
+        "2",
+        0
+      ]
+    }
+  },
+  "4": {
+    "class_type": "UNETLoader",
+    "inputs": {
+      "unet_name": "qwen_image_edit_2511_fp8mixed.safetensors",
+      "weight_dtype": "default"
+    }
+  },
+  "5": {
+    "class_type": "ModelSamplingAuraFlow",
+    "inputs": {
+      "model": [
+        "4",
+        0
+      ],
+      "shift": 3.1
+    }
+  },
+  "6": {
+    "class_type": "CFGNorm",
+    "inputs": {
+      "model": [
+        "5",
+        0
+      ],
+      "strength": 1,
+      "pre_cfg": false
+    }
+  },
+  "7": {
+    "class_type": "CLIPLoader",
+    "inputs": {
+      "clip_name": "qwen_2.5_vl_7b_fp8_scaled.safetensors",
+      "type": "qwen_image",
+      "device": "default"
+    }
+  },
+  "8": {
+    "class_type": "VAELoader",
+    "inputs": {
+      "vae_name": "qwen_image_vae.safetensors"
+    }
+  },
+  "9": {
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "inputs": {
+      "clip": [
+        "7",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ],
+      "image1": [
+        "3",
+        0
+      ],
+      "prompt": "Edit only the flat red Seattle skyline silhouette in this crop. Replace it with an unmistakable Paris skyline led by the Eiffel Tower with a restrained Montparnasse Tower counterpoint. Use the exact same graphic language: pure signal-red flat vector silhouette anchored to the bottom edge, pure black background, hard clean edges. Preserve any existing white grid lines and any red circular arc exactly. No text, no letters, no numbers, no logos, no photography, no gradients, no texture, no people."
+    },
+    "_meta": {
+      "title": "City skyline edit prompt"
+    }
+  },
+  "10": {
+    "class_type": "TextEncodeQwenImageEditPlus",
+    "inputs": {
+      "clip": [
+        "7",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ],
+      "image1": [
+        "3",
+        0
+      ],
+      "prompt": "generated text, letters, numbers, logo, swoosh, watermark, signature, gradients, photography, clouds, flag, tourist postcard collage, cultural costume, faux national pattern, blurry edges, hybrid landmarks"
+    },
+    "_meta": {
+      "title": "Exclusions"
+    }
+  },
+  "11": {
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "inputs": {
+      "conditioning": [
+        "9",
+        0
+      ],
+      "reference_latents_method": "index_timestep_zero"
+    }
+  },
+  "12": {
+    "class_type": "FluxKontextMultiReferenceLatentMethod",
+    "inputs": {
+      "conditioning": [
+        "10",
+        0
+      ],
+      "reference_latents_method": "index_timestep_zero"
+    }
+  },
+  "13": {
+    "class_type": "VAEEncode",
+    "inputs": {
+      "pixels": [
+        "3",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    }
+  },
+  "14": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": [
+        "6",
+        0
+      ],
+      "seed": 498017,
+      "steps": 20,
+      "cfg": 4,
+      "sampler_name": "euler",
+      "scheduler": "simple",
+      "positive": [
+        "11",
+        0
+      ],
+      "negative": [
+        "12",
+        0
+      ],
+      "latent_image": [
+        "13",
+        0
+      ],
+      "denoise": 1
+    }
+  },
+  "15": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": [
+        "14",
+        0
+      ],
+      "vae": [
+        "8",
+        0
+      ]
+    }
+  },
+  "16": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "15",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 570,
+      "height": 365,
+      "crop": "disabled"
+    }
+  },
+  "17": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": [
+        "1",
+        0
+      ],
+      "source": [
+        "16",
+        0
+      ],
+      "x": 100,
+      "y": 1030,
+      "resize_source": false
+    },
+    "_meta": {
+      "title": "Reinsert skyline crop into protected background"
+    }
+  },
+  "18": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "17",
+        0
+      ],
+      "filename_prefix": "NRC_LOCALIZE/CITY_PLATE"
+    }
+  },
+  "19": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "runner-cutout.png"
+    },
+    "_meta": {
+      "title": "Transparent runner"
+    }
+  },
+  "20": {
+    "class_type": "InvertMask",
+    "inputs": {
+      "mask": [
+        "19",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "Convert LoadImage transparency mask to source opacity"
+    }
+  },
+  "21": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": [
+        "17",
+        0
+      ],
+      "source": [
+        "19",
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "resize_source": false,
+      "mask": [
+        "20",
+        0
+      ]
+    }
+  },
+  "22": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "21",
+        0
+      ],
+      "filename_prefix": "NRC_LOCALIZE/COMFY_PREVIEW"
+    }
+  }
+}

@@ -1,0 +1,212 @@
+{
+  "1": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "1f9c5ed325dfbc5169a37f5e8fdbb340d9b3eb52847eaec2f0ebcd44bf3103c0.png"
+    },
+    "_meta": {
+      "title": "01 · LOCKED campaign background"
+    }
+  },
+  "2": {
+    "class_type": "ImageCrop",
+    "inputs": {
+      "image": [
+        "1",
+        0
+      ],
+      "width": 570,
+      "height": 365,
+      "x": 100,
+      "y": 1030
+    },
+    "_meta": {
+      "title": "02 · Isolate variable skyline module"
+    }
+  },
+  "3": {
+    "class_type": "GeminiImage2Node",
+    "inputs": {
+      "images": [
+        "2",
+        0
+      ],
+      "prompt": "Edit only the flat red Seattle skyline silhouette in this crop. Replace it with a recognizable Mexico City skyline with Monumento a la Revolución and Torre Latinoamericana. Use the exact same graphic language: pure signal-red flat vector silhouette anchored to the bottom edge, pure black background, hard clean edges. Preserve all existing white grid lines and the red circular arc exactly. Do not add text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, or postcard motifs. Avoid sombreros, Day of the Dead makeup, papel picado filler. Return one clean edited image.",
+      "model": "gemini-3-pro-image-preview",
+      "seed": 498017,
+      "aspect_ratio": "auto",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "system_prompt": "You edit one protected module in a campaign system. Follow the landmark substitution literally, preserve non-skyline pixels, never invent typography or logos, and always return an image."
+    },
+    "_meta": {
+      "title": "03A · NANO BANANA PRO · CIUDAD DE MÉXICO skyline"
+    }
+  },
+  "4": {
+    "class_type": "ImageScale",
+    "inputs": {
+      "image": [
+        "3",
+        0
+      ],
+      "upscale_method": "lanczos",
+      "width": 570,
+      "height": 365,
+      "crop": "disabled"
+    },
+    "_meta": {
+      "title": "04A · Normalize generated module"
+    }
+  },
+  "5": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": [
+        "1",
+        0
+      ],
+      "source": [
+        "4",
+        0
+      ],
+      "x": 100,
+      "y": 1030,
+      "resize_source": false
+    },
+    "_meta": {
+      "title": "05A · Reinsert into protected campaign plate"
+    }
+  },
+  "6": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "5",
+        0
+      ],
+      "filename_prefix": "NRC_LOCALIZE/MEXICO_CITY_ES_CITY_PLATE"
+    },
+    "_meta": {
+      "title": "OUTPUT A · Localized city plate"
+    }
+  },
+  "7": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "d6a8dec1b76bc367b3d6f03080a5da8f8059db0b2936ec75a8e8ce302f7acb2a.png"
+    },
+    "_meta": {
+      "title": "01B · Supplied pose + wardrobe reference"
+    }
+  },
+  "8": {
+    "class_type": "GeminiImage2Node",
+    "inputs": {
+      "images": [
+        "7",
+        0
+      ],
+      "prompt": "Create a NEW fictional person from this reference: Casting brief: a fictional adult Mexican woman runner, contemporary Mexico City running-club casting, confident and direct. Preserve the exact front-facing hands-on-hips running pose, camera angle, body scale, crop, centered silhouette, grayscale high-contrast halftone print texture, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment. Change the person's identity and facial features; do not merely recolor the supplied person. Keep styling contemporary and globally credible, with no national costume, flag, landmark, souvenir styling, caricature, text additions, extra logos, jewelry additions, extra limbs, or anatomy changes. Place the full isolated figure against a plain neutral studio background with a clean continuous silhouette. Return one image.",
+      "model": "gemini-3-pro-image-preview",
+      "seed": 904221,
+      "aspect_ratio": "auto",
+      "resolution": "1K",
+      "response_modalities": "IMAGE",
+      "system_prompt": "Generate a new fictional adult runner while preserving pose, crop, garment structure, and graphic treatment from the reference. Avoid stereotypes. Always return an image."
+    },
+    "_meta": {
+      "title": "03B · NANO BANANA PRO · CIUDAD DE MÉXICO fictional runner"
+    }
+  },
+  "9": {
+    "class_type": "RecraftRemoveBackgroundNode",
+    "inputs": {
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "04B · Remove generated studio background"
+    }
+  },
+  "10": {
+    "class_type": "InvertMask",
+    "inputs": {
+      "mask": [
+        "9",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "05B · Convert removal mask to PNG alpha"
+    }
+  },
+  "11": {
+    "class_type": "SaveImageWithAlpha",
+    "inputs": {
+      "images": [
+        "9",
+        0
+      ],
+      "mask": [
+        "10",
+        0
+      ],
+      "filename_prefix": "NRC_LOCALIZE/MEXICO_CITY_ES_RUNNER_ALPHA"
+    },
+    "_meta": {
+      "title": "OUTPUT B · Localized runner with alpha"
+    }
+  },
+  "12": {
+    "class_type": "ImageCompositeMasked",
+    "inputs": {
+      "destination": [
+        "5",
+        0
+      ],
+      "source": [
+        "9",
+        0
+      ],
+      "x": 0,
+      "y": 0,
+      "resize_source": true,
+      "mask": [
+        "9",
+        1
+      ]
+    },
+    "_meta": {
+      "title": "06 · Composite localized persona over localized city"
+    }
+  },
+  "13": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "12",
+        0
+      ],
+      "filename_prefix": "NRC_LOCALIZE/MEXICO_CITY_ES_COMFY_COMPOSITE"
+    },
+    "_meta": {
+      "title": "OUTPUT C · Comfy validation composite"
+    }
+  },
+  "14": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "images": [
+        "8",
+        0
+      ],
+      "filename_prefix": "NRC_LOCALIZE/MEXICO_CITY_ES_RUNNER_RAW"
+    },
+    "_meta": {
+      "title": "QA · Raw localized runner generation"
+    }
+  }
+}

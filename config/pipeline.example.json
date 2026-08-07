@@ -1,0 +1,25 @@
+{
+  "workflowId": "21f30a93-e0fb-43d3-a620-e2065174cec5",
+  "workflowUrl": "https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5",
+  "apiWorkflow": "workflows/nano-banana-pro-full-localizer.api.json",
+  "localesSource": "data/localizations.json",
+  "defaultLocales": ["paris-fr", "london-en", "tokyo-ja"],
+  "comfyOutputNodeIds": {
+    "cityPlate": "9",
+    "runnerAlpha": "15",
+    "composite": "17",
+    "runnerRaw": "18",
+    "warmupVideo": "21",
+    "strategistJson": "22"
+  },
+  "stages": {
+    "static": {
+      "skill": "graphic-design",
+      "guide": "agent-prompts/graphic-design.md"
+    },
+    "motion": {
+      "skill": "hyperframes",
+      "guide": "agent-prompts/hyperframes.md"
+    }
+  }
+}

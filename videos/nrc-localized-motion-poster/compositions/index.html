@@ -1,0 +1,287 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="UTF-8" /></head>
+  <body>
+    <template>
+      <style>
+        @font-face {
+          font-family: "Six Caps";
+          src: url("assets/SixCaps.ttf") format("truetype");
+          font-style: normal;
+          font-weight: 400;
+          font-display: block;
+        }
+
+        #root {
+          --ink: #050505;
+          --paper: #f5f5f2;
+          --signal: #ff1616;
+          --frame: #1c1c1c;
+          --display: "Arial Narrow", "Helvetica Neue", Arial, sans-serif;
+          --edge-face: "Six Caps", "Arial Narrow", sans-serif;
+          --utility: "Helvetica Neue", Arial, sans-serif;
+          position: absolute;
+          inset: 0;
+          width: 1204px;
+          height: 1720px;
+          overflow: hidden;
+          isolation: isolate;
+          color: var(--paper);
+          background: var(--frame);
+          font-family: var(--utility);
+        }
+
+        *, *::before, *::after { box-sizing: border-box; }
+
+        .native-stage {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 1055px;
+          height: 1491px;
+          transform: scale(1.1412322275, 1.1535881958);
+          transform-origin: 0 0;
+        }
+
+        .plate-stage { z-index: 0; }
+        .back-stage { z-index: 1; }
+        .front-stage { z-index: 3; }
+
+        .plate {
+          position: absolute;
+          inset: 0;
+          width: 1055px;
+          height: 1491px;
+          object-fit: fill;
+          user-select: none;
+        }
+
+        .runner-wrap {
+          position: absolute;
+          z-index: 2;
+          inset: 0;
+          width: 1204px;
+          height: 1720px;
+          overflow: hidden;
+        }
+
+        .runner-video {
+          position: absolute;
+          inset: 0;
+          display: block;
+          width: 1204px;
+          height: 1720px;
+          object-fit: fill;
+          transform: scale(1.13);
+          transform-origin: 50% 93.3%;
+          filter: contrast(1.04);
+        }
+
+        .runwild {
+          position: absolute;
+          left: 176px;
+          top: 348px;
+          width: 302px;
+          height: 430px;
+          overflow: visible;
+        }
+
+        .runwild text {
+          fill: var(--paper);
+          font: 900 148px/.8 var(--display);
+          letter-spacing: -.08em;
+          text-transform: uppercase;
+        }
+
+        .go {
+          position: absolute;
+          left: 634px;
+          top: 226px;
+          color: transparent;
+          -webkit-text-stroke: 2px rgba(245,245,242,.95);
+          font: 900 287px/.8 var(--display);
+          letter-spacing: -.15em;
+          transform: scaleX(.66);
+          transform-origin: 0 0;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+
+        .edge {
+          position: absolute;
+          top: 20px;
+          height: 1448px;
+          width: 66px;
+          overflow: hidden;
+          color: var(--paper);
+          font: 400 34px/.84 var(--edge-face);
+          font-synthesis: none;
+          letter-spacing: .015em;
+          text-transform: uppercase;
+          white-space: nowrap;
+          writing-mode: vertical-rl;
+          text-orientation: mixed;
+          opacity: .98;
+        }
+
+        .edge.left { left: 22px; transform: rotate(180deg); }
+        .edge.right { right: 22px; }
+        .edge-track { display: block; will-change: transform; }
+
+        .topline {
+          position: absolute;
+          top: 27px;
+          left: 92px;
+          width: 871px;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          font: 400 40px/.82 var(--edge-face);
+          font-synthesis: none;
+          letter-spacing: .015em;
+          transform: scaleX(.86);
+          transform-origin: 50% 50%;
+          text-transform: uppercase;
+        }
+
+        .city-lockup {
+          position: absolute;
+          right: 102px;
+          top: 675px;
+          width: 260px;
+          text-align: right;
+          text-transform: uppercase;
+          filter: drop-shadow(0 2px 0 #000);
+        }
+
+        .city {
+          color: var(--signal);
+          font: 900 37px/.9 var(--display);
+          letter-spacing: -.04em;
+          white-space: nowrap;
+        }
+
+        .support {
+          margin-top: 8px;
+          color: var(--paper);
+          font: 750 14px/1.05 var(--utility);
+          letter-spacing: .04em;
+          white-space: nowrap;
+        }
+
+        .bottom-meta {
+          position: absolute;
+          left: 106px;
+          bottom: 26px;
+          width: 843px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          font: 700 11px/1.05 var(--utility);
+          letter-spacing: .08em;
+          text-transform: uppercase;
+        }
+
+        .location {
+          max-width: 690px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .status {
+          flex: none;
+          padding: 5px 7px 4px;
+          color: #050505;
+          background: var(--signal);
+          letter-spacing: .03em;
+        }
+      </style>
+
+      <main
+        id="root"
+        data-composition-id="nrc-static-faithful-motion"
+        data-start="0"
+        data-duration="5.041667"
+        data-fps="24"
+        data-width="1204"
+        data-height="1720"
+        aria-label="New York localized running motion poster"
+      >
+        <div class="native-stage plate-stage">
+          <img id="nrc-plate" class="plate" src="assets/city-plate.png" alt="New York campaign city plate" />
+        </div>
+
+        <section class="native-stage back-stage" aria-hidden="true">
+          <svg class="runwild" viewBox="0 0 320 430" preserveAspectRatio="xMinYMin meet">
+            <defs>
+              <filter id="nrc-wave" x="-20%" y="-10%" width="140%" height="120%">
+                <feTurbulence type="fractalNoise" baseFrequency="0.013 0.045" numOctaves="1" seed="11" result="noise" />
+                <feDisplacementMap in="SourceGraphic" in2="noise" scale="19" xChannelSelector="R" yChannelSelector="G" />
+              </filter>
+              <clipPath id="nrc-run-clip"><rect id="nrc-run-reveal" x="0" y="0" width="320" height="150" /></clipPath>
+              <clipPath id="nrc-wild-clip"><rect id="nrc-wild-reveal" x="0" y="150" width="320" height="190" /></clipPath>
+            </defs>
+            <text id="nrc-run" x="0" y="139" filter="url(#nrc-wave)" clip-path="url(#nrc-run-clip)">RUN</text>
+            <text id="nrc-wild" x="0" y="288" filter="url(#nrc-wave)" clip-path="url(#nrc-wild-clip)">WILD</text>
+          </svg>
+          <div id="nrc-go" class="go">GO</div>
+        </section>
+
+        <div class="runner-wrap">
+          <video
+            id="nrc-runner-alpha"
+            class="runner-video clip"
+            src="assets/runner-warmup-alpha.webm"
+            data-start="0"
+            data-duration="5.041667"
+            data-media-start="0"
+            data-track-index="1"
+            muted
+            playsinline
+            preload="auto"
+            data-layout-allow-overflow
+          ></video>
+        </div>
+
+        <section class="native-stage front-stage">
+          <div id="nrc-topline" class="topline" data-layout-allow-overflow>NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT.</div>
+          <div class="edge left" data-layout-allow-overflow><span id="nrc-edge-left" class="edge-track" data-layout-allow-overflow>NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT.</span></div>
+          <div class="edge right" data-layout-allow-overflow><span id="nrc-edge-right" class="edge-track" data-layout-allow-overflow>NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT. &nbsp; NIKE.COM — YOUR ONLY LIMIT IS YOU. JUST DO IT.</span></div>
+          <div class="city-lockup">
+            <div id="nrc-city" class="city">NEW YORK</div>
+            <div id="nrc-support" class="support">THE CITY RUNS WITH YOU</div>
+          </div>
+          <div id="nrc-bottom-meta" class="bottom-meta">
+            <div class="location" data-layout-allow-overflow>FICTIONAL DEMO ROUTE · REPLACE BEFORE PRODUCTION</div>
+            <div class="status">COMFY + AGENT · QA</div>
+          </div>
+        </section>
+      </main>
+
+      <script src="assets/gsap.min.js"></script>
+      <script>
+        (() => {
+          window.__timelines = window.__timelines || {};
+          const tl = gsap.timeline({ paused: true });
+
+          tl.fromTo('#nrc-run-reveal', { attr: { width: 0 } }, { attr: { width: 320 }, duration: 0.46, ease: 'power4.out' }, 0.18);
+          tl.fromTo('#nrc-wild-reveal', { attr: { width: 0 } }, { attr: { width: 320 }, duration: 0.52, ease: 'power4.out' }, 0.58);
+          tl.fromTo('#nrc-go', { clipPath: 'inset(0 100% 0 0)', autoAlpha: 0 }, { clipPath: 'inset(0 0% 0 0)', autoAlpha: 1, duration: 0.64, ease: 'power4.out' }, 0.92);
+
+          tl.fromTo('#nrc-topline', { clipPath: 'inset(100% 0 0 0)', autoAlpha: 0 }, { clipPath: 'inset(0% 0 0 0)', autoAlpha: 1, duration: 0.52, ease: 'power4.out' }, 0.14);
+          tl.fromTo('#nrc-city', { clipPath: 'inset(0 100% 0 0)', autoAlpha: 0 }, { clipPath: 'inset(0 0% 0 0)', autoAlpha: 1, duration: 0.42, ease: 'power4.out' }, 1.66);
+          tl.fromTo('#nrc-support', { y: 18, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.42, ease: 'power3.out' }, 1.92);
+          tl.fromTo('#nrc-bottom-meta', { y: 24, autoAlpha: 0 }, { y: 0, autoAlpha: 1, duration: 0.48, ease: 'power3.out' }, 2.28);
+
+          tl.fromTo('#nrc-edge-left', { yPercent: -8 }, { yPercent: -28, duration: 5.041667, ease: 'none' }, 0);
+          tl.fromTo('#nrc-edge-right', { yPercent: -24 }, { yPercent: -4, duration: 5.041667, ease: 'none' }, 0);
+
+          window.__timelines['nrc-static-faithful-motion'] = tl;
+          tl.seek(0);
+        })();
+      </script>
+    </template>
+  </body>
+</html>
