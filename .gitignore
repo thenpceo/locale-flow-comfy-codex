@@ -36,6 +36,7 @@ videos/*/assets/runner-warmup.mp4
 !assets/processed/london-en-alpha-mask.png
 !assets/processed/tokyo-ja-alpha-mask.png
 !assets/processed/new-york-en-alpha-mask.png
+!assets/processed/skyline-module-input.png
 !exports/previews/paris-fr.png
 !exports/previews/london-en.png
 !exports/previews/tokyo-ja.png
