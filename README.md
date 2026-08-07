@@ -19,6 +19,8 @@ deliverables, before manifests and QA records, without turning the workflow into
 
 - One city input becomes a structured landmark, casting, locale, exclusion, and review brief.
 - Nano Banana Pro generates the skyline module and a new fictional runner in separate branches.
+- Skyline planning uses a target-city landmark whitelist, explicitly erases the Seattle source silhouette,
+  and reserves the far-left visibility zone so signature architecture survives the runner composite.
 - Recraft creates an editable runner alpha.
 - Kling 3.0 animates **only the isolated runner**.
 - Bria attaches the locked city plate **after** Kling, protecting poster geometry from video drift.
@@ -79,6 +81,10 @@ The saved graph is for inspection and single-city demos. Codex uses
 The exact latest editor graph is also checked in as
 `workflows/nike-run-localizer-codex-orchestrated-multi-locale-latest.json` so it can be inspected, versioned,
 or imported without relying on a cloud link.
+
+The current skyline contract requires the primary landmark in the far-left 3–22% of the crop and a continuous
+bottom-anchored skyline through at least 72% of its width. Landmark names are a closed whitelist; the original
+Seattle skyline and Space Needle must be erased for every non-Seattle locale.
 
 ## Output contract
 

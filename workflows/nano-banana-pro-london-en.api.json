@@ -31,13 +31,13 @@
         "2",
         0
       ],
-      "prompt": "Edit only the flat red Seattle skyline silhouette in this crop. Replace it with a recognizable London skyline with Elizabeth Tower and the London Eye as clean separate silhouettes. Use the exact same graphic language: pure signal-red flat vector silhouette anchored to the bottom edge, pure black background, hard clean edges. Preserve all existing white grid lines and the red circular arc exactly. Do not add text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, or postcard motifs. Avoid red buses, royal guards, Union Jack texture. Return one clean edited image.",
+      "prompt": "TARGET CITY: LONDON. SOURCE ERASURE: completely remove the entire supplied Seattle skyline, including the Space Needle and every source building; do not preserve, reinterpret, or blend any Seattle structure into the result. Rebuild the skyline using only this closed landmark whitelist: a recognizable London skyline with Elizabeth Tower and the London Eye as clean separate silhouettes. Do not add any landmark that is not named in that direction. COMPOSITION MAP: create a continuous signal-red building silhouette touching the bottom edge from x=0% through at least x=72%; the lower-left corner must be solid red with no empty black gap. Place the primary signature landmark fully visible in the far-left x=3–22% zone, not cropped; place any secondary landmark in x=24–42%; use varied low and mid-rise city-specific filler buildings through x=68%. The centered runner will obscure the middle and right, so the city's most recognizable architecture must read clearly at far left. Use the exact campaign language: pure signal-red flat vector silhouette, pure black background, hard clean edges. Preserve every existing white grid line and red circular arc exactly. Do not add text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, national symbols, or postcard motifs. Avoid red buses, royal guards, Union Jack texture. Return one clean edited image.",
       "model": "gemini-3-pro-image-preview",
       "seed": 498017,
       "aspect_ratio": "auto",
       "resolution": "1K",
       "response_modalities": "IMAGE",
-      "system_prompt": "You edit one protected module in a campaign system. Follow the landmark substitution literally, preserve non-skyline pixels, never invent typography or logos, and always return an image."
+      "system_prompt": "You edit one protected skyline module in a campaign system. The input is a Seattle source crop and may contain the Space Needle. Completely erase every source building before rebuilding. Unless TARGET CITY is Seattle, the Space Needle is forbidden. Treat the named target-city landmarks as a closed whitelist: never invent, retain, or borrow a landmark from another city. Obey the percentage-based left-edge composition map literally, preserve every protected grid and arc pixel, never invent typography or logos, and always return an image."
     },
     "_meta": {
       "title": "03A · NANO BANANA PRO · LONDON skyline"

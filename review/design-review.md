@@ -31,6 +31,6 @@ The three-city proof is presentation-ready as a governed workflow demonstration.
 | Typography and hierarchy | 4.4/5 | Six Caps unifies the outer rail; regional headline fonts remain a production decision. |
 | Cultural specificity and care | 4.0/5 | Market briefs are explicit and non-stereotyped, but require local validation. |
 | Inspectability and governance | 4.8/5 | Raw runner, mask, RGBA, composite, QA, and human gates are exposed. |
-| Production readiness and provenance | 4.6/5 | Saved version-7, 28-node strategist graph, reproducible assets, source hashes, and downloadable evidence are present. |
+| Production readiness and provenance | 4.7/5 | Saved version-2 canonical 28-node graph, geographic landmark whitelist, source-erasure rule, left-edge composition contract, reproducible assets, source hashes, and downloadable evidence are present. |
 
 Total: **91/100 — presentation-ready prototype, human review required.**

@@ -4,12 +4,17 @@ Open the new, unambiguous interview graph in Comfy Cloud:
 
 https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5
 
-The saved version 7 graph contains one red `CITY INPUT · CHANGE ONLY THIS` node. Its value feeds a Gemini
+The saved workflow record is now on version 2 of the new canonical graph. It contains one red
+`CITY INPUT · CHANGE ONLY THIS` node. Its value feeds a Gemini
 localization-strategist node, which returns strict JSON containing a detailed skyline prompt, fictional-runner
 prompt, probable locale, copy direction, and explicit human-review gates. Two core JSON extractor nodes route
 the appropriate prompts into separate Nano Banana Pro image branches.
 
 The skyline branch edits only a protected 570 × 365 module and reinserts it into the locked campaign plate.
+Its strategist treats the source Seattle silhouette as material to erase, validates a closed whitelist of
+target-city landmarks, places the primary landmark in the far-left 3–22% visibility zone, and requires one
+continuous red skyline mass across the lower-left 72%. This prevents source-city leakage such as the Space
+Needle appearing in New York and avoids empty lower-left compositions hidden by the runner.
 The person branch generates a new fictional runner from the supplied pose and wardrobe reference, then Recraft
 removes the studio background. The graph makes alpha polarity explicit, saves the runner RGBA, composites the
 new person over the new city plate, and saves the validation composite.

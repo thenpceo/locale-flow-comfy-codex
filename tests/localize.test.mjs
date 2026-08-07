@@ -41,3 +41,15 @@ test('native canvas matches supplied assets', () => {
   assert.deepEqual([manifest.canvas.width, manifest.canvas.height], [1055, 1491]);
   assert.deepEqual(manifest.generation.protectedRegion, { x: 100, y: 1030, width: 570, height: 365 });
 });
+
+test('city-driven skyline prompt prevents source-city leakage and protects left-edge visibility', () => {
+  const workflow = JSON.parse(fs.readFileSync(new URL('../workflows/nano-banana-pro-full-localizer.api.json', import.meta.url)));
+  const strategist = workflow['4'].inputs.system_prompt;
+  const generator = workflow['6'].inputs.system_prompt;
+
+  for (const phrase of ['Space Needle', 'closed whitelist', 'x=3–22%', 'x=0% through at least x=72%']) {
+    assert.match(strategist, new RegExp(phrase.replace(/[–%]/g, match => `\\${match}`)));
+  }
+  assert.match(generator, /Space Needle is forbidden/);
+  assert.match(generator, /no empty lower-left gap/);
+});

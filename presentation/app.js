@@ -3,7 +3,7 @@ const markets = {
     city: 'PARIS',
     locale: 'PARIS · FRANCE · fr-FR',
     headline: 'LIBRE DE COURIR',
-    skyline: 'Eiffel Tower + Montparnasse Tower',
+    skyline: 'Paris-only whitelist · Eiffel Tower far left · continuous lower edge',
     casting: 'Casting brief: fictional French runner · North African heritage · local review required',
     description: 'Eiffel Tower + Montparnasse Tower. Casting brief: a fictional French runner of North African heritage. French draft copy awaiting local review.'
   },
@@ -11,7 +11,7 @@ const markets = {
     city: 'LONDON',
     locale: 'LONDON · UNITED KINGDOM · en-GB',
     headline: 'RUN FREE',
-    skyline: 'Elizabeth Tower + London Eye',
+    skyline: 'London-only whitelist · Elizabeth Tower far left · continuous lower edge',
     casting: 'Casting brief: fictional British South Asian runner · local review required',
     description: 'Elizabeth Tower + London Eye. Casting brief: a fictional British South Asian runner. UK-English draft copy awaiting brand review.'
   },
@@ -19,7 +19,7 @@ const markets = {
     city: '東京',
     locale: '東京 · 日本 · ja-JP',
     headline: '街を駆けろ',
-    skyline: 'Tokyo Skytree + Tokyo Tower',
+    skyline: 'Tokyo-only whitelist · Skytree far left · continuous lower edge',
     casting: 'Casting brief: fictional Japanese runner · local review required',
     description: 'Tokyo Skytree + Tokyo Tower. Casting brief: a fictional Japanese runner. Japanese draft copy awaiting native-speaker review.'
   }
@@ -30,7 +30,7 @@ const stages = {
     index: '01 / 06',
     title: 'Generated city plate',
     path: id => `../assets/generated/${id}/city-plate.png`,
-    note: 'Nano Banana Pro edits a protected 570 × 365 skyline crop and Comfy reinserts it into the untouched campaign plate.'
+    note: 'The strategist erases the Seattle source skyline, closes the prompt to verified target-city landmarks, and reserves the far-left 3–22% for the signature silhouette before Comfy reinserts the crop.'
   },
   raw: {
     index: '02 / 06',
