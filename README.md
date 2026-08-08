@@ -225,6 +225,10 @@ and checksums. These remain human decisions:
 
 The JSON handoff keeps those states visible instead of calling a market “approved” because generation ran.
 
+The latest real production regression covered Mexico City, Sydney, and Shanghai. It found and fixed provider
+concurrency, output isolation, generated-accessory, and motion-branding defects. See the
+[three-locale QA report](review/locale-qa-2026-08-08.md) for the final media evidence and review gates.
+
 ## Repository map
 
 ```text
