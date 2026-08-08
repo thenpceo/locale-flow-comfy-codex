@@ -53,3 +53,11 @@ test('city-driven skyline prompt prevents source-city leakage and protects left-
   assert.match(generator, /Space Needle is forbidden/);
   assert.match(generator, /no empty lower-left gap/);
 });
+
+test('multi-locale planning bounds paid graph concurrency and records retry policy', () => {
+  const pipeline = JSON.parse(fs.readFileSync(new URL('../config/pipeline.example.json', import.meta.url)));
+  assert.equal(pipeline.batchPolicy.maxConcurrentLocales, 2);
+  assert.equal(pipeline.batchPolicy.maxRetryAttempts, 1);
+  assert.equal(pipeline.batchPolicy.retryBackoffSeconds, 60);
+  assert.ok(pipeline.batchPolicy.retryableErrors.includes('429'));
+});

@@ -25,8 +25,11 @@ When the user asks to localize the campaign to one or more cities/locales:
 - Canonical batch-execution graph:
   `workflows/nano-banana-pro-full-localizer.api.json`
 - For one locale, a saved-workflow run is acceptable.
-- For two or more independent locales, clone the API graph once per locale and call the Comfy batch
-  tool once. Do not submit them sequentially.
+- For two or more independent locales, clone the API graph once per locale and submit bounded Comfy
+  batches of no more than `config/pipeline.example.json#batchPolicy.maxConcurrentLocales` graphs.
+  Wait for each bounded batch to reach terminal state before submitting the next one. This preserves
+  batch fan-out without sending three full Gemini/Nano Banana/Kling/Bria graphs into the same provider
+  allowance at once.
 - Before submission, set node `1.value` to the city and replace the six filename prefixes with the
   locale id:
   - node 9: `NRC_LOCALIZE/<LOCALE>_CITY_PLATE`
@@ -38,6 +41,8 @@ When the user asks to localize the campaign to one or more cities/locales:
 - Paid generation requires the active Comfy spend gate. Quote the estimate and obtain explicit approval.
 - A submit is not completion. Wait for the batch/job terminal state, retrieve outputs, and download the
   original files into `runs/<run-id>/<locale>/comfy/`.
+- If a locale fails with a configured retryable provider error such as HTTP 429, wait the configured
+  backoff and retry that failed locale once. Never retry a completed locale or the whole batch.
 - Record prompt ids, batch id, workflow id/version, timestamps, model names, checksums, and source paths
   in each locale's `handoff.json`.
 

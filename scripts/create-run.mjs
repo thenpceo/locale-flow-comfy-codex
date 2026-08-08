@@ -18,6 +18,7 @@ if (!requested.length) {
 }
 
 const all = JSON.parse(fs.readFileSync(path.join(root, 'data/localizations.json'), 'utf8'));
+const pipeline = JSON.parse(fs.readFileSync(path.join(root, 'config/pipeline.example.json'), 'utf8'));
 const byId = new Map(all.map(item => [item.id, item]));
 const missing = requested.filter(id => !byId.has(id));
 if (missing.length) {
@@ -91,6 +92,14 @@ const run = {
   createdAt: now.toISOString(),
   status: 'planned',
   locales: requested,
+  batches: Array.from(
+    { length: Math.ceil(requested.length / pipeline.batchPolicy.maxConcurrentLocales) },
+    (_, index) => requested.slice(
+      index * pipeline.batchPolicy.maxConcurrentLocales,
+      (index + 1) * pipeline.batchPolicy.maxConcurrentLocales
+    )
+  ),
+  batchPolicy: pipeline.batchPolicy,
   workflowId: '21f30a93-e0fb-43d3-a620-e2065174cec5',
   workflowVersion: 7,
   apiWorkflow: 'workflows/nano-banana-pro-full-localizer.api.json',

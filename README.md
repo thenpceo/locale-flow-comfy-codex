@@ -27,7 +27,7 @@ deliverables, before manifests and QA records, without turning the workflow into
 - Comfy saves five media outputs plus one JSON handoff per locale.
 - Codex invokes a graphic-design agent for exact localized copy and static export.
 - Codex invokes a HyperFrames agent for staggered type, perimeter marquee, and final MP4.
-- Multiple locales run as one Codex-managed batch with separate cost, retry, asset, and review records.
+- Multiple locales run as Codex-managed bounded batches with separate cost, retry, asset, and review records.
 
 ## Architecture
 
@@ -36,7 +36,7 @@ flowchart TD
     U["User asks Codex for cities/locales"] --> P["Codex run planner"]
     P --> B{"One or many locales?"}
     B -->|One| C["Comfy per-locale media graph"]
-    B -->|Many| CB["One Comfy batch submission"]
+    B -->|Many| CB["Bounded Comfy batches · max 2 locales"]
     CB --> C
     C --> S["City plate PNG"]
     C --> A["Runner alpha PNG"]
@@ -157,7 +157,7 @@ Codex will then:
 
 1. clone the API graph for each locale;
 2. set the city and locale-specific output prefixes;
-3. use one Comfy batch call for two or more independent markets;
+3. use bounded Comfy batch calls of at most two full graphs, waiting between batches;
 4. wait for terminal completion;
 5. download and checksum original outputs;
 6. complete each handoff manifest;
@@ -207,6 +207,7 @@ Bria nodes. Prices change; Codex must use the live estimator and obtain explicit
 - Never rerun a paid job because a download failed.
 - Never rerun Kling because HyperFrames failed.
 - Retry only the failed locale and smallest failed stage.
+- A provider 429 gets one retry after a 60-second backoff; successful sibling locales are never rerun.
 - A submitted prompt is not a completed output; terminal job or batch status is required.
 
 ## QA and governance

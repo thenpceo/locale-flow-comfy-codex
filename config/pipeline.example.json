@@ -4,6 +4,12 @@
   "apiWorkflow": "workflows/nano-banana-pro-full-localizer.api.json",
   "localesSource": "data/localizations.json",
   "defaultLocales": ["paris-fr", "london-en", "tokyo-ja"],
+  "batchPolicy": {
+    "maxConcurrentLocales": 2,
+    "retryableErrors": ["429", "Rate Limit Exceeded"],
+    "maxRetryAttempts": 1,
+    "retryBackoffSeconds": 60
+  },
   "comfyOutputNodeIds": {
     "cityPlate": "9",
     "runnerAlpha": "15",

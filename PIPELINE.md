@@ -59,7 +59,8 @@ localized typography is not generated in Comfy.
 
 1. Plan: `npm run pipeline:plan -- --locales paris-fr,london-en,tokyo-ja`.
 2. Codex estimates and confirms Comfy spend.
-3. Codex submits one batch for all requested locales.
+3. Codex divides the locale list into bounded batches of at most two full graphs, waiting for each
+   batch to finish before starting the next. The user still supplies one locale-list prompt.
 4. Codex waits for terminal completion and downloads originals into the generated run directory.
 5. Codex completes each `handoff.json` against `contracts/handoff.schema.json`.
 6. Codex invokes `graphic-design` once per locale.
@@ -69,6 +70,8 @@ localized typography is not generated in Comfy.
 ## Retry semantics
 
 - Retry only the failed locale and smallest failed stage.
+- For HTTP 429 / `Rate Limit Exceeded`, wait 60 seconds and retry the failed locale once.
+- Never run more than two full locale graphs concurrently; each graph fans out into several partner APIs.
 - Never rerun a completed paid Comfy job because a download or downstream agent failed.
 - A Comfy queue count is not evidence of completion; terminal job/batch status is.
 - A static agent failure must not invalidate the owned Comfy outputs.
@@ -78,4 +81,3 @@ localized typography is not generated in Comfy.
 
 Mechanical checks can pass automatically. Language, cultural specificity, casting, landmark accuracy,
 anatomy, resemblance, brand, usage rights, and legal approval remain named human decisions.
-
