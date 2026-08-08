@@ -84,3 +84,12 @@ test('Kling motion keeps the lower garment unbranded', () => {
   assert.match(workflow['19'].inputs['multi_shot.prompt'], /only permitted lettering or brand mark/);
   assert.match(workflow['19'].inputs['multi_shot.negative_prompt'], /shorts logo/);
 });
+
+test('localized motion preserves CJK scoping and static city wrapping', () => {
+  const motion = fs.readFileSync(new URL('../videos/nrc-localized-motion-poster/compositions/index.html', import.meta.url), 'utf8');
+  assert.match(motion, /\.runwild\.cjk text/);
+  assert.match(motion, /\.city-lockup\.cjk \.city/);
+  assert.doesNotMatch(motion, /#root\.cjk/);
+  const cityRule = motion.match(/\.city \{([\s\S]*?)\}/)?.[1] || '';
+  assert.doesNotMatch(cityRule, /white-space:\s*nowrap/);
+});
