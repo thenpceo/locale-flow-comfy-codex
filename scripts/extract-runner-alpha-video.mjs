@@ -6,16 +6,24 @@ import sharp from 'sharp';
 import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
-const inputVideo = path.join(root, 'assets/generated/new-york-en/runner-warmup.mp4');
-const lockedPlate = path.join(root, 'assets/generated/new-york-en/city-plate.png');
-const outputVideo = path.join(root, 'videos/nrc-localized-motion-poster/assets/runner-warmup-alpha.webm');
+const args = process.argv.slice(2);
+const localeFlag = args.indexOf('--locale');
+const outputFlag = args.indexOf('--output');
+const localeId = localeFlag >= 0 ? args[localeFlag + 1] : 'new-york-en';
+const inputVideo = path.join(root, `assets/generated/${localeId}/runner-warmup.mp4`);
+const lockedPlate = path.join(root, `assets/generated/${localeId}/city-plate.png`);
+const outputVideo = outputFlag >= 0
+  ? path.resolve(args[outputFlag + 1])
+  : localeFlag >= 0
+    ? path.join(root, `assets/generated/${localeId}/runner-warmup-alpha.webm`)
+    : path.join(root, 'videos/nrc-localized-motion-poster/assets/runner-warmup-alpha.webm');
 const width = 1204;
 const height = 1720;
 const threshold = 32;
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), 'nrc-runner-alpha-'));
 
 if (!fs.existsSync(inputVideo) || !fs.existsSync(lockedPlate)) {
-  throw new Error('Missing New York motion video or locked city plate.');
+  throw new Error(`Missing ${localeId} motion video or locked city plate.`);
 }
 
 execFileSync('ffmpeg', [

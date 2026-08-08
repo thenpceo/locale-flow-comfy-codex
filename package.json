@@ -8,6 +8,7 @@
     "pipeline:plan": "node scripts/create-run.mjs",
     "validate:workflow": "node scripts/validate-comfy-workflow.mjs",
     "render": "node scripts/render.mjs",
+    "render:motion-locales": "node scripts/render-motion-locales.mjs",
     "qa": "node scripts/qa.mjs",
     "test": "node --test tests/*.test.mjs",
     "proof": "npm run assets:presentation && npm run build:workflow && npm run validate:workflow && npm test && npm run render && npm run qa"
