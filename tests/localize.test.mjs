@@ -77,3 +77,10 @@ test('runner generation forbids invented apparel, accessories, and lettering', (
     assert.match(combined, new RegExp(phrase));
   }
 });
+
+test('Kling motion keeps the lower garment unbranded', () => {
+  const workflow = JSON.parse(fs.readFileSync(new URL('../workflows/nano-banana-pro-full-localizer.api.json', import.meta.url)));
+  assert.match(workflow['19'].inputs['multi_shot.prompt'], /solid-black unbranded lower garment/);
+  assert.match(workflow['19'].inputs['multi_shot.prompt'], /only permitted lettering or brand mark/);
+  assert.match(workflow['19'].inputs['multi_shot.negative_prompt'], /shorts logo/);
+});
