@@ -188,6 +188,19 @@ The current New York reference project lives in
 `videos/nrc-localized-motion-poster/`. Its verified final reference render is
 `videos/nrc-localized-motion-poster/renders/new-york-motion-poster.mp4`.
 
+To create the alpha intermediates, localize the deterministic typography, validate every composition, and
+render several completed Comfy locales in one command:
+
+```bash
+npm run render:motion-locales -- --locales mexico-city-es,sydney-en,shanghai-zh
+```
+
+The checked-in QA batch includes the final
+[Mexico City](videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4),
+[Sydney](videos/nrc-localized-motion-poster/renders/sydney-en-motion-poster.mp4), and
+[Shanghai](videos/nrc-localized-motion-poster/renders/shanghai-zh-motion-poster.mp4) motion posters plus a
+[render manifest](videos/nrc-localized-motion-poster/renders/locale-motion-manifest.json).
+
 ## Included Codex skills
 
 The repo contains three project-local skills under `.agents/skills/`:
@@ -226,7 +239,8 @@ and checksums. These remain human decisions:
 The JSON handoff keeps those states visible instead of calling a market “approved” because generation ran.
 
 The latest real production regression covered Mexico City, Sydney, and Shanghai. It found and fixed provider
-concurrency, output isolation, generated-accessory, and motion-branding defects. See the
+concurrency, output isolation, generated-accessory, motion-branding, CJK-scoping, and static-to-motion lockup
+defects. See the
 [three-locale QA report](review/locale-qa-2026-08-08.md) for the final media evidence and review gates.
 
 ## Repository map
