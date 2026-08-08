@@ -31,16 +31,16 @@ anatomy, wardrobe, resemblance, and rights.
 
 ## Production split
 
-Comfy regenerates the protected skyline crop, generates a fictional runner, removes the runner
-background, exports an alpha asset, and produces a validation composite. The agent then reassembles the
-two Comfy assets as a layered poster so typography can sit both behind and in front of the runner. Copy,
-layout, and review labels remain deterministic. The supplied green-screen image is retained only as a
-fallback reference.
+Comfy regenerates the protected skyline crop and generates a fictional runner on a required, uniform
+`#00FF00` plate with enough clearance to preserve the whole visible body during still and motion work.
+A tolerance-based chroma mask exports the alpha asset and validation composite. Kling animates that green-screen
+runner; HyperFrames keys it over the approved static plate. Copy, layout, and review labels remain
+deterministic.
 
-## Three completed markets
+## Three current completed markets
 
-Paris, London, and Tokyo. Seven additional city briefs remain packaged as future workflow inputs rather
-than completed outputs.
+Cairo, Rio de Janeiro, and San Francisco. Nine additional city briefs remain packaged as future workflow
+inputs or earlier production evidence rather than current presentation outputs.
 
 Translations are creative drafts, not market-approved copy. All event/location lines are explicitly
 fictional placeholders and must be replaced before any external use.

@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const processed = path.join(root, 'assets', 'processed');
-const markets = ['paris-fr', 'london-en', 'tokyo-ja'];
+const markets = ['cairo-ar', 'rio-pt', 'san-francisco-en'];
 fs.mkdirSync(processed, { recursive: true });
 
 function ffmpeg(args, label) {

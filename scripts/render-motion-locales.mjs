@@ -10,7 +10,7 @@ const localizations = JSON.parse(fs.readFileSync(path.join(root, 'data/localizat
 const byId = new Map(localizations.map(locale => [locale.id, locale]));
 const args = process.argv.slice(2);
 const localesFlag = args.indexOf('--locales');
-const requested = (localesFlag >= 0 ? args[localesFlag + 1] : 'mexico-city-es,sydney-en,shanghai-zh')
+const requested = (localesFlag >= 0 ? args[localesFlag + 1] : 'cairo-ar,rio-pt,san-francisco-en')
   .split(',')
   .map(value => value.trim())
   .filter(Boolean);
@@ -45,8 +45,15 @@ function localizeComposition(source, locale) {
       .replace('<svg class="runwild"', '<svg class="runwild cjk"')
       .replace('<div class="city-lockup">', '<div class="city-lockup cjk">');
   }
+  if (locale.direction === 'rtl') {
+    output = output
+      .replace('<svg class="runwild"', '<svg class="runwild rtl-hidden"')
+      .replace('<div class="city-lockup">', '<div class="city-lockup rtl">')
+      .replace('class="rtl-headline"', 'class="rtl-headline show"');
+  }
   output = replaceText(output, 'nrc-run', line1);
   output = replaceText(output, 'nrc-wild', line2);
+  output = replaceText(output, 'nrc-rtl-headline', locale.headline);
   output = replaceText(output, 'nrc-topline', edgeUnit);
   output = replaceText(output, 'nrc-edge-left', edgeTrack);
   output = replaceText(output, 'nrc-edge-right', edgeTrack);
@@ -92,10 +99,10 @@ for (const localeId of requested) {
       .replaceAll('"FICTIONAL DEMO ROUTE · REPLACE BEFORE PRODUCTION"', `"${locale.locationLine}"`)
   );
 
-  execFileSync('npx', ['--yes', 'hyperframes@0.7.100', 'check'], { cwd: temp, stdio: 'inherit' });
+  execFileSync('npx', ['--yes', 'hyperframes@0.7.101', 'check'], { cwd: temp, stdio: 'inherit' });
   const output = path.join(renderDir, `${localeId}-motion-poster.mp4`);
   execFileSync('npx', [
-    '--yes', 'hyperframes@0.7.100', 'render',
+    '--yes', 'hyperframes@0.7.101', 'render',
     '--quality', 'high', '--fps', '24', '--strict', '--output', output
   ], { cwd: temp, stdio: 'inherit' });
 

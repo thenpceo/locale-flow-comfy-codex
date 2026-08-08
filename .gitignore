@@ -9,6 +9,8 @@ node_modules/
 runs/*
 !runs/.gitkeep
 output/
+review/final-motion-frames/
+review/motion-frames/
 assets/source/*
 references/*
 assets/generated/*
@@ -38,6 +40,7 @@ assets/generated/mexico-city-es/*
 !assets/generated/mexico-city-es/comfy-composite.png
 !assets/generated/mexico-city-es/runner-alpha.png
 !assets/generated/mexico-city-es/runner-raw.png
+!assets/generated/mexico-city-es/runner-greenscreen-input.png
 !assets/generated/mexico-city-es/runner-warmup.mp4
 !assets/generated/mexico-city-es/runner-motion-alpha-preview.webm
 !assets/generated/mexico-city-es/handoff.json
@@ -74,9 +77,16 @@ assets/generated/shanghai-zh/*
 !exports/previews/mexico-city-es.png
 !exports/previews/sydney-en.png
 !exports/previews/shanghai-zh.png
+!exports/previews/cairo-ar.png
+!exports/previews/rio-pt.png
+!exports/previews/san-francisco-en.png
 !exports/city-localization-contact-sheet.png
 !videos/nrc-localized-motion-poster/renders/
 !videos/nrc-localized-motion-poster/renders/new-york-motion-poster.mp4
+!videos/nrc-localized-motion-poster/renders/cairo-ar-motion-poster.mp4
+!videos/nrc-localized-motion-poster/renders/rio-pt-motion-poster.mp4
+!videos/nrc-localized-motion-poster/renders/san-francisco-en-motion-poster.mp4
+!videos/nrc-localized-motion-poster/renders/locale-motion-manifest.json
 !videos/nrc-localized-motion-poster/snapshots/
 !videos/nrc-localized-motion-poster/snapshots/contact-sheet.jpg
 !videos/nrc-localized-motion-poster/snapshots/static-vs-motion-final.png

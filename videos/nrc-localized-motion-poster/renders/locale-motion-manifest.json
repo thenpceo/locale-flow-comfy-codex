@@ -1,9 +1,36 @@
 {
-  "renderedAt": "2026-08-08T00:49:55.050Z",
+  "renderedAt": "2026-08-08T18:33:26.805Z",
   "results": [
+    {
+      "locale": "cairo-ar",
+      "output": "videos/nrc-localized-motion-poster/renders/cairo-ar-motion-poster.mp4",
+      "codec": "h264",
+      "width": 1204,
+      "height": 1720,
+      "fps": "24/1",
+      "duration": 5.041667
+    },
     {
       "locale": "mexico-city-es",
       "output": "videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4",
+      "codec": "h264",
+      "width": 1204,
+      "height": 1720,
+      "fps": "24/1",
+      "duration": 5.041667
+    },
+    {
+      "locale": "rio-pt",
+      "output": "videos/nrc-localized-motion-poster/renders/rio-pt-motion-poster.mp4",
+      "codec": "h264",
+      "width": 1204,
+      "height": 1720,
+      "fps": "24/1",
+      "duration": 5.041667
+    },
+    {
+      "locale": "san-francisco-en",
+      "output": "videos/nrc-localized-motion-poster/renders/san-francisco-en-motion-poster.mp4",
       "codec": "h264",
       "width": 1204,
       "height": 1720,

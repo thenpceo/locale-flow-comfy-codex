@@ -31,7 +31,7 @@
         "2",
         0
       ],
-      "prompt": "TARGET CITY: NEW YORK. SOURCE ERASURE: completely remove the entire supplied Seattle skyline, including the Space Needle and every source building; do not preserve, reinterpret, or blend any Seattle structure into the result. Rebuild the skyline using only this closed landmark whitelist: a recognizable New York skyline with the Empire State Building and One World Trade Center separated clearly. Do not add any landmark that is not named in that direction. COMPOSITION MAP: create a continuous signal-red building silhouette touching the bottom edge from x=0% through at least x=72%; the lower-left corner must be solid red with no empty black gap. Place the primary signature landmark fully visible in the far-left x=3–22% zone, not cropped; place any secondary landmark in x=24–42%; use varied low and mid-rise city-specific filler buildings through x=68%. The centered runner will obscure the middle and right, so the city's most recognizable architecture must read clearly at far left. Use the exact campaign language: pure signal-red flat vector silhouette, pure black background, hard clean edges. Preserve every existing white grid line and red circular arc exactly. Do not add text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, national symbols, or postcard motifs. Avoid Statue of Liberty close-up, yellow taxis, Times Square collage. Return one clean edited image.",
+      "prompt": "TARGET CITY: NEW YORK. SOURCE ERASURE: completely remove the entire supplied Seattle skyline, including the Space Needle and every source building; do not preserve, reinterpret, or blend any Seattle structure into the result. Rebuild the skyline using only this closed landmark whitelist: a recognizable New York skyline with the Empire State Building and One World Trade Center separated clearly. Do not add any landmark that is not named in that direction. COMPOSITION MAP: create a continuous signal-red building silhouette touching the bottom edge from x=0% through at least x=72%; the lower-left corner must be solid red with no empty black gap. Place the primary signature landmark fully visible in the far-left x=3–22% zone, not cropped; place any secondary landmark in x=24–42%; use varied low and mid-rise city-specific filler buildings through x=68%. The centered runner will obscure the middle and right, so the city's most recognizable architecture must read clearly at far left. Use the exact campaign language: pure signal-red flat vector silhouette, pure black background, hard clean edges. Every pixel that is not a protected white grid line or red artwork must remain pure black; never create a white, gray, transparent, or colored canvas, panel, rectangle, backdrop, or skyline-module background. Preserve every existing white grid line and red circular arc exactly. Do not add text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, national symbols, or postcard motifs. Avoid Statue of Liberty close-up, yellow taxis, Times Square collage. Return one clean edited image.",
       "model": "gemini-3-pro-image-preview",
       "seed": 498017,
       "aspect_ratio": "auto",
@@ -94,10 +94,10 @@
   "7": {
     "class_type": "LoadImage",
     "inputs": {
-      "image": "d6a8dec1b76bc367b3d6f03080a5da8f8059db0b2936ec75a8e8ce302f7acb2a.png"
+      "image": "1745d4955b7c06d9bd24b2eaf5226b1c0f246ba618de76151be3bbe4c94be891.png"
     },
     "_meta": {
-      "title": "01B · Supplied pose + wardrobe reference"
+      "title": "01B · Supplied GREEN-SCREEN pose + wardrobe reference"
     }
   },
   "8": {
@@ -107,28 +107,34 @@
         "7",
         0
       ],
-      "prompt": "Create a NEW fictional person from this reference: Casting brief: a fictional adult Afro-Latina New York woman runner, contemporary borough running-club casting, confident and direct. Preserve the exact front-facing hands-on-hips running pose, camera angle, body scale, crop, centered silhouette, grayscale high-contrast halftone print texture, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment. Change the person's identity and facial features; do not merely recolor the supplied person. Preserve the supplied wardrobe exactly. The existing NIKE word treatment is the only permitted lettering. Do not add city names, running-club text, invented logos, headbands, hats, glasses, watches, jewelry, bags, or any other accessory. Avoid national costume, flags, landmarks, souvenir styling, caricature, extra limbs, or anatomy changes. Place the full isolated figure against a plain neutral studio background with a clean continuous silhouette. Return one image.",
+      "prompt": "Create a NEW fictional person from this reference: Casting brief: a fictional adult Afro-Latina New York woman runner, contemporary borough running-club casting, confident and direct. Preserve the exact front-facing hands-on-hips running pose, camera angle, body scale, centered placement, grayscale high-contrast halftone print texture, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment. Change the person's identity and facial features; do not merely recolor the supplied person. Preserve the supplied wardrobe exactly. The existing NIKE word treatment is the only permitted lettering. Do not add city names, running-club text, invented logos, headbands, hats, glasses, watches, jewelry, bags, or any other accessory. Avoid national costume, flags, landmarks, souvenir styling, caricature, extra limbs, or anatomy changes. GREEN-SCREEN CONTRACT: return one full continuous figure against a perfectly uniform pure chroma-green #00FF00 background. Keep at least 8% green clearance above the head, 12% green clearance on both sides, and enough green below the lower garment that no hip, leg, hand, elbow, hair, or garment edge touches or leaves the frame. No floor, shadow, gradient, texture, green spill, holes, cropped anatomy, or background object. Return one image.",
       "model": "gemini-3-pro-image-preview",
       "seed": 904221,
       "aspect_ratio": "auto",
       "resolution": "1K",
       "response_modalities": "IMAGE",
-      "system_prompt": "Generate a new fictional adult runner while preserving pose, crop, garment structure, and graphic treatment from the reference. Preserve the supplied wardrobe exactly. The existing NIKE word treatment is the only permitted lettering. Do not add city names, running-club text, invented logos, headbands, hats, glasses, watches, jewelry, bags, or any other accessory. Avoid stereotypes. Always return an image."
+      "system_prompt": "Execute the casting direction literally. Generate a new fictional adult runner while preserving pose, body scale, garment structure, and graphic treatment. Preserve the supplied wardrobe exactly. The existing NIKE word treatment is the only permitted lettering. Return a complete continuous silhouette on perfectly uniform pure chroma green #00FF00 with generous green clearance around every body and garment edge. Never crop a hip, leg, hand, elbow, hair, or garment edge. Do not add shadows, floor, gradients, texture, green spill, city names, running-club text, invented logos, accessories, or stereotypes. Always return an image."
     },
     "_meta": {
-      "title": "03B · NANO BANANA PRO · NEW YORK fictional runner"
+      "title": "03B · NANO BANANA PRO · NEW YORK GREEN-SCREEN runner"
     }
   },
   "9": {
-    "class_type": "RecraftRemoveBackgroundNode",
+    "class_type": "ColorToMask",
     "inputs": {
-      "image": [
-        "8",
+      "images": [
+        "18",
         0
-      ]
+      ],
+      "invert": false,
+      "red": 0,
+      "green": 255,
+      "blue": 0,
+      "threshold": 80,
+      "per_batch": 16
     },
     "_meta": {
-      "title": "04B · Remove generated studio background"
+      "title": "04B · CHROMA KEY · Tolerance-based green background mask"
     }
   },
   "10": {
@@ -136,18 +142,18 @@
     "inputs": {
       "mask": [
         "9",
-        1
+        0
       ]
     },
     "_meta": {
-      "title": "05B · Convert removal mask to PNG alpha"
+      "title": "05B · Invert chroma mask to protected foreground alpha"
     }
   },
   "11": {
     "class_type": "SaveImageWithAlpha",
     "inputs": {
       "images": [
-        "9",
+        "18",
         0
       ],
       "mask": [
@@ -157,7 +163,7 @@
       "filename_prefix": "NRC_LOCALIZE/NEW_YORK_EN_RUNNER_ALPHA"
     },
     "_meta": {
-      "title": "OUTPUT B · Localized runner with alpha"
+      "title": "OUTPUT B · Chroma-keyed runner with alpha"
     }
   },
   "12": {
@@ -168,19 +174,19 @@
         0
       ],
       "source": [
-        "9",
+        "18",
         0
       ],
       "x": 0,
       "y": 0,
       "resize_source": true,
       "mask": [
-        "9",
-        1
+        "10",
+        0
       ]
     },
     "_meta": {
-      "title": "06 · Composite localized persona over localized city"
+      "title": "06 · Composite chroma-keyed persona over localized city"
     }
   },
   "13": {
@@ -200,13 +206,75 @@
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "8",
+        "18",
         0
       ],
       "filename_prefix": "NRC_LOCALIZE/NEW_YORK_EN_RUNNER_RAW"
     },
     "_meta": {
       "title": "QA · Raw localized runner generation"
+    }
+  },
+  "15": {
+    "class_type": "KlingVideoNode",
+    "inputs": {
+      "multi_shot": "disabled",
+      "multi_shot.prompt": "Animate only the fictional runner on the supplied pure chroma-green screen. Locked camera, locked 9:16 framing, and constant body scale. Keep generous green clearance around the entire person in every frame; no hand, elbow, hair, hip, leg, foot, or garment edge may touch or leave the frame. MOTION BEATS: first perform a relaxed standing side-body stretch, gently lengthening one side and then the other; then transition into a compact light run-in-place with a small rhythmic athletic bounce; finish still jogging lightly with a subtle natural smile. Preserve the same fictional identity, face, anatomy, body proportions, centered placement, grayscale high-contrast halftone print treatment, black athletic top with the supplied NIKE word treatment, white forearm bands, and completely solid-black unbranded lower garment. The supplied NIKE word treatment on the top is the only permitted lettering or brand mark; do not add a swoosh, emblem, logo, text, stripe, or highlight anywhere else on the clothing. Keep motion natural, athletic, restrained, continuous, and presentation-friendly. The background must remain perfectly uniform pure chroma green #00FF00 with no shadow, gradient, texture, floor, environment, props, typography, wardrobe changes, cuts, or camera movement.",
+      "multi_shot.negative_prompt": "cropped body, cropped legs, cropped feet, cropped hands, cropped elbows, body touching frame, leaving frame, green holes in body, green spill, shadow, floor, background variation, background motion, moving poster, moving skyline, moving graphics, moving text, camera motion, zoom, pan, tilt, cuts, scene change, clothing change, logo change, text change, new swoosh, shorts logo, lower-garment mark, added branding, white emblem on shorts, identity drift, face drift, frown, exaggerated smile, extra people, extra limbs, missing limbs, anatomy distortion, running away, jumping high, dramatic motion",
+      "multi_shot.duration": 5,
+      "generate_audio": false,
+      "model": "kling-v3",
+      "model.resolution": "1080p",
+      "model.aspect_ratio": "9:16",
+      "seed": 290317,
+      "start_frame": [
+        "18",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "07 · KLING 3.0 · Animate ONLY the GREEN-SCREEN runner"
+    }
+  },
+  "16": {
+    "class_type": "BriaVideoGreenScreen",
+    "inputs": {
+      "video": [
+        "15",
+        0
+      ],
+      "green_shade": "chroma_green",
+      "seed": 290318
+    },
+    "_meta": {
+      "title": "08 · BRIA VIDEO GREEN SCREEN · Normalize matte to exact #00FF00"
+    }
+  },
+  "17": {
+    "class_type": "SaveVideo",
+    "inputs": {
+      "video": [
+        "16",
+        0
+      ],
+      "filename_prefix": "NRC_LOCALIZE/NEW_YORK_EN_RUNNER_WARMUP",
+      "format": "mp4",
+      "codec": "auto"
+    },
+    "_meta": {
+      "title": "OUTPUT D · Green-screen runner warm-up for HyperFrames"
+    }
+  },
+  "18": {
+    "class_type": "ImageRemoveAlpha+",
+    "inputs": {
+      "image": [
+        "8",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "03C · Normalize generated RGBA to RGB before chroma key"
     }
   }
 }

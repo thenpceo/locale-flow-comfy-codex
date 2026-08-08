@@ -46,7 +46,7 @@
       "model.top_p": 0.9,
       "model.max_output_tokens": 4096,
       "seed": 44017,
-      "system_prompt": "You are a localization strategist for a global running campaign. The user supplies only a city name, which is a hard geographic constraint. Return valid minified JSON and nothing else, with exactly these string keys: skyline_prompt, runner_prompt, locale, copy_direction, human_review. Before answering, internally verify that every proposed landmark is physically located in the requested city. If uncertain, use fewer landmarks; never substitute a famous structure from another city. The skyline_prompt must: (1) begin with TARGET CITY and name exactly one primary and at most one secondary built landmark as a closed whitelist; (2) order complete erasure of the supplied Seattle skyline, Space Needle, and every source building before reconstruction, except that Space Needle may appear only when the requested city is Seattle; (3) forbid retaining, blending, or inventing any structure outside the whitelist; (4) require a continuous signal-red skyline touching the bottom edge from x=0% through at least x=72%, with a solid lower-left corner and no empty black gap; (5) place the primary landmark fully visible and uncropped in the far-left x=3–22% zone, any secondary landmark in x=24–42%, and varied low/mid-rise city-specific filler buildings through x=68%, because a centered runner will cover the middle and right; and (6) require pure signal-red flat vector silhouette, pure black background, hard clean edges, preservation of every white grid line and red circular arc, and no text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, national symbols, costume, or postcard collage. The runner_prompt must create a NEW fictional adult runner with a credible contemporary local running-club casting direction. It must change identity and facial features rather than recoloring the reference, avoid guessing a single ethnicity from the city, and avoid stereotypes, national costume, flags, landmarks, souvenir styling, caricature, extra limbs, or anatomy changes. It must preserve the exact front-facing hands-on-hips pose, camera angle, body scale, crop, centered silhouette, grayscale high-contrast halftone print texture, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment, against a plain neutral studio background. It must preserve the supplied wardrobe exactly and explicitly forbid city names, running-club lettering, invented logos, headbands, hats, glasses, watches, jewelry, bags, or any other accessory. The existing NIKE word treatment is the only permitted lettering. locale must be a likely BCP-47 locale for the city but acknowledge ambiguity in human_review when relevant. copy_direction must be a short locally appropriate creative direction, not final translated copy. human_review must name language, cultural, casting, landmark, brand, and rights checks. Do not use markdown fences."
+      "system_prompt": "You are a localization strategist for a global running campaign. The user supplies only a city name, which is a hard geographic constraint. Return valid minified JSON and nothing else, with exactly these string keys: skyline_prompt, runner_prompt, locale, copy_direction, human_review. Before answering, internally verify that every proposed landmark is physically located in the requested city. If uncertain, use fewer landmarks; never substitute a famous structure from another city. The skyline_prompt must: (1) begin with TARGET CITY and name exactly one primary and at most one secondary built landmark as a closed whitelist; (2) order complete erasure of the supplied Seattle skyline, Space Needle, and every source building before reconstruction, except that Space Needle may appear only when the requested city is Seattle; (3) forbid retaining, blending, or inventing any structure outside the whitelist; (4) require a continuous signal-red skyline touching the bottom edge from x=0% through at least x=72%, with a solid lower-left corner and no empty black gap; (5) place the primary landmark fully visible and uncropped in the far-left x=3–22% zone, any secondary landmark in x=24–42%, and varied low/mid-rise city-specific filler buildings through x=68%, because a centered runner will cover the middle and right; and (6) require pure signal-red flat vector silhouette, pure black background, hard clean edges, preservation of every white grid line and red circular arc, and no text, letters, numbers, logos, people, flags, photography, gradients, texture, shadows, national symbols, costume, or postcard collage. It must explicitly say that every non-grid, non-red pixel stays pure black and forbid any white, gray, transparent, or colored canvas, panel, rectangle, backdrop, or skyline-module background. The runner_prompt must create a NEW fictional adult runner with a credible contemporary local running-club casting direction. It must change identity and facial features rather than recoloring the reference, avoid guessing a single ethnicity from the city, and avoid stereotypes, national costume, flags, landmarks, souvenir styling, caricature, extra limbs, or anatomy changes. It must preserve the exact front-facing hands-on-hips pose, camera angle, body scale, centered silhouette, grayscale high-contrast halftone print texture, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment. It must preserve the supplied wardrobe exactly and explicitly forbid city names, running-club lettering, invented logos, headbands, hats, glasses, watches, jewelry, bags, or any other accessory. The existing NIKE word treatment is the only permitted lettering. It must require one full continuous figure on a perfectly uniform pure chroma-green #00FF00 background, at least 8% clearance above the head and 12% on both sides, with green below the lower garment, and no body or garment edge touching the frame. It must forbid floor, shadow, gradient, texture, green spill, holes, and cropped hips, legs, hands, elbows, hair, or garment edges. locale must be a likely BCP-47 locale for the city but acknowledge ambiguity in human_review when relevant. copy_direction must be a short locally appropriate creative direction, not final translated copy. human_review must name language, cultural, casting, landmark, brand, and rights checks. Do not use markdown fences."
     },
     "_meta": {
       "title": "01 · LOCALIZATION STRATEGIST LLM · City to structured brief"
@@ -138,10 +138,10 @@
   "10": {
     "class_type": "LoadImage",
     "inputs": {
-      "image": "d6a8dec1b76bc367b3d6f03080a5da8f8059db0b2936ec75a8e8ce302f7acb2a.png"
+      "image": "1745d4955b7c06d9bd24b2eaf5226b1c0f246ba618de76151be3bbe4c94be891.png"
     },
     "_meta": {
-      "title": "01B · Supplied pose + wardrobe reference"
+      "title": "01B · Supplied GREEN-SCREEN pose + wardrobe reference"
     }
   },
   "11": {
@@ -173,22 +173,28 @@
       "aspect_ratio": "auto",
       "resolution": "1K",
       "response_modalities": "IMAGE",
-      "system_prompt": "Execute the supplied structured casting and art direction literally. Generate a new fictional adult runner while preserving pose, crop, garment structure, and graphic treatment from the reference. Preserve the supplied wardrobe exactly. The existing NIKE word treatment is the only permitted lettering. Do not add city names, running-club text, invented logos, headbands, hats, glasses, watches, jewelry, bags, or any other accessory. Avoid stereotypes. Always return an image."
+      "system_prompt": "Execute the supplied casting direction literally. Generate a new fictional adult runner while preserving pose, body scale, garment structure, and graphic treatment. Preserve the supplied wardrobe exactly. The existing NIKE word treatment is the only permitted lettering. Return a complete continuous silhouette on perfectly uniform pure chroma green #00FF00 with generous green clearance around every body and garment edge. Never crop a hip, leg, hand, elbow, hair, or garment edge. Do not add shadows, floor, gradients, texture, green spill, city names, running-club text, invented logos, accessories, or stereotypes. Always return an image."
     },
     "_meta": {
-      "title": "04B · NANO BANANA PRO · Strategist-directed fictional runner"
+      "title": "04B · NANO BANANA PRO · Strategist-directed GREEN-SCREEN runner"
     }
   },
   "13": {
-    "class_type": "RecraftRemoveBackgroundNode",
+    "class_type": "ColorToMask",
     "inputs": {
-      "image": [
-        "12",
+      "images": [
+        "29",
         0
-      ]
+      ],
+      "invert": false,
+      "red": 0,
+      "green": 255,
+      "blue": 0,
+      "threshold": 80,
+      "per_batch": 16
     },
     "_meta": {
-      "title": "05B · Remove generated studio background"
+      "title": "05B · CHROMA KEY · Tolerance-based green background mask"
     }
   },
   "14": {
@@ -196,18 +202,18 @@
     "inputs": {
       "mask": [
         "13",
-        1
+        0
       ]
     },
     "_meta": {
-      "title": "06B · Convert removal mask to PNG alpha"
+      "title": "06B · Invert chroma mask to protected foreground alpha"
     }
   },
   "15": {
     "class_type": "SaveImageWithAlpha",
     "inputs": {
       "images": [
-        "13",
+        "29",
         0
       ],
       "mask": [
@@ -217,7 +223,7 @@
       "filename_prefix": "NRC_LOCALIZE/CITY_INPUT_RUNNER_ALPHA"
     },
     "_meta": {
-      "title": "OUTPUT B · Dynamic runner with alpha"
+      "title": "OUTPUT B · Chroma-keyed runner with alpha"
     }
   },
   "16": {
@@ -228,19 +234,19 @@
         0
       ],
       "source": [
-        "13",
+        "29",
         0
       ],
       "x": 0,
       "y": 0,
       "resize_source": true,
       "mask": [
-        "13",
-        1
+        "14",
+        0
       ]
     },
     "_meta": {
-      "title": "07 · Composite dynamic persona over dynamic city"
+      "title": "07 · Composite chroma-keyed persona over dynamic city"
     }
   },
   "17": {
@@ -260,7 +266,7 @@
     "class_type": "SaveImage",
     "inputs": {
       "images": [
-        "12",
+        "29",
         0
       ],
       "filename_prefix": "NRC_LOCALIZE/CITY_INPUT_RUNNER_RAW"
@@ -273,8 +279,8 @@
     "class_type": "KlingVideoNode",
     "inputs": {
       "multi_shot": "disabled",
-      "multi_shot.prompt": "Animate only the isolated runner. Locked camera and locked framing. The runner performs a subtle pre-run warm-up: one controlled shoulder roll, a gentle standing side stretch, then returns to the original front-facing hands-on-hips pose. Preserve the same fictional identity, face, anatomy, body proportions, centered placement, crop, grayscale high-contrast halftone print treatment, black athletic top with the supplied NIKE word treatment, white forearm bands, and completely solid-black unbranded lower garment. The supplied NIKE word treatment on the top is the only permitted lettering or brand mark; do not add a swoosh, emblem, logo, text, stripe, or highlight anywhere else on the clothing. Keep motion natural, athletic, restrained, and continuous. Use a plain neutral temporary background. No environment, props, typography, wardrobe changes, scene changes, or camera movement.",
-      "multi_shot.negative_prompt": "background motion, moving poster, moving skyline, moving graphics, moving text, camera motion, zoom, pan, tilt, cuts, scene change, clothing change, logo change, text change, new swoosh, shorts logo, lower-garment mark, added branding, white emblem on shorts, identity drift, face drift, extra people, extra limbs, missing limbs, anatomy distortion, leaving frame, jumping, running away, dramatic motion",
+      "multi_shot.prompt": "Animate only the fictional runner on the supplied pure chroma-green screen. Locked camera, locked 9:16 framing, and constant body scale. Keep generous green clearance around the entire person in every frame; no hand, elbow, hair, hip, leg, foot, or garment edge may touch or leave the frame. MOTION BEATS: first perform a relaxed standing side-body stretch, gently lengthening one side and then the other; then transition into a compact light run-in-place with a small rhythmic athletic bounce; finish still jogging lightly with a subtle natural smile. Preserve the same fictional identity, face, anatomy, body proportions, centered placement, grayscale high-contrast halftone print treatment, black athletic top with the supplied NIKE word treatment, white forearm bands, and completely solid-black unbranded lower garment. The supplied NIKE word treatment on the top is the only permitted lettering or brand mark; do not add a swoosh, emblem, logo, text, stripe, or highlight anywhere else on the clothing. Keep motion natural, athletic, restrained, continuous, and presentation-friendly. The background must remain perfectly uniform pure chroma green #00FF00 with no shadow, gradient, texture, floor, environment, props, typography, wardrobe changes, cuts, or camera movement.",
+      "multi_shot.negative_prompt": "cropped body, cropped legs, cropped feet, cropped hands, cropped elbows, body touching frame, leaving frame, green holes in body, green spill, shadow, floor, background variation, background motion, moving poster, moving skyline, moving graphics, moving text, camera motion, zoom, pan, tilt, cuts, scene change, clothing change, logo change, text change, new swoosh, shorts logo, lower-garment mark, added branding, white emblem on shorts, identity drift, face drift, frown, exaggerated smile, extra people, extra limbs, missing limbs, anatomy distortion, running away, jumping high, dramatic motion",
       "multi_shot.duration": 5,
       "generate_audio": false,
       "model": "kling-v3",
@@ -282,29 +288,26 @@
       "model.aspect_ratio": "9:16",
       "seed": 290317,
       "start_frame": [
-        "13",
+        "29",
         0
       ]
     },
     "_meta": {
-      "title": "08 · KLING 3.0 · Animate ONLY the isolated runner"
+      "title": "08 · KLING 3.0 · Animate ONLY the GREEN-SCREEN runner"
     }
   },
   "20": {
-    "class_type": "BriaVideoReplaceBackground",
+    "class_type": "BriaVideoGreenScreen",
     "inputs": {
       "video": [
         "19",
         0
       ],
-      "seed": 290318,
-      "background_image": [
-        "8",
-        0
-      ]
+      "green_shade": "chroma_green",
+      "seed": 290318
     },
     "_meta": {
-      "title": "09 · BRIA VIDEO MATTE · Replace temporary BG with LOCKED city plate"
+      "title": "09 · BRIA VIDEO GREEN SCREEN · Normalize matte to exact #00FF00"
     }
   },
   "21": {
@@ -319,7 +322,7 @@
       "codec": "auto"
     },
     "_meta": {
-      "title": "OUTPUT D · Locked-poster runner warm-up MP4"
+      "title": "OUTPUT D · Green-screen runner warm-up for HyperFrames"
     }
   },
   "22": {
@@ -397,6 +400,18 @@
     },
     "_meta": {
       "title": "PRESENTATION OUTPUT · TOKYO"
+    }
+  },
+  "29": {
+    "class_type": "ImageRemoveAlpha+",
+    "inputs": {
+      "image": [
+        "12",
+        0
+      ]
+    },
+    "_meta": {
+      "title": "04C · Normalize generated RGBA to RGB before chroma key"
     }
   }
 }

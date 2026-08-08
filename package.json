@@ -4,9 +4,11 @@
   "type": "module",
   "scripts": {
     "assets:presentation": "node scripts/build-presentation-assets.mjs",
-    "build:workflow": "node scripts/build-nano-banana-workflow.mjs && node scripts/build-presentation-workflow.mjs",
+    "build:workflow": "node scripts/build-nano-banana-workflow.mjs && node scripts/build-presentation-workflow.mjs && node scripts/update-editor-workflow.mjs",
     "pipeline:plan": "node scripts/create-run.mjs",
     "validate:workflow": "node scripts/validate-comfy-workflow.mjs",
+    "clean:city-plate": "node scripts/clean-city-plate.mjs",
+    "clean:runner-alpha": "node scripts/clean-runner-alpha.mjs",
     "render": "node scripts/render.mjs",
     "render:motion-locales": "node scripts/render-motion-locales.mjs",
     "qa": "node scripts/qa.mjs",

@@ -8,9 +8,9 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const localizations = JSON.parse(fs.readFileSync(path.join(root, 'data/localizations.json'), 'utf8'));
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'manifest.json'), 'utf8'));
 
-test('prototype includes ten unique target markets', () => {
-  assert.equal(localizations.length, 10);
-  assert.equal(new Set(localizations.map(item => item.id)).size, 10);
+test('prototype includes twelve unique target markets', () => {
+  assert.equal(localizations.length, 12);
+  assert.equal(new Set(localizations.map(item => item.id)).size, 12);
 });
 
 test('each market carries complete localization and landmark contracts', () => {
@@ -25,15 +25,14 @@ test('each market carries complete localization and landmark contracts', () => {
   }
 });
 
-test('three interview markets and one motion proof completed the paid generation flow', () => {
+test('three current interview markets completed the paid static and motion flow', () => {
   assert.equal(manifest.generation.spendApproved, true);
   const completed = new Set(manifest.generation.completedMarkets);
-  for (const market of ['paris-fr', 'london-en', 'tokyo-ja']) {
+  for (const market of ['cairo-ar', 'rio-pt', 'san-francisco-en']) {
     assert.ok(completed.has(market), `${market} must be completed`);
   }
-  assert.ok(completed.has('new-york-en-motion-proof'));
-  assert.equal(typeof manifest.generation.motion?.promptId, 'string');
-  assert.ok(fs.existsSync(path.join(root, manifest.generation.motion.output)));
+  assert.equal(manifest.generation.motion.outputs.length, 3);
+  for (const output of manifest.generation.motion.outputs) assert.ok(fs.existsSync(path.join(root, output)));
   assert.match(manifest.generation.state, /completed/i);
 });
 
@@ -52,6 +51,8 @@ test('city-driven skyline prompt prevents source-city leakage and protects left-
   }
   assert.match(generator, /Space Needle is forbidden/);
   assert.match(generator, /no empty lower-left gap/);
+  assert.match(strategist, /non-grid, non-red pixel stays pure black/);
+  assert.match(strategist, /white, gray, transparent, or colored canvas/);
 });
 
 test('multi-locale planning bounds paid graph concurrency and records retry policy', () => {
@@ -76,6 +77,9 @@ test('runner generation forbids invented apparel, accessories, and lettering', (
   for (const phrase of ['only permitted lettering', 'headbands', 'running-club', 'Preserve the supplied wardrobe exactly']) {
     assert.match(combined, new RegExp(phrase));
   }
+  for (const phrase of ['#00FF00', '12% on both sides', 'cropped hips, legs, hands, elbows']) {
+    assert.match(combined, new RegExp(phrase.replace('%', '\\%')));
+  }
 });
 
 test('Kling motion keeps the lower garment unbranded', () => {
@@ -83,6 +87,14 @@ test('Kling motion keeps the lower garment unbranded', () => {
   assert.match(workflow['19'].inputs['multi_shot.prompt'], /solid-black unbranded lower garment/);
   assert.match(workflow['19'].inputs['multi_shot.prompt'], /only permitted lettering or brand mark/);
   assert.match(workflow['19'].inputs['multi_shot.negative_prompt'], /shorts logo/);
+  assert.match(workflow['19'].inputs['multi_shot.prompt'], /side-body stretch/);
+  assert.match(workflow['19'].inputs['multi_shot.prompt'], /run-in-place/);
+  assert.match(workflow['19'].inputs['multi_shot.prompt'], /subtle natural smile/);
+  assert.equal(workflow['19'].inputs.start_frame[0], '29');
+  assert.equal(workflow['29'].class_type, 'ImageRemoveAlpha+');
+  assert.equal(workflow['29'].inputs.image[0], '12');
+  assert.equal(workflow['20'].class_type, 'BriaVideoGreenScreen');
+  assert.equal(workflow['20'].inputs.green_shade, 'chroma_green');
 });
 
 test('localized motion preserves CJK scoping and static city wrapping', () => {
@@ -90,6 +102,8 @@ test('localized motion preserves CJK scoping and static city wrapping', () => {
   assert.match(motion, /\.runwild\.cjk text/);
   assert.match(motion, /\.city-lockup\.cjk \.city/);
   assert.doesNotMatch(motion, /#root\.cjk/);
+  assert.match(motion, /\.runwild\.rtl-hidden/);
+  assert.match(motion, /\.rtl-headline\.show/);
   const cityRule = motion.match(/\.city \{([\s\S]*?)\}/)?.[1] || '';
   assert.doesNotMatch(cityRule, /white-space:\s*nowrap/);
 });

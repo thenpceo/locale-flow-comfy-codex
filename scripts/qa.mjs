@@ -120,7 +120,7 @@ const markdown = [
   '',
   `Status: ${summary.totals.pass} PASS / ${summary.totals.review} REVIEW / ${summary.totals.fail} FAIL`,
   '',
-  'Paris, London, and Tokyo completed in Comfy. REVIEW is the correct state until local language, casting, cultural, landmark, and brand/legal checks are signed off.',
+  'Cairo, Rio de Janeiro, and San Francisco completed in Comfy. REVIEW is the correct state until local language, casting, cultural, landmark, and brand/legal checks are signed off.',
   '',
   '| Market | Status | Reasons |',
   '|---|---|---|',

@@ -4,7 +4,7 @@ Open the new, unambiguous interview graph in Comfy Cloud:
 
 https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5
 
-The saved workflow record is now on version 2 of the new canonical graph. It contains one red
+The saved workflow record is now on version 7 of the canonical graph. It contains one red
 `CITY INPUT · CHANGE ONLY THIS` node. Its value feeds a Gemini
 localization-strategist node, which returns strict JSON containing a detailed skyline prompt, fictional-runner
 prompt, probable locale, copy direction, and explicit human-review gates. Two core JSON extractor nodes route
@@ -15,19 +15,23 @@ Its strategist treats the source Seattle silhouette as material to erase, valida
 target-city landmarks, places the primary landmark in the far-left 3–22% visibility zone, and requires one
 continuous red skyline mass across the lower-left 72%. This prevents source-city leakage such as the Space
 Needle appearing in New York and avoids empty lower-left compositions hidden by the runner.
-The person branch generates a new fictional runner from the supplied pose and wardrobe reference, then Recraft
-removes the studio background. The graph makes alpha polarity explicit, saves the runner RGBA, composites the
-new person over the new city plate, and saves the validation composite.
+The person branch starts from the supplied green-screen pose and wardrobe reference and generates a new
+fictional runner on a required uniform `#00FF00` plate. The prompt enforces head, hand, elbow, hip, leg, and
+garment clearance so the body cannot be clipped. A tolerance chroma mask with explicit polarity saves the
+runner RGBA despite green luminance variation. RGB normalization before the mask prevents provider alpha from
+causing four-channel tensor mismatches. The graph composites the new person over the new city plate and saves
+the validation composite.
 
-The motion branch starts from the Recraft-isolated runner—not from the poster composite. Kling 3.0 generates a
-five-second, locked-camera warm-up. Bria then replaces Kling's temporary background with the already-rendered
-city plate and `SaveVideo` writes the MP4. This ordering is the protection mechanism: skyline, grids, arcs, mark,
-palette, and crop do not enter the generative video model.
+The motion branch starts from the generated green-screen runner—not from the poster composite. Kling 3.0
+generates a five-second, locked-camera side stretch followed by a light run-in-place, athletic bounce, and
+subtle smile. Bria restores a clean chroma-green plate and `SaveVideo` writes the handoff MP4. This ordering is
+the protection mechanism: skyline, grids, arcs, mark, palette, and crop never enter the generative video model;
+HyperFrames later keys the moving runner over the exact approved static plate.
 
-The executable portion is 22 nodes. The full 28-node interview graph also displays the completed Paris, London,
-and Tokyo poster references. Change node `00` to a city such as `NEW YORK`, queue the graph, then walk left to
+The executable portion is 23 nodes. The full 29-node interview graph also displays completed reference outputs.
+Change node `00` to a city such as `NEW YORK`, queue the graph, then walk left to
 right through the strategist, the two extracted prompts, the two image branches, alpha, still composite, Kling
-runner-only animation, Bria locked-plate recomposite, MP4 output, and the strict-JSON handoff written by
+runner-only animation, Bria green normalization, MP4 output, and the strict-JSON handoff written by
 `SaveText` for Codex.
 
 For multiple locales, Codex clones the executable API graph in one batch request, changes the single city value
@@ -37,7 +41,6 @@ invokes the graphic-design finishing pass for statics and the HyperFrames finish
 
 `nano-banana-pro-<market>.api.json` preserves the older explicit per-market graphs as production evidence. The
 primary demo file is `nano-banana-pro-interview-presentation.api.json`. Running the strategist workflow spends
-credits on one Gemini text node, two Nano Banana Pro image nodes, one Recraft node, one Kling 3.0 node, and one
-Bria video-background replacement node. The completed New York motion proof has prompt ID
-`c13b648a-8c74-470f-ba4f-4a57ccd9687d` and is archived at
-`assets/generated/new-york-en/runner-warmup.mp4`.
+credits on one Gemini text node, two Nano Banana Pro image nodes, one Kling 3.0 node, and one Bria green-screen
+normalization node. The current checked batch covers Cairo, Rio de Janeiro, and San Francisco; each final MP4
+is finished downstream with the same deterministic HyperFrames composition used for the approved static.

@@ -21,9 +21,9 @@ deliverables, before manifests and QA records, without turning the workflow into
 - Nano Banana Pro generates the skyline module and a new fictional runner in separate branches.
 - Skyline planning uses a target-city landmark whitelist, explicitly erases the Seattle source silhouette,
   and reserves the far-left visibility zone so signature architecture survives the runner composite.
-- Recraft creates an editable runner alpha.
-- Kling 3.0 animates **only the isolated runner**.
-- Bria attaches the locked city plate **after** Kling, protecting poster geometry from video drift.
+- The generated runner stays on a green plate with enforced body clearance, then a tolerance-based chroma mask creates the editable alpha even when the generator introduces slight green luminance variation.
+- Kling 3.0 animates **only the green-screen runner**, never the designed poster.
+- Bria normalizes Kling's background back to clean chroma green before the agent handoff, protecting poster geometry from video drift.
 - Comfy saves five media outputs plus one JSON handoff per locale.
 - Codex invokes a graphic-design agent for exact localized copy and static export.
 - Codex invokes a HyperFrames agent for staggered type, perimeter marquee, and final MP4.
@@ -61,17 +61,17 @@ its own prompt id, asset folder, retry boundary, provenance, and human-review st
 
 ## Saved Comfy workflow
 
-[Open the latest 28-node workflow in Comfy Cloud](https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5)
+[Open the latest 29-node workflow in Comfy Cloud](https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5)
 
 The visible workflow contains:
 
 1. One red `CITY INPUT · CHANGE ONLY THIS` node.
 2. A Gemini localization strategist returning strict JSON.
 3. Separate skyline and fictional-runner Nano Banana Pro branches.
-4. Recraft background removal and explicit alpha handling.
+4. Tolerance-based chroma-key extraction with explicit mask polarity and alpha handling.
 5. Static city, runner, and composite outputs.
-6. Kling 3.0 receiving only the isolated runner.
-7. Bria recompositing the moving runner over the locked city plate.
+6. Kling 3.0 receiving only the full-clearance green-screen runner.
+7. Bria normalizing the moving runner to a clean green plate for deterministic downstream keying.
 8. MP4 output and JSON agent-handoff output.
 9. Three completed reference-poster previews for interview presentation.
 
@@ -94,7 +94,7 @@ Seattle skyline and Space Needle must be erased for every non-Seattle locale.
 | 15 | fictional runner PNG with alpha | graphic-design |
 | 17 | Comfy validation composite PNG | graphic-design + QA |
 | 18 | raw runner PNG | anatomy/casting review |
-| 21 | runner warm-up over locked plate MP4 | HyperFrames |
+| 21 | green-screen runner warm-up MP4 | HyperFrames |
 | 22 | strategist JSON | both agents + review |
 
 The machine-readable contract is [contracts/handoff.schema.json](contracts/handoff.schema.json).
@@ -128,7 +128,7 @@ Do not commit third-party brand assets or identifiable-person media until public
 
 Open the repository in Codex and use a prompt such as:
 
-> Localize this campaign for Paris, London, and Tokyo. Run the Comfy workflow for every locale, then
+> Localize this campaign for Cairo, Rio de Janeiro, and San Francisco. Run the Comfy workflow for every locale, then
 > finish the static posters with the graphic-design skill and the motion posters with HyperFrames. Show
 > me the spend estimate before paid generation and do not stop at previews.
 
@@ -138,7 +138,7 @@ both finishing stages. The user does not need to open a terminal or manually mov
 For audit or automation testing, the free planning step can also be run directly:
 
 ```bash
-npm run pipeline:plan -- --locales paris-fr,london-en,tokyo-ja
+npm run pipeline:plan -- --locales cairo-ar,rio-pt,san-francisco-en
 ```
 
 This creates:
@@ -171,12 +171,15 @@ The graphic-design agent receives the city plate, runner alpha, validation compo
 and locale record. It preserves official marks and protected geometry, then adds copy as editable HTML/SVG.
 It exports a native-ratio sRGB PNG, source, provenance, and QA package.
 
+The deterministic finishing pass also de-spills residual green from semi-transparent hair and garment edges;
+the Comfy tolerance mask owns silhouette extraction, while the agent owns final edge-color cleanup.
+
 Final typography is never entrusted to the image generator.
 
 ## Motion finishing
 
-The HyperFrames agent receives the Comfy MP4 and the completed static design tokens. It treats the MP4 as
-a frozen media plate, then adds:
+The HyperFrames agent receives the locked city plate, Comfy green-screen runner MP4, and completed static
+design tokens. It chroma-keys and composites the runner as a controlled media layer, then adds:
 
 - staggered localized headline animation;
 - supporting-line entrance;
@@ -192,13 +195,13 @@ To create the alpha intermediates, localize the deterministic typography, valida
 render several completed Comfy locales in one command:
 
 ```bash
-npm run render:motion-locales -- --locales mexico-city-es,sydney-en,shanghai-zh
+npm run render:motion-locales -- --locales cairo-ar,rio-pt,san-francisco-en
 ```
 
 The checked-in QA batch includes the final
-[Mexico City](videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4),
-[Sydney](videos/nrc-localized-motion-poster/renders/sydney-en-motion-poster.mp4), and
-[Shanghai](videos/nrc-localized-motion-poster/renders/shanghai-zh-motion-poster.mp4) motion posters plus a
+[Cairo](videos/nrc-localized-motion-poster/renders/cairo-ar-motion-poster.mp4),
+[Rio de Janeiro](videos/nrc-localized-motion-poster/renders/rio-pt-motion-poster.mp4), and
+[San Francisco](videos/nrc-localized-motion-poster/renders/san-francisco-en-motion-poster.mp4) motion posters plus a
 [render manifest](videos/nrc-localized-motion-poster/renders/locale-motion-manifest.json).
 
 ## Included Codex skills
@@ -214,8 +217,8 @@ Firefly Graph implementation.
 
 ## Cost and retry behavior
 
-The current five-second per-locale graph includes paid Gemini, Nano Banana Pro, Recraft, Kling 3.0, and
-Bria nodes. Prices change; Codex must use the live estimator and obtain explicit approval before submission.
+The current five-second per-locale graph includes paid Gemini, Nano Banana Pro, Kling 3.0, and Bria nodes.
+Prices change; Codex must use the live estimator and obtain explicit approval before submission.
 
 - Never rerun a paid job because a download failed.
 - Never rerun Kling because HyperFrames failed.
@@ -238,10 +241,10 @@ and checksums. These remain human decisions:
 
 The JSON handoff keeps those states visible instead of calling a market “approved” because generation ran.
 
-The latest real production regression covered Mexico City, Sydney, and Shanghai. It found and fixed provider
-concurrency, output isolation, generated-accessory, motion-branding, CJK-scoping, and static-to-motion lockup
-defects. See the
-[three-locale QA report](review/locale-qa-2026-08-08.md) for the final media evidence and review gates.
+The latest real production regression covered Cairo, Rio de Janeiro, and San Francisco. It added generated
+green-screen people, robust chroma extraction, protected-plate skyline cleanup, Arabic RTL motion type, and
+strict per-frame contrast checks. See the
+[latest three-locale QA report](review/locale-qa-2026-08-08-cairo-rio-sf.md) for the final media evidence and review gates.
 
 ## Repository map
 

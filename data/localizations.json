@@ -96,6 +96,38 @@
     "avoid": ["carnival costume", "favela texture", "football icons"]
   },
   {
+    "id": "cairo-ar",
+    "city": "القاهرة",
+    "country": "مصر",
+    "locale": "ar-EG",
+    "language": "Arabic",
+    "direction": "rtl",
+    "headline": "اركض بحرية",
+    "supporting": "القاهرة تركض معك",
+    "edgeCopy": "HADDAK AL-WAHID HUWA ANTA. JUST DO IT.",
+    "locationLine": "مسار تجريبي خيالي · يُستبدل قبل الإنتاج",
+    "landmarks": ["Cairo Tower", "Mosque of Muhammad Ali"],
+    "skylinePrompt": "a recognizable Cairo skyline led by Cairo Tower with the Mosque of Muhammad Ali as a clean secondary silhouette",
+    "personaPrompt": "Casting brief: a fictional adult Egyptian woman runner, contemporary Cairo running-club casting, confident and direct",
+    "avoid": ["pyramid postcard collage", "pharaoh costume", "camel or desert filler"]
+  },
+  {
+    "id": "san-francisco-en",
+    "city": "SAN FRANCISCO",
+    "country": "UNITED STATES",
+    "locale": "en-US",
+    "language": "English",
+    "direction": "ltr",
+    "headline": "RUN FREE",
+    "supporting": "SAN FRANCISCO MOVES WITH YOU",
+    "edgeCopy": "YOUR ONLY LIMIT IS YOU. JUST DO IT.",
+    "locationLine": "FICTIONAL DEMO ROUTE · REPLACE BEFORE PRODUCTION",
+    "landmarks": ["Golden Gate Bridge", "Transamerica Pyramid"],
+    "skylinePrompt": "a recognizable San Francisco skyline led by the Golden Gate Bridge with the Transamerica Pyramid as a clean secondary silhouette",
+    "personaPrompt": "Casting brief: a fictional adult Chinese American woman runner, contemporary San Francisco running-club casting, confident and direct",
+    "avoid": ["cable car collage", "tech-company logos", "painted-ladies postcard styling"]
+  },
+  {
     "id": "sydney-en",
     "city": "SYDNEY",
     "country": "AUSTRALIA",

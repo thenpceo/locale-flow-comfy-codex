@@ -85,14 +85,18 @@
       position: absolute;
       left: 634px;
       top: 226px;
-      color: transparent;
-      -webkit-text-stroke: 2px rgba(245,245,242,.95);
-      font: 900 287px/.8 var(--display);
-      letter-spacing: -.15em;
-      transform: scaleX(.66);
-      transform-origin: 0 0;
-      text-transform: uppercase;
-      white-space: nowrap;
+      width: 276px;
+      height: 248px;
+      overflow: visible;
+    }
+    .go path,
+    .go rect {
+      fill: none;
+      stroke: rgba(245,245,242,.95);
+      stroke-width: 2.5px;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      vector-effect: non-scaling-stroke;
     }
     .rtl-headline {
       display: none;
@@ -170,7 +174,10 @@
         <text id="line2" x="0" y="288" filter="url(#wave)">WILD</text>
       </svg>
       <div id="rtl-headline" class="rtl-headline"></div>
-      <div id="go" class="go">GO</div>
+      <svg id="go" class="go" viewBox="0 0 320 260" role="img" aria-label="GO">
+        <path d="M145 84V72C145 38 123 20 89 20H67C32 20 14 43 14 83V177C14 217 34 240 69 240H92C126 240 145 217 145 179V134H91M145 134H116V161H145" />
+        <rect x="180" y="20" width="124" height="220" rx="48" ry="48" />
+      </svg>
     </section>
     <img id="runner" class="runner" alt="Runner cutout" />
     <section class="type-front">

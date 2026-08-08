@@ -15,8 +15,8 @@ CODEX RUN PLANNER
       └── many locales → BATCH ─────┤
                                     ▼
                               COMFY MEDIA UNIT
-                   skyline · runner · alpha · composite
-                         Kling runner-only motion · JSON
+                   skyline · green runner · alpha · composite
+                    Kling chroma motion plate · JSON
                                     │
                            downloaded + checksummed
                                     ▼
@@ -49,10 +49,11 @@ Embedding an opaque loop inside the image graph would make failures and cultural
 | B | 15 | runner PNG with alpha | graphic-design |
 | C | 17 | validation composite PNG | graphic-design + QA |
 | QA | 18 | raw runner PNG | anatomy/casting review |
-| D | 21 | runner-only warm-up recomposited MP4 | HyperFrames |
+| D | 21 | green-screen runner warm-up MP4 | HyperFrames |
 | E | 22 | strategist JSON | both agents + review |
 
-Kling receives only the isolated runner layer. Bria attaches the locked plate afterward. The final
+Kling receives only the full-clearance green-screen runner layer. Bria normalizes that motion result to
+clean chroma green. HyperFrames keys the moving human over the exact approved static plate; the final
 localized typography is not generated in Comfy.
 
 ## Run lifecycle

@@ -72,8 +72,8 @@
           width: 1204px;
           height: 1720px;
           object-fit: fill;
-          transform: scale(1.13);
-          transform-origin: 50% 93.3%;
+          transform: scale(1);
+          transform-origin: 50% 50%;
           filter: contrast(1.04);
         }
 
@@ -97,14 +97,19 @@
           position: absolute;
           left: 634px;
           top: 226px;
-          color: transparent;
-          -webkit-text-stroke: 2px rgba(245,245,242,.95);
-          font: 900 287px/.8 var(--display);
-          letter-spacing: -.15em;
-          transform: scaleX(.66);
-          transform-origin: 0 0;
-          text-transform: uppercase;
-          white-space: nowrap;
+          width: 276px;
+          height: 248px;
+          overflow: visible;
+        }
+
+        .go path,
+        .go rect {
+          fill: none;
+          stroke: rgba(245,245,242,.95);
+          stroke-width: 2.5px;
+          stroke-linecap: round;
+          stroke-linejoin: round;
+          vector-effect: non-scaling-stroke;
         }
 
         .edge {
@@ -155,7 +160,7 @@
         }
 
         .city {
-          color: var(--signal);
+          color: #ff4444;
           font: 900 37px/.9 var(--display);
           letter-spacing: -.04em;
         }
@@ -163,9 +168,27 @@
         .runwild.cjk text { font-size: 92px; letter-spacing: -.02em; }
         .city-lockup.cjk .city { letter-spacing: .02em; }
 
+        .runwild.rtl-hidden { display: none; }
+
+        .rtl-headline {
+          display: none;
+          position: absolute;
+          left: 145px;
+          top: 365px;
+          width: 350px;
+          color: #fff;
+          direction: rtl;
+          text-align: right;
+          font: 900 84px/.92 var(--display);
+          letter-spacing: 0;
+        }
+
+        .rtl-headline.show { display: block; }
+        .city-lockup.rtl { direction: rtl; }
+
         .support {
           margin-top: 8px;
-          color: var(--paper);
+          color: #fff;
           font: 750 14px/1.05 var(--utility);
           letter-spacing: .04em;
           white-space: nowrap;
@@ -228,7 +251,11 @@
             <text id="nrc-run" x="0" y="139" filter="url(#nrc-wave)" clip-path="url(#nrc-run-clip)">RUN</text>
             <text id="nrc-wild" x="0" y="288" filter="url(#nrc-wave)" clip-path="url(#nrc-wild-clip)">WILD</text>
           </svg>
-          <div id="nrc-go" class="go">GO</div>
+          <div id="nrc-rtl-headline" class="rtl-headline">RUN WILD</div>
+          <svg id="nrc-go" class="go" viewBox="0 0 320 260" role="img" aria-label="GO">
+            <path d="M145 84V72C145 38 123 20 89 20H67C32 20 14 43 14 83V177C14 217 34 240 69 240H92C126 240 145 217 145 179V134H91M145 134H116V161H145" />
+            <rect x="180" y="20" width="124" height="220" rx="48" ry="48" />
+          </svg>
         </section>
 
         <div class="runner-wrap">
@@ -270,6 +297,7 @@
 
           tl.fromTo('#nrc-run-reveal', { attr: { width: 0 } }, { attr: { width: 320 }, duration: 0.46, ease: 'power4.out' }, 0.18);
           tl.fromTo('#nrc-wild-reveal', { attr: { width: 0 } }, { attr: { width: 320 }, duration: 0.52, ease: 'power4.out' }, 0.58);
+          tl.fromTo('#nrc-rtl-headline', { clipPath: 'inset(0 100% 0 0)', autoAlpha: 0 }, { clipPath: 'inset(0 0% 0 0)', autoAlpha: 1, duration: 0.72, ease: 'power4.out' }, 0.28);
           tl.fromTo('#nrc-go', { clipPath: 'inset(0 100% 0 0)', autoAlpha: 0 }, { clipPath: 'inset(0 0% 0 0)', autoAlpha: 1, duration: 0.64, ease: 'power4.out' }, 0.92);
 
           tl.fromTo('#nrc-topline', { clipPath: 'inset(100% 0 0 0)', autoAlpha: 0 }, { clipPath: 'inset(0% 0 0 0)', autoAlpha: 1, duration: 0.52, ease: 'power4.out' }, 0.14);

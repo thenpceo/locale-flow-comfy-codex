@@ -28,7 +28,7 @@ Red means active market, generation stage, or review attention. It is never used
 
 - Navigation: a thin fixed production rail with project title, workflow link, and section anchors.
 - Hero: one large final poster, an uncompromising title, and a concise thesis.
-- Production graph: two literal still-generation lanes plus one purple motion-isolation lane. The motion lane makes the invariant visible: runner alpha enters Kling 3.0, while the locked plate enters later at Bria recompositing.
+- Production graph: two literal still-generation lanes plus one purple motion-isolation lane. The motion lane makes the invariant visible: the green-screen runner enters Kling 3.0, Bria cleans the chroma plate, and HyperFrames later keys it over the locked static design.
 - Market switcher: three large text tabs with real poster thumbnails; roving keyboard navigation.
 - Asset viewer: input, city plate, runner alpha, Comfy composite, and final poster shown as a sequence.
 - QA ledger: plain rows with explicit status text and evidence; color is supplemental.
@@ -40,7 +40,7 @@ Use a 12-column desktop grid with asymmetric spans and fluid section spacing. Th
 
 ## Motion
 
-The page itself stays restrained. One user-controlled five-second proof clip demonstrates layer-isolated generation: only the fictional runner warms up; the poster plate is reattached after Kling. The clip is muted and never autoplays. Under `prefers-reduced-motion: reduce`, remove transforms, transitions, and smooth scrolling.
+The page itself stays restrained. One user-controlled five-second proof clip demonstrates layer-isolated generation: only the fictional runner warms up; HyperFrames reattaches the exact poster plate after Kling. The clip is muted and never autoplays. Under `prefers-reduced-motion: reduce`, remove transforms, transitions, and smooth scrolling.
 
 ## Accessibility
 

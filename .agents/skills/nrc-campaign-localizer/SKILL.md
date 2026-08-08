@@ -10,8 +10,8 @@ Use this skill when a user asks Codex to localize the poster system for one city
 ## Inputs
 
 - A comma-separated list of city or city-locale records.
-- The canonical 22-node API execution graph in `workflows/nano-banana-pro-full-localizer.api.json`.
-- The saved 28-node graph is for visible interview inspection only. Never execute its three reference-preview pairs as part of a paid locale run.
+- The canonical 23-node API execution graph in `workflows/nano-banana-pro-full-localizer.api.json`.
+- The saved 29-node graph is for visible interview inspection only. Never execute its reference-preview pairs as part of a paid locale run.
 - Cleared campaign plate and runner reference assets in the user's Comfy workspace.
 
 ## Procedure

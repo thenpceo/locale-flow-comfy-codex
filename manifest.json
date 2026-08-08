@@ -1,7 +1,7 @@
 {
   "project": "Nike Run Club city-localization interview prototype",
   "authorization": "Independent prototype using user-supplied reference assets; not Nike-authorized",
-  "status": "three-market production proof plus completed New York Kling 3.0 motion-isolation run",
+  "status": "completed Cairo, Rio de Janeiro, and San Francisco static-plus-motion production proof",
   "deliverable": "native-ratio localized poster system, visible Comfy generation graph, isolated-runner motion proof, and interview presentation",
   "canvas": {
     "name": "native-poster",
@@ -50,8 +50,8 @@
       "path": "assets/source/runner-greenscreen.png",
       "source": "user supplied",
       "sha256": "717fa3da59bdf613e845df330b5efc815f690ce55fef024ceb737768d54bf71c",
-      "role": "chroma-key fallback",
-      "rights": "prototype use only; not used in primary render"
+      "role": "green-screen pose and wardrobe reference for the generated-runner branch",
+      "rights": "prototype use only; used as a generation reference"
     },
     {
       "path": "references/final-poster-reference.png",
@@ -68,9 +68,9 @@
     "workflowFilename": "nike-run-localizer-one-city-strategist-demo.json",
     "apiWorkflow": "workflows/nano-banana-pro-full-localizer.api.json",
     "model": "Nano Banana Pro / gemini-3-pro-image-preview",
-    "state": "completed and saved as version 7 in a dedicated workflow record; one CITY input feeds a Gemini localization strategist, JSON prompt routing, two Nano Banana Pro branches, Recraft still-alpha extraction, compositing, Kling 3.0 runner-only animation, Bria locked-plate video replacement, a machine-readable agent handoff, and three completed reference previews; 22-node executable localizer plus 28-node interview graph",
+    "state": "completed and saved as version 7 in a dedicated workflow record; one CITY input feeds a Gemini localization strategist, JSON prompt routing, separate Nano Banana Pro skyline and green-screen fictional-runner branches, RGB normalization, tolerance chroma extraction, compositing, Kling 3.0 runner-only animation, Bria green-screen normalization, and a machine-readable agent handoff; 23-node executable localizer plus 29-node interview graph",
     "spendApproved": true,
-    "completedMarkets": ["paris-fr", "london-en", "tokyo-ja", "new-york-en-motion-proof"],
+    "completedMarkets": ["cairo-ar", "rio-pt", "san-francisco-en"],
     "estimatedCreditsPerMarket": 58,
     "motion": {
       "model": "Kling 3.0 / kling-v3",
@@ -78,11 +78,9 @@
       "durationSeconds": 5.041667,
       "fps": 24,
       "audio": false,
-      "promptId": "c13b648a-8c74-470f-ba4f-4a57ccd9687d",
-      "completedAt": "2026-08-07T21:30:56Z",
-      "output": "assets/generated/new-york-en/runner-warmup.mp4",
-      "sha256": "ae12fd624848e0d386844f5396f7979d576b22f637981bf7fe25f4c39a8af931",
-      "isolationContract": "Kling receives only the Recraft-isolated runner. Bria receives the Kling video plus the locked city plate after generation; the poster is not an input to Kling."
+      "completedAt": "2026-08-08",
+      "outputs": ["assets/generated/cairo-ar/runner-warmup.mp4", "assets/generated/rio-pt/runner-warmup.mp4", "assets/generated/san-francisco-en/runner-warmup.mp4"],
+      "isolationContract": "Kling receives only the generated runner on chroma green. Bria normalizes the Kling background; HyperFrames keys the runner over the locked city plate. The poster is never an input to Kling."
     },
     "protectedRegion": {"x": 100, "y": 1030, "width": 570, "height": 365},
     "skylineExclusions": "no generated text, logos, marks, gradients, photography, texture, flags, cultural costume, or postcard collage",
@@ -116,6 +114,6 @@
     "Each featured market uses a newly generated fictional adult runner rather than changing the supplied person's race or ethnicity.",
     "Casting prompts are draft creative hypotheses and require local-market human review before any real campaign use.",
     "City plates and translations remain REVIEW until a local human approves cultural specificity and language.",
-    "The New York MP4 is a motion-layer proof of the Comfy image composite, not a final typeset campaign deliverable; deterministic localized typography remains downstream."
+    "Final Arabic, Portuguese, and English copy remains subject to native-market review even when mechanical QA passes."
   ]
 }
