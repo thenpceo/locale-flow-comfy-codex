@@ -3,352 +3,170 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="description" content="One Codex prompt fans a locale list into hundreds of inspectable static and motion campaign assets through Comfy and deterministic agent finishing.">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff1616'/%3E%3Cpath d='M5 19h22v4H5zM5 10h4v9H5z' fill='%23080808'/%3E%3C/svg%3E">
-  <title>One prompt / Hundreds of localized assets — production graph</title>
+  <meta name="description" content="A Comfy and Codex system that turns one campaign into governed static and motion assets for every locale.">
+  <title>Locale Flow — one campaign, every market</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ff1717'/%3E%3Cpath d='M6 9h20v5H6zm0 9h13v5H6z' fill='%23070707'/%3E%3C/svg%3E">
   <link rel="stylesheet" href="./styles.css">
-  <script type="module" src="./app.js"></script>
 </head>
 <body>
-  <a class="skip-link" href="#main">Skip to main content</a>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <header class="rail">
-    <a class="wordmark" href="#top" aria-label="Back to top">NRC / LOCALIZATION GRAPH</a>
+  <header class="site-header">
+    <a class="brand" href="#overview">LOCALE FLOW</a>
     <nav aria-label="Presentation sections">
-      <a href="#flow">Flow</a>
-      <a href="#inspect">Layers</a>
+      <a href="#flow">System</a>
       <a href="#outputs">Outputs</a>
-      <a href="#qa">QA</a>
+      <a href="#qa">QA + AEM</a>
     </nav>
-    <a class="comfy-link" href="https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5" target="_blank" rel="noreferrer">OPEN LATEST COMFY WORKFLOW ↗</a>
+    <a class="header-link" href="../workflows/nike-run-localizer-codex-orchestrated-multi-locale-latest.json" download>Workflow JSON ↓</a>
   </header>
 
   <main id="main">
-    <section id="top" class="hero section-shell">
+    <section id="overview" class="hero shell">
       <div class="hero-copy">
-        <p class="disclosure">Independent interview prototype · not a Nike or Adobe-authorized campaign</p>
-        <h1>ONE PROMPT.<br><span>HUNDREDS OF<br>LOCAL ASSETS.</span></h1>
-        <p class="lede">Give Codex a list of locales once. It fans every city through the same inspectable Comfy graph, collects the layers, and finishes static and motion deliverables with exact campaign geometry and visible approval gates.</p>
-        <div class="prompt-card" aria-label="Example Codex localization prompt">
-          <div><span>CODEX / CAMPAIGN REQUEST</span><b>01 PROMPT</b></div>
-          <p>“Localize this campaign for <strong>Mexico City, Sydney, and Shanghai</strong>. Generate every city, runner, mask, static, and motion layer, then return the complete review package.”</p>
-          <ol aria-label="Prompt expansion">
-            <li><b>03</b><span>LOCALES TESTED</span></li>
-            <li><b>× 02</b><span>FINAL FORMATS</span></li>
-            <li><b>06</b><span>HERO OUTPUTS</span></li>
-          </ol>
+        <p class="eyebrow">COMFY + CODEX + KLING + HYPERFRAMES</p>
+        <h1>ONE CAMPAIGN.<br><span>EVERY MARKET.</span></h1>
+        <p class="hero-lede">Give the system a list of cities. It localizes the place, casts a new fictional runner, rebuilds the campaign typography, creates motion, and returns governed static and video assets for every market.</p>
+        <div class="hero-facts" aria-label="System summary">
+          <div><b>01</b><span>city variable</span></div>
+          <div><b>04</b><span>production stages</span></div>
+          <div><b>∞</b><span>locales at scale</span></div>
         </div>
         <div class="hero-actions">
-          <a class="button primary" href="#flow">Read the graph</a>
-          <a class="button secondary" href="https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5" target="_blank" rel="noreferrer">Open latest 28 nodes in Comfy ↗</a>
+          <a class="button button-primary" href="#flow">See the Mexico City flow</a>
+          <a class="button" href="https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5" target="_blank" rel="noreferrer">Open Comfy Cloud ↗</a>
         </div>
-      </div>
-      <div class="hero-output" aria-label="Three examples from an arbitrarily long locale batch">
-        <figure class="hero-card hero-card-primary"><img src="../exports/previews/mexico-city-es.png" alt="Final Mexico City localized poster"><figcaption>MEXICO CITY / es-MX</figcaption></figure>
-        <figure class="hero-card hero-card-left"><img src="../exports/previews/sydney-en.png" alt="Final Sydney localized poster"><figcaption>SYDNEY / en-AU</figcaption></figure>
-        <figure class="hero-card hero-card-right"><img src="../exports/previews/shanghai-zh.png" alt="Final Shanghai localized poster"><figcaption>上海 / zh-CN</figcaption></figure>
-      </div>
-    </section>
-
-    <section class="scale-strip" aria-label="Campaign scale equation">
-      <div><span>ONE NATURAL-LANGUAGE REQUEST</span><b>→</b><strong>ANY LOCALE LIST</strong></div>
-      <div><span>25 LOCALES × 10 TRACEABLE ASSETS</span><b>=</b><strong>250 DELIVERABLES</strong></div>
-      <div><span>PLUS MANIFESTS + QA + RETRY STATE</span><b>→</b><strong>ONE REVIEW SYSTEM</strong></div>
-    </section>
-
-    <section id="flow" class="flow-section">
-      <div class="section-shell flow-intro">
-        <div>
-          <p class="flow-kicker">THE PRODUCTION MAP</p>
-          <h2 id="production-map-title">ONE LOCALE RECORD.<br>FOUR PRODUCTION BRANCHES.</h2>
-        </div>
-        <p>Codex is the control plane. It expands the list into independent city jobs, batches them through Comfy, collects every intermediate, then routes stable layers to the static and HyperFrames finishing skills. One failed market retries without rerunning the other ninety-nine.</p>
+        <p class="disclosure">Independent interview prototype. Not a Nike or Adobe-authorized campaign.</p>
       </div>
 
-      <div class="market-lock" aria-label="Production graph locale is locked to Mexico City">
-        <span>DEMO WALKTHROUGH LOCALE</span><strong>MEXICO CITY</strong><small>es-MX · the same locale drives A, B, C, and D</small>
-      </div>
-
-      <div id="production-graph" class="graph-shell" aria-live="polite">
-        <div class="graph-header">
-          <span>ACTIVE MARKET / <b id="graph-market-city">CIUDAD DE MÉXICO</b></span>
-          <span>COMFY CLOUD / NANO BANANA PRO / RECRAFT / KLING 3.0 / BRIA / AGENT TYPE</span>
-        </div>
-
-        <div class="city-control" aria-label="Single city input drives both generative branches">
-          <span>00 · ONE RECORD FROM THE LOCALE LIST</span>
-          <div class="city-input-box"><small>CITY INPUT</small><strong id="graph-city-input">CIUDAD DE MÉXICO</strong></div>
-          <b class="city-arrow" aria-hidden="true">→</b>
-          <div class="strategy-box"><small>GEMINI PLANNING NODE</small><strong>LOCALIZATION STRATEGIST</strong><p>landmarks · locale · casting · exclusions · review gates</p></div>
-          <i aria-hidden="true">↙ &nbsp; ↘</i>
-        </div>
-
-        <div class="pipeline-lane lane-place">
-          <div class="lane-heading"><b>A</b><span>PLACE BRANCH</span><small>ONLY THE SKYLINE MODULE MAY CHANGE</small></div>
-          <article class="flow-node node-image">
-            <div class="node-top"><span>01A</span><b>LOCKED INPUT</b></div>
-            <img src="../assets/source/campaign-background.png" alt="Protected campaign background input">
-            <div class="node-bottom"><strong>Campaign plate</strong><small>1055 × 1491 · protected</small></div>
-          </article>
-          <div class="wire" aria-hidden="true"><span></span><i>crop</i></div>
-          <article class="flow-node node-image">
-            <div class="node-top"><span>02A</span><b>IMAGE CROP</b></div>
-            <img src="../assets/processed/skyline-module-input.png" alt="Original Seattle skyline module crop">
-            <div class="node-bottom"><strong>Skyline module</strong><small>570 × 365 · variable</small></div>
-          </article>
-          <div class="wire wire-hot" aria-hidden="true"><span></span><i>edit</i></div>
-          <article class="flow-node node-model">
-            <div class="node-top"><span>03A</span><b>NANO BANANA PRO</b></div>
-            <div class="model-mark">NB<br>PRO</div>
-            <p id="graph-skyline-prompt">CDMX-only whitelist · Torre Latinoamericana far left · continuous lower edge</p>
-            <div class="node-bottom"><strong>Localized skyline</strong><small>geo-locked · left-biased · 1K</small></div>
-          </article>
-          <div class="wire wire-hot" aria-hidden="true"><span></span><i>reinsert</i></div>
-          <article class="flow-node node-image node-output">
-            <div class="node-top"><span>04A</span><b>CITY PLATE</b></div>
-            <img id="graph-city" src="../assets/generated/mexico-city-es/city-plate.png" alt="Mexico City localized city plate">
-            <div class="node-bottom"><strong>Protected layout restored</strong><small>Comfy output A</small></div>
-          </article>
-        </div>
-
-        <div class="pipeline-lane lane-person">
-          <div class="lane-heading"><b>B</b><span>PERSON BRANCH</span><small>POSE + WARDROBE ARE THE REFERENCE</small></div>
-          <article class="flow-node node-image">
-            <div class="node-top"><span>01B</span><b>REFERENCE INPUT</b></div>
-            <img src="../assets/source/runner-cutout.png" alt="Supplied runner pose and wardrobe reference">
-            <div class="node-bottom"><strong>Pose + garment</strong><small>identity is not preserved</small></div>
-          </article>
-          <div class="wire wire-hot" aria-hidden="true"><span></span><i>generate</i></div>
-          <article class="flow-node node-model">
-            <div class="node-top"><span>02B</span><b>NANO BANANA PRO</b></div>
-            <div class="model-mark">NB<br>PRO</div>
-            <p id="graph-casting-brief">Casting brief: fictional contemporary CDMX runner</p>
-            <div class="node-bottom"><strong>New fictional runner</strong><small>pose-controlled generation</small></div>
-          </article>
-          <div class="wire" aria-hidden="true"><span></span><i>save raw</i></div>
-          <article class="flow-node node-image">
-            <div class="node-top"><span>03B</span><b>RAW RUNNER</b></div>
-            <img id="graph-runner-raw" src="../assets/generated/mexico-city-es/runner-raw.png" alt="Raw Mexico City runner generation">
-            <div class="node-bottom"><strong>Unkeyed generation</strong><small>Comfy QA output</small></div>
-          </article>
-          <div class="wire wire-split" aria-hidden="true"><span></span><i>Recraft</i></div>
-          <article class="flow-node node-dual node-output">
-            <div class="node-top"><span>04B</span><b>RECRAFT + ALPHA</b></div>
-            <div class="dual-media">
-              <figure><img id="graph-mask" src="../assets/processed/mexico-city-es-alpha-mask.png" alt="Mexico City runner alpha mask"><figcaption>MASK</figcaption></figure>
-              <figure class="checker"><img id="graph-alpha" src="../assets/generated/mexico-city-es/runner-alpha.png" alt="Mexico City runner transparent alpha"><figcaption>RGBA</figcaption></figure>
-            </div>
-            <div class="node-bottom"><strong>Mask + runner alpha</strong><small>Comfy output B</small></div>
-          </article>
-        </div>
-
-        <div class="merge-bus" aria-label="City plate and runner alpha merge">
-          <span class="merge-source">CITY PLATE</span>
-          <i aria-hidden="true">+</i>
-          <span class="merge-source">RUNNER ALPHA</span>
-          <div class="merge-line" aria-hidden="true"></div>
-          <b>MERGE</b>
-        </div>
-
-        <div class="finish-lane">
-          <article class="flow-node node-image node-output">
-            <div class="node-top"><span>05</span><b>COMFY VALIDATION</b></div>
-            <img id="graph-composite" src="../assets/generated/mexico-city-es/comfy-composite.png" alt="Mexico City Comfy validation composite">
-            <div class="node-bottom"><strong>Image layers verified</strong><small>Comfy output C</small></div>
-          </article>
-          <div class="wire wire-hot" aria-hidden="true"><span></span><i>handoff</i></div>
-          <article class="flow-node node-agent">
-            <div class="node-top"><span>06</span><b>AGENT PRODUCTION</b></div>
-            <ol class="layer-stack" aria-label="Deterministic production layers">
-              <li><span>05</span>QA + provenance</li>
-              <li><span>04</span>Six Caps perimeter type</li>
-              <li><span>03</span>Localized headline + facts</li>
-              <li><span>02</span>Runner alpha</li>
-              <li><span>01</span>Localized city plate</li>
-            </ol>
-            <div class="node-bottom"><strong id="graph-headline">CORRE LIBRE</strong><small>deterministic HTML/SVG</small></div>
-          </article>
-          <div class="wire wire-hot" aria-hidden="true"><span></span><i>export</i></div>
-          <article class="flow-node node-image node-final">
-            <div class="node-top"><span>07</span><b>REVIEWABLE OUTPUT</b></div>
-            <img id="graph-final" src="../exports/previews/mexico-city-es.png" alt="Final Mexico City localized poster">
-            <div class="node-bottom"><strong>Native poster</strong><small>1055 × 1491 · sRGB</small></div>
-          </article>
-        </div>
-
-        <div class="motion-lane" aria-label="Active market motion isolation proof">
-          <div class="lane-heading"><b>C</b><span>MOTION BRANCH</span><small><span id="graph-motion-market">MEXICO CITY</span> · KLING NEVER RECEIVES THE POSTER</small></div>
-          <article class="flow-node node-image">
-            <div class="node-top"><span>08</span><b>ISOLATED SOURCE</b></div>
-            <img id="graph-motion-source" src="../assets/generated/mexico-city-es/runner-alpha.png" alt="Mexico City fictional runner isolated from the poster">
-            <div class="node-bottom"><strong>Runner pixels only</strong><small>Recraft foreground output</small></div>
-          </article>
-          <div class="wire wire-motion" aria-hidden="true"><span></span><i>animate</i></div>
-          <article class="flow-node node-motion-model">
-            <div class="node-top"><span>09</span><b>KLING 3.0</b></div>
-            <div class="model-mark">K3<br>ONLY</div>
-            <p>Five-second locked-camera warm-up. Shoulder roll → standing side stretch → return toward hero pose.</p>
-            <div class="node-bottom"><strong>Moving runner layer</strong><small>1080p · 24 fps · no audio</small></div>
-          </article>
-          <div class="wire wire-motion" aria-hidden="true"><span></span><i>matte</i></div>
-          <article class="flow-node node-lock">
-            <div class="node-top"><span>10</span><b>BRIA RECOMPOSITE</b></div>
-            <div class="lock-diagram">
-              <figure><img id="graph-motion-composite" src="../assets/generated/mexico-city-es/comfy-composite.png" alt="Mexico City moving foreground reference"><figcaption>MOVING FOREGROUND</figcaption></figure>
-              <b aria-hidden="true">+</b>
-              <figure><img id="graph-motion-city" src="../assets/generated/mexico-city-es/city-plate.png" alt="Mexico City locked city plate"><figcaption>LOCKED PLATE</figcaption></figure>
-            </div>
-            <div class="node-bottom"><strong>Background supplied after Kling</strong><small>poster pixels cannot be regenerated</small></div>
-          </article>
-          <div class="wire wire-motion" aria-hidden="true"><span></span><i>save mp4</i></div>
-          <article class="flow-node node-video node-output">
-            <div class="node-top"><span>11</span><b>COMFY VIDEO OUTPUT</b></div>
-            <video id="graph-motion-video" src="../assets/generated/mexico-city-es/runner-warmup.mp4" controls muted loop playsinline preload="metadata" aria-label="Mexico City runner warm-up with locked poster background"></video>
-            <div class="node-bottom"><strong>Only the runner moves</strong><small>1204 × 1720 · 5.04 seconds</small></div>
-          </article>
-        </div>
-
-        <div class="agent-motion-lane" aria-label="Agent and HyperFrames final motion finishing">
-          <div class="lane-heading"><b>D</b><span>AGENT MOTION FINISH</span><small>MEXICO CITY · APPROVED STATIC GEOMETRY IS THE SOURCE OF TRUTH</small></div>
-          <article class="flow-node node-video">
-            <div class="node-top"><span>12</span><b>COMFY HANDOFF</b></div>
-            <video src="../assets/generated/mexico-city-es/runner-warmup.mp4" controls muted loop playsinline preload="metadata" aria-label="Mexico City Comfy warm-up video passed to the agent"></video>
-            <div class="node-bottom"><strong>Locked plate + moving human</strong><small>Comfy MP4 · no campaign typography</small></div>
-          </article>
-          <div class="wire wire-agent" aria-hidden="true"><span></span><i>handoff</i></div>
-          <article class="flow-node node-agent-motion">
-            <div class="node-top"><span>13</span><b>CODEX + HYPERFRAMES</b></div>
-            <ol class="motion-layer-stack" aria-label="Static-faithful animated typography layers">
-              <li><span>05</span>Perimeter marquee</li>
-              <li><span>04</span>City + route lockup</li>
-              <li><span>03</span>Wavy CORRE LIBRE</li>
-              <li><span>02</span>Staggered type reveals</li>
-              <li><span>01</span>Approved static geometry</li>
-            </ol>
-            <div class="node-bottom"><strong>Animate the poster, do not redesign it</strong><small>frame-by-frame static comparison</small></div>
-          </article>
-          <div class="wire wire-agent" aria-hidden="true"><span></span><i>render</i></div>
-          <article class="flow-node node-video node-output">
-            <div class="node-top"><span>14</span><b>FINAL HYPERFRAMES MP4</b></div>
-            <video src="../videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Final Mexico City HyperFrames motion poster"></video>
-            <div class="node-bottom"><strong>Campaign-complete motion poster</strong><small>animated type + marquee + provenance</small></div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="inspect" class="inspect-section section-shell">
-      <div class="inspect-heading">
-        <h2>INSPECT EVERY<br>HANDOFF.</h2>
-        <p>The same active market drives this viewer and the graph above. Nothing is hidden behind a single “generated” thumbnail.</p>
-      </div>
-      <div id="market-viewer" class="market-viewer" aria-labelledby="production-map-title" tabindex="0">
-        <div class="stage-view">
-          <figure>
-            <img id="stage-image" src="../assets/generated/mexico-city-es/city-plate.png" alt="Mexico City generated city plate">
-            <figcaption><span id="stage-number">01 / 06</span><strong id="stage-title">Generated city plate</strong></figcaption>
-          </figure>
-        </div>
-        <div class="stage-controls">
-          <div class="market-meta">
-            <p id="market-locale">CIUDAD DE MÉXICO · MÉXICO · es-MX</p>
-            <h3 id="market-headline">CORRE LIBRE</h3>
-            <p id="market-description">Torre Latinoamericana + Monumento a la Revolución. A new fictional runner, Spanish-Mexico draft copy, and city-specific silhouette remain linked to the strategist brief and human review.</p>
-          </div>
-          <div class="stage-buttons" aria-label="Select a production layer">
-            <button type="button" class="is-active" aria-pressed="true" aria-controls="stage-image" data-stage="city">City plate</button>
-            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="raw">Raw runner</button>
-            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="mask">Alpha mask</button>
-            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="runner">Runner RGBA</button>
-            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="composite">Comfy composite</button>
-            <button type="button" aria-pressed="false" aria-controls="stage-image" data-stage="final">Final poster</button>
-          </div>
-          <p id="viewer-status" class="visually-hidden" aria-live="polite"></p>
-          <p id="stage-note" class="stage-note">The strategist erases the Seattle source skyline, closes the prompt to verified target-city landmarks, and reserves the far-left 3–22% for the signature silhouette before Comfy reinserts the crop.</p>
-          <a id="stage-download" class="text-link" href="../assets/generated/mexico-city-es/city-plate.png" download>Download this layer ↓</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="outputs" class="outputs-section section-shell">
-      <div class="outputs-heading"><h2>THREE SHOWN.<br>NO PRACTICAL LOCALE LIMIT.</h2><p>Mexico City, Sydney, and Shanghai are three rows from the same fan-out. Each final static remains linked to its Comfy layers, strategist handoff, motion render, retry state, and human review status.</p></div>
-      <div class="poster-grid">
-        <figure><a href="../exports/previews/mexico-city-es.png" target="_blank"><img src="../exports/previews/mexico-city-es.png" alt="Mexico City final localized poster"></a><figcaption><b>MEXICO CITY</b><a href="../exports/previews/mexico-city-es.png" download>PNG ↓</a></figcaption></figure>
-        <figure><a href="../exports/previews/sydney-en.png" target="_blank"><img src="../exports/previews/sydney-en.png" alt="Sydney final localized poster"></a><figcaption><b>SYDNEY</b><a href="../exports/previews/sydney-en.png" download>PNG ↓</a></figcaption></figure>
-        <figure><a href="../exports/previews/shanghai-zh.png" target="_blank"><img src="../exports/previews/shanghai-zh.png" alt="Shanghai final localized poster"></a><figcaption><b>上海 / SHANGHAI</b><a href="../exports/previews/shanghai-zh.png" download>PNG ↓</a></figcaption></figure>
-      </div>
-      <a class="contact-sheet-link" href="../review/locale-qa-2026-08-08.jpg" target="_blank">Open the three-locale static QA sheet ↗</a>
-      <div class="motion-proof">
-        <div>
-          <p class="flow-kicker">03 LOCALES / MOTION PROOF</p>
-          <h3>MOVE THE HUMAN.<br>FREEZE THE SYSTEM.</h3>
-          <p>Kling receives only each isolated runner. HyperFrames reconstructs the approved static layer stack exactly, then animates the type reveals and perimeter marquee without redesigning the wavy headline, city lockup, or campaign geometry.</p>
-        </div>
-        <div class="motion-proof-grid">
-          <figure><video src="../videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Final Mexico City motion poster"></video><figcaption><span>FINAL MP4</span><b>MEXICO CITY / es-MX</b></figcaption></figure>
-          <figure><video src="../videos/nrc-localized-motion-poster/renders/sydney-en-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Final Sydney motion poster"></video><figcaption><span>FINAL MP4</span><b>SYDNEY / en-AU</b></figcaption></figure>
-          <figure><video src="../videos/nrc-localized-motion-poster/renders/shanghai-zh-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Final Shanghai motion poster"></video><figcaption><span>FINAL MP4</span><b>上海 / zh-CN</b></figcaption></figure>
-        </div>
-      </div>
-    </section>
-
-    <section id="qa" class="qa-section">
-      <div class="section-shell qa-grid">
-        <div class="qa-thesis">
-          <h2>FAST DOES NOT<br>MEAN APPROVED.</h2>
-          <p>Mechanical validation happens automatically. Language, representation, landmark accuracy, anatomy, wardrobe, resemblance, rights, and campaign approval remain named human decisions.</p>
-          <a class="button secondary" href="https://github.com/thenpceo/locale-flow-comfy-codex/blob/main/review/locale-qa-2026-08-08.md" target="_blank" rel="noreferrer">Open 3-locale QA report ↗</a>
-        </div>
-        <div class="ledger" role="table" aria-label="Quality assurance ledger">
-          <div role="row"><b role="cell">Final dimensions + sRGB</b><span role="cell" class="pass">PASS</span></div>
-          <div role="row"><b role="cell">Protected checksums</b><span role="cell" class="pass">PASS</span></div>
-          <div role="row"><b role="cell">Workflow package</b><span role="cell" class="pass">PASS</span></div>
-          <div role="row"><b role="cell">Copy + tone</b><span role="cell">HUMAN REVIEW</span></div>
-          <div role="row"><b role="cell">Culture + casting</b><span role="cell">HUMAN REVIEW</span></div>
-          <div role="row"><b role="cell">Anatomy + alpha</b><span role="cell">HUMAN REVIEW</span></div>
-          <div role="row"><b role="cell">Brand + rights + legal</b><span role="cell">HUMAN REVIEW</span></div>
-        </div>
-        <figure class="qa-proof">
-          <a href="../review/locale-motion-qa-2026-08-08.jpg" target="_blank"><img src="../review/locale-motion-qa-2026-08-08.jpg" alt="Mexico City, Sydney, and Shanghai approved static, mid-motion, and settled-frame comparison"></a>
-          <figcaption><b>3 NEW LOCALES · 7 BUGS FOUND + FIXED</b><span>APPROVED STATIC → MID-MOTION → SETTLED OUTPUT</span></figcaption>
+      <div class="before-after" aria-label="Source campaign plate transformed into the finished Mexico City poster">
+        <figure>
+          <div class="frame-label"><span>INPUT</span><b>PROTECTED CAMPAIGN PLATE</b></div>
+          <img src="../assets/source/campaign-background.png" alt="Source campaign background with Seattle skyline">
+          <figcaption>Original skyline · brand geometry protected</figcaption>
+        </figure>
+        <div class="transform-arrow" aria-hidden="true">→</div>
+        <figure class="after">
+          <div class="frame-label"><span>OUTPUT</span><b>MEXICO CITY / es-MX</b></div>
+          <img src="../exports/previews/mexico-city-es.png" alt="Finished Mexico City localized campaign poster">
+          <figcaption>New place · new runner · localized copy</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="handoff section-shell">
-      <div>
-        <h2>THE 90-SECOND<br>INTERVIEW ROUTE.</h2>
-        <ol>
-          <li><b>Start with one request.</b> Paste a list of cities into Codex. Ten or one hundred locales use the same production contract.</li>
-          <li><b>Show the fan-out.</b> Codex turns the list into independent Comfy jobs with separate cost, retries, outputs, and QA state.</li>
-          <li><b>Open the strategist.</b> The LLM turns that city into a structured landmark, locale, casting, exclusion, and review brief.</li>
-          <li><b>Trace both branches.</b> JSON extractors route its detailed prompts into the skyline and fictional-runner generators.</li>
-          <li><b>Point to the mask.</b> The alpha pass makes the handoff editable instead of flattening it.</li>
-          <li><b>Prove motion isolation.</b> Kling sees only the runner; Bria reattaches the locked poster afterward.</li>
-          <li><b>Close on scale and governance.</b> One prompt can create hundreds of media pieces; humans still approve culture, language, landmark truth, and brand.</li>
-        </ol>
+    <section id="flow" class="flow-section">
+      <div class="shell section-heading">
+        <p class="eyebrow">ONE COMPLETE WALKTHROUGH / MEXICO CITY</p>
+        <h2>ONE CITY IN.<br>THE WHOLE CAMPAIGN OUT.</h2>
+        <p>A single locale record drives the complete A→D chain. Each stage has one clear job and one reviewable output.</p>
       </div>
-      <aside>
-        <p>ONE PROMPT IN CODEX.<br>HUNDREDS OF ASSETS OUT.</p>
-        <span>Protected inputs · model nodes · inspectable intermediates · deterministic production · approval gates</span>
-        <a class="button primary" href="https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5" target="_blank" rel="noreferrer">Present the latest saved graph ↗</a>
-      </aside>
+
+      <div class="city-input shell" aria-label="Mexico City is the single workflow input">
+        <span>INPUT</span><strong>MEXICO CITY</strong><small>es-MX · Torre Latinoamericana · Monumento a la Revolución</small>
+      </div>
+
+      <div class="flow-grid shell">
+        <article class="flow-stage stage-a">
+          <header><b>A</b><div><span>LOCALIZE</span><h3>PLACE + PERSON</h3></div></header>
+          <div class="stage-pair">
+            <figure><img src="../assets/generated/mexico-city-es/city-plate.png" alt="Mexico City campaign plate generated in Comfy"><figcaption>CITY PLATE</figcaption></figure>
+            <figure><img src="../assets/generated/mexico-city-es/runner-alpha.png" alt="New fictional Mexico City runner with transparent background"><figcaption>RUNNER RGBA</figcaption></figure>
+          </div>
+          <p>The strategist writes landmark and casting briefs. Nano Banana Pro changes the skyline and fictional runner; Recraft returns the editable alpha.</p>
+          <footer>COMFY · GEMINI · NANO BANANA PRO · RECRAFT</footer>
+        </article>
+
+        <article class="flow-stage stage-b">
+          <header><b>B</b><div><span>DESIGN</span><h3>FINISH THE STATIC</h3></div></header>
+          <figure class="stage-media"><img src="../exports/previews/mexico-city-es.png" alt="Mexico City poster finished by the graphic design agent"></figure>
+          <p>Codex uses the graphic-design skill to rebuild the exact campaign layout, localized headline, city lockup, perimeter type, and production metadata.</p>
+          <footer>CODEX · GRAPHIC-DESIGN SKILL · HTML / SVG</footer>
+        </article>
+
+        <article class="flow-stage stage-c">
+          <header><b>C</b><div><span>MOVE</span><h3>ANIMATE THE HUMAN</h3></div></header>
+          <figure class="stage-media"><video src="../assets/generated/mexico-city-es/runner-warmup.mp4" controls muted loop playsinline preload="metadata" aria-label="Kling animation where only the Mexico City runner moves"></video></figure>
+          <p>Kling receives the isolated person—not the finished poster—then creates a subtle warm-up while the approved city plate remains locked.</p>
+          <footer>COMFY · KLING 3.0 · BRIA RECOMPOSITE</footer>
+        </article>
+
+        <article class="flow-stage stage-d">
+          <header><b>D</b><div><span>FINISH</span><h3>ANIMATE THE TYPE</h3></div></header>
+          <figure class="stage-media"><video src="../videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Final Mexico City motion poster with HyperFrames typography"></video></figure>
+          <p>HyperFrames takes the approved static as the source of truth, then adds staggered copy, the wavy headline, city lockup, and perimeter marquee.</p>
+          <footer>CODEX · HYPERFRAMES · FINAL MP4</footer>
+        </article>
+      </div>
     </section>
 
-    <section class="downloads section-shell">
-      <h2>EVERY FILE,<br>INSPECTABLE.</h2>
-      <div class="download-grid">
-        <div><h3>Workflow + Skills</h3><a href="../workflows/nike-run-localizer-codex-orchestrated-multi-locale-latest.json" download>28-node Comfy graph ↓</a><a href="../.agents/skills/nrc-campaign-localizer/SKILL.md" target="_blank">Orchestrator skill ↗</a><a href="../.agents/skills/nrc-static-finisher/SKILL.md" target="_blank">Static finisher skill ↗</a><a href="../.agents/skills/nrc-motion-finisher/SKILL.md" target="_blank">Motion finisher skill ↗</a><a href="https://github.com/thenpceo/locale-flow-comfy-codex/blob/main/review/locale-qa-2026-08-08.md" target="_blank" rel="noreferrer">3-locale QA report ↗</a><a href="../videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4" download>Mexico City MP4 ↓</a><a href="../videos/nrc-localized-motion-poster/renders/sydney-en-motion-poster.mp4" download>Sydney MP4 ↓</a><a href="../videos/nrc-localized-motion-poster/renders/shanghai-zh-motion-poster.mp4" download>Shanghai MP4 ↓</a></div>
-        <div><h3>Mexico City</h3><a href="../assets/generated/mexico-city-es/handoff.json" target="_blank">Strategist JSON ↗</a><a href="../assets/generated/mexico-city-es/city-plate.png" download>City plate ↓</a><a href="../assets/generated/mexico-city-es/runner-raw.png" download>Raw runner ↓</a><a href="../assets/processed/mexico-city-es-alpha-mask.png" download>Alpha mask ↓</a><a href="../assets/generated/mexico-city-es/runner-alpha.png" download>Runner RGBA ↓</a><a href="../assets/generated/mexico-city-es/comfy-composite.png" download>Composite ↓</a><a href="../assets/generated/mexico-city-es/runner-warmup.mp4" download>Comfy motion ↓</a><a href="../exports/previews/mexico-city-es.png" download>Final poster ↓</a></div>
-        <div><h3>Sydney</h3><a href="../assets/generated/sydney-en/handoff.json" target="_blank">Strategist JSON ↗</a><a href="../assets/generated/sydney-en/city-plate.png" download>City plate ↓</a><a href="../assets/generated/sydney-en/runner-raw.png" download>Raw runner ↓</a><a href="../assets/processed/sydney-en-alpha-mask.png" download>Alpha mask ↓</a><a href="../assets/generated/sydney-en/runner-alpha.png" download>Runner RGBA ↓</a><a href="../assets/generated/sydney-en/comfy-composite.png" download>Composite ↓</a><a href="../assets/generated/sydney-en/runner-warmup.mp4" download>Comfy motion ↓</a><a href="../exports/previews/sydney-en.png" download>Final poster ↓</a></div>
-        <div><h3>Shanghai</h3><a href="../assets/generated/shanghai-zh/handoff.json" target="_blank">Strategist JSON ↗</a><a href="../assets/generated/shanghai-zh/city-plate.png" download>City plate ↓</a><a href="../assets/generated/shanghai-zh/runner-raw.png" download>Raw runner ↓</a><a href="../assets/processed/shanghai-zh-alpha-mask.png" download>Alpha mask ↓</a><a href="../assets/generated/shanghai-zh/runner-alpha.png" download>Runner RGBA ↓</a><a href="../assets/generated/shanghai-zh/comfy-composite.png" download>Composite ↓</a><a href="../assets/generated/shanghai-zh/runner-warmup.mp4" download>Comfy motion ↓</a><a href="../exports/previews/shanghai-zh.png" download>Final poster ↓</a></div>
+    <section id="outputs" class="outputs-section shell">
+      <div class="section-heading compact">
+        <p class="eyebrow">ONE BATCH / SIX FINISHED ASSETS</p>
+        <h2>THREE LOCALES.<br>STATIC + MOTION.</h2>
+        <p>The same workflow ran for Mexico City, Sydney, and Shanghai. These are the finished campaign deliverables—not intermediate generations.</p>
+      </div>
+
+      <div class="output-grid">
+        <article class="output-card">
+          <header><span>01 / es-MX</span><h3>MEXICO CITY</h3></header>
+          <a href="../exports/previews/mexico-city-es.png" target="_blank"><img src="../exports/previews/mexico-city-es.png" alt="Mexico City finished static poster"></a>
+          <video src="../videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Mexico City finished animated poster"></video>
+          <footer><a href="../exports/previews/mexico-city-es.png" download>STATIC PNG ↓</a><a href="../videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4" download>MOTION MP4 ↓</a></footer>
+        </article>
+
+        <article class="output-card">
+          <header><span>02 / en-AU</span><h3>SYDNEY</h3></header>
+          <a href="../exports/previews/sydney-en.png" target="_blank"><img src="../exports/previews/sydney-en.png" alt="Sydney finished static poster"></a>
+          <video src="../videos/nrc-localized-motion-poster/renders/sydney-en-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Sydney finished animated poster"></video>
+          <footer><a href="../exports/previews/sydney-en.png" download>STATIC PNG ↓</a><a href="../videos/nrc-localized-motion-poster/renders/sydney-en-motion-poster.mp4" download>MOTION MP4 ↓</a></footer>
+        </article>
+
+        <article class="output-card">
+          <header><span>03 / zh-CN</span><h3>上海 / SHANGHAI</h3></header>
+          <a href="../exports/previews/shanghai-zh.png" target="_blank"><img src="../exports/previews/shanghai-zh.png" alt="Shanghai finished static poster"></a>
+          <video src="../videos/nrc-localized-motion-poster/renders/shanghai-zh-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Shanghai finished animated poster"></video>
+          <footer><a href="../exports/previews/shanghai-zh.png" download>STATIC PNG ↓</a><a href="../videos/nrc-localized-motion-poster/renders/shanghai-zh-motion-poster.mp4" download>MOTION MP4 ↓</a></footer>
+        </article>
+      </div>
+    </section>
+
+    <section id="qa" class="qa-section">
+      <div class="shell qa-layout">
+        <div class="qa-copy">
+          <p class="eyebrow">ENTERPRISE GOVERNANCE</p>
+          <h2>GENERATE FAST.<br>APPROVE DELIBERATELY.</h2>
+          <p>The system can automatically validate every file, route exceptions to a human reviewer, and publish only approved assets into the enterprise DAM.</p>
+          <div class="qa-columns">
+            <div><h3>AUTOMATED QA</h3><ul><li>Dimensions, format, color profile</li><li>Protected-region checksums</li><li>Alpha and compositing integrity</li><li>Copy fit and required metadata</li><li>Retry and provenance manifest</li></ul></div>
+            <div><h3>HUMAN APPROVAL</h3><ul><li>Language and local tone</li><li>Cultural and casting review</li><li>Landmark accuracy</li><li>Brand, rights, and legal</li><li>Final campaign release</li></ul></div>
+          </div>
+        </div>
+
+        <div class="aem-panel">
+          <p class="eyebrow">ADOBE EXPERIENCE MANAGER ASSETS</p>
+          <h3>FROM GENERATION TO DAM—AUTOMATICALLY.</h3>
+          <div class="aem-flow" aria-label="AEM Assets integration flow">
+            <div><b>01</b><strong>GENERATE</strong><span>Static, MP4, masks, manifest</span></div>
+            <i aria-hidden="true">→</i>
+            <div><b>02</b><strong>QA + APPROVE</strong><span>Rules, review status, provenance</span></div>
+            <i aria-hidden="true">→</i>
+            <div><b>03</b><strong>PUBLISH TO AEM</strong><span>Direct binary upload + metadata</span></div>
+            <i aria-hidden="true">→</i>
+            <div><b>04</b><strong>ACTIVATE</strong><span>Renditions ready for channels</span></div>
+          </div>
+          <p class="aem-note">The production connector would use the customer’s AEM as a Cloud Service credentials and product profile. Approved binaries upload directly to AEM’s cloud storage; QA results and locale provenance travel with the asset metadata.</p>
+          <div class="source-links">
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-cloud-service/content/assets/admin/developer-reference-material-apis" target="_blank" rel="noreferrer">Adobe: AEM Assets APIs ↗</a>
+            <a href="https://experienceleague.adobe.com/en/docs/experience-manager-learn/assets/advanced/programmatic-asset-upload" target="_blank" rel="noreferrer">Adobe: programmatic asset upload ↗</a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <span>NRC CITY LOCALIZATION / INTERVIEW PROTOTYPE / 2026</span>
-    <span>Not authorized by Nike or Adobe</span>
+  <footer class="site-footer">
+    <span>LOCALE FLOW / INTERVIEW PROTOTYPE / 2026</span>
+    <span>ONE CAMPAIGN → EVERY MARKET</span>
   </footer>
 </body>
 </html>
