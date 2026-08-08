@@ -62,6 +62,11 @@ assets/generated/shanghai-zh/*
 !assets/generated/shanghai-zh/runner-warmup.mp4
 !assets/generated/shanghai-zh/runner-motion-alpha-preview.webm
 !assets/generated/shanghai-zh/handoff.json
+!assets/generated/cairo-ar/
+assets/generated/cairo-ar/*
+!assets/generated/cairo-ar/city-plate.png
+!assets/generated/cairo-ar/runner-raw.png
+!assets/generated/cairo-ar/runner-warmup.mp4
 !assets/processed/paris-fr-alpha-mask.png
 !assets/processed/london-en-alpha-mask.png
 !assets/processed/tokyo-ja-alpha-mask.png
