@@ -10,7 +10,8 @@ Use this skill when a user asks Codex to localize the poster system for one city
 ## Inputs
 
 - A comma-separated list of city or city-locale records.
-- The saved Comfy graph in `workflows/nike-run-localizer-codex-orchestrated-multi-locale-latest.json`.
+- The canonical 22-node API execution graph in `workflows/nano-banana-pro-full-localizer.api.json`.
+- The saved 28-node graph is for visible interview inspection only. Never execute its three reference-preview pairs as part of a paid locale run.
 - Cleared campaign plate and runner reference assets in the user's Comfy workspace.
 
 ## Procedure

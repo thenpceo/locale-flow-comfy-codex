@@ -24,6 +24,8 @@ When the user asks to localize the campaign to one or more cities/locales:
   https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5
 - Canonical batch-execution graph:
   `workflows/nano-banana-pro-full-localizer.api.json`
+- Never convert or execute the 28-node interview graph for batch production. Its nodes 23–28 are static
+  reference previews and would pollute every locale's output set with unrelated assets.
 - For one locale, a saved-workflow run is acceptable.
 - For two or more independent locales, clone the API graph once per locale and submit bounded Comfy
   batches of no more than `config/pipeline.example.json#batchPolicy.maxConcurrentLocales` graphs.

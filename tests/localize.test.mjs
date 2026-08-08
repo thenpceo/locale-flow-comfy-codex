@@ -61,3 +61,11 @@ test('multi-locale planning bounds paid graph concurrency and records retry poli
   assert.equal(pipeline.batchPolicy.retryBackoffSeconds, 60);
   assert.ok(pipeline.batchPolicy.retryableErrors.includes('429'));
 });
+
+test('paid execution graph exposes only the six locale deliverables', () => {
+  const workflow = JSON.parse(fs.readFileSync(new URL('../workflows/nano-banana-pro-full-localizer.api.json', import.meta.url)));
+  const outputNodes = Object.entries(workflow)
+    .filter(([, node]) => ['SaveImage', 'SaveImageWithAlpha', 'SaveVideo', 'SaveText', 'PreviewImage'].includes(node.class_type));
+  assert.deepEqual(outputNodes.map(([id]) => id), ['9', '15', '17', '18', '21', '22']);
+  assert.equal(outputNodes.some(([, node]) => node.class_type === 'PreviewImage'), false);
+});
