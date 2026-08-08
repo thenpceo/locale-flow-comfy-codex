@@ -93,3 +93,10 @@ test('localized motion preserves CJK scoping and static city wrapping', () => {
   const cityRule = motion.match(/\.city \{([\s\S]*?)\}/)?.[1] || '';
   assert.doesNotMatch(cityRule, /white-space:\s*nowrap/);
 });
+
+test('partial motion rerenders preserve prior locale manifest entries', () => {
+  const renderer = fs.readFileSync(new URL('../scripts/render-motion-locales.mjs', import.meta.url), 'utf8');
+  assert.match(renderer, /previousResults/);
+  assert.match(renderer, /mergedResults\.set\(result\.locale, result\)/);
+  assert.match(renderer, /locale\.localeCompare\(b\.locale\)/);
+});
