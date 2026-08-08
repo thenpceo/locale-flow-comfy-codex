@@ -107,13 +107,13 @@
         "7",
         0
       ],
-      "prompt": "Create a NEW fictional person from this reference: Casting brief: a fictional adult British South Asian woman runner, contemporary London running-club casting, confident and direct. Preserve the exact front-facing hands-on-hips running pose, camera angle, body scale, crop, centered silhouette, grayscale high-contrast halftone print texture, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment. Change the person's identity and facial features; do not merely recolor the supplied person. Keep styling contemporary and globally credible, with no national costume, flag, landmark, souvenir styling, caricature, text additions, extra logos, jewelry additions, extra limbs, or anatomy changes. Place the full isolated figure against a plain neutral studio background with a clean continuous silhouette. Return one image.",
+      "prompt": "Create a NEW fictional person from this reference: Casting brief: a fictional adult British South Asian woman runner, contemporary London running-club casting, confident and direct. Preserve the exact front-facing hands-on-hips running pose, camera angle, body scale, crop, centered silhouette, grayscale high-contrast halftone print texture, black athletic top with the supplied NIKE word treatment, white forearm bands, and black lower garment. Change the person's identity and facial features; do not merely recolor the supplied person. Preserve the supplied wardrobe exactly. The existing NIKE word treatment is the only permitted lettering. Do not add city names, running-club text, invented logos, headbands, hats, glasses, watches, jewelry, bags, or any other accessory. Avoid national costume, flags, landmarks, souvenir styling, caricature, extra limbs, or anatomy changes. Place the full isolated figure against a plain neutral studio background with a clean continuous silhouette. Return one image.",
       "model": "gemini-3-pro-image-preview",
       "seed": 904221,
       "aspect_ratio": "auto",
       "resolution": "1K",
       "response_modalities": "IMAGE",
-      "system_prompt": "Generate a new fictional adult runner while preserving pose, crop, garment structure, and graphic treatment from the reference. Avoid stereotypes. Always return an image."
+      "system_prompt": "Generate a new fictional adult runner while preserving pose, crop, garment structure, and graphic treatment from the reference. Preserve the supplied wardrobe exactly. The existing NIKE word treatment is the only permitted lettering. Do not add city names, running-club text, invented logos, headbands, hats, glasses, watches, jewelry, bags, or any other accessory. Avoid stereotypes. Always return an image."
     },
     "_meta": {
       "title": "03B · NANO BANANA PRO · LONDON fictional runner"

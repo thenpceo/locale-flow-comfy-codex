@@ -6,7 +6,7 @@
   "filename": "nike-run-localizer-one-city-strategist-demo.json",
   "workflowId": "21f30a93-e0fb-43d3-a620-e2065174cec5",
   "canvasUrl": "https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5",
-  "savedVersion": 2,
+  "savedVersion": 3,
   "nodeCount": 28,
   "executableNodeCount": 22,
   "completedMarkets": ["paris-fr", "london-en", "tokyo-ja", "new-york-en-motion-proof"],
@@ -35,5 +35,5 @@
   "latestOutput": "assets/generated/new-york-en/runner-warmup.mp4",
   "latestOutputSha256": "ae12fd624848e0d386844f5396f7979d576b22f637981bf7fe25f4c39a8af931",
   "executionHistory": "The 28-node strategist architecture completed a New York proof successfully, including a five-second Kling 3.0 runner-only animation and Bria locked-plate recomposite. Earlier completed jobs produced the delivered Paris, London, and Tokyo reference assets.",
-  "verification": "Version 2 of the new canonical record contains the polished six-group canvas and one CITY input feeding the strategist, both image branches, the isolated motion branch, and a JSON agent-handoff output. The skyline strategist now erases the Seattle source, forbids non-whitelisted landmarks, anchors the signature landmark in the far-left 3–22% zone, and fills the lower-left edge continuously. The runner layer—not the poster—feeds Kling 3.0; the protected city plate enters afterward at Bria. Codex fans this graph out for any requested locale count, downloads each prefixed artifact set, then invokes the deterministic static and motion finishing skills."
+  "verification": "Version 3 of the canonical record contains the polished six-group canvas and one CITY input feeding the strategist, both image branches, the isolated motion branch, and a JSON agent-handoff output. The skyline strategist erases the Seattle source, forbids non-whitelisted landmarks, anchors the signature landmark in the far-left 3–22% zone, and fills the lower-left edge continuously. The runner branch now preserves the supplied wardrobe exactly, permits only the existing NIKE lettering, and explicitly forbids generated city names, running-club text, headwear, jewelry, and other accessories. The runner layer—not the poster—feeds Kling 3.0; the protected city plate enters afterward at Bria. Codex fans this graph out in bounded batches, downloads each prefixed artifact set, then invokes the deterministic static and motion finishing skills."
 }

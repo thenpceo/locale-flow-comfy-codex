@@ -69,3 +69,11 @@ test('paid execution graph exposes only the six locale deliverables', () => {
   assert.deepEqual(outputNodes.map(([id]) => id), ['9', '15', '17', '18', '21', '22']);
   assert.equal(outputNodes.some(([, node]) => node.class_type === 'PreviewImage'), false);
 });
+
+test('runner generation forbids invented apparel, accessories, and lettering', () => {
+  const workflow = JSON.parse(fs.readFileSync(new URL('../workflows/nano-banana-pro-full-localizer.api.json', import.meta.url)));
+  const combined = `${workflow['4'].inputs.system_prompt} ${workflow['12'].inputs.system_prompt}`;
+  for (const phrase of ['only permitted lettering', 'headbands', 'running-club', 'Preserve the supplied wardrobe exactly']) {
+    assert.match(combined, new RegExp(phrase));
+  }
+});
