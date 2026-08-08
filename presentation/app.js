@@ -67,22 +67,8 @@ const stages = {
   }
 };
 
-const packageAssets = [
-  { index: '01', title: 'City plate', owner: 'COMFY / NANO BANANA PRO', type: 'image', path: id => `../assets/generated/${id}/city-plate.png` },
-  { index: '02', title: 'Raw fictional runner', owner: 'COMFY / NANO BANANA PRO', type: 'image', path: id => `../assets/generated/${id}/runner-raw.png` },
-  { index: '03', title: 'Foreground alpha mask', owner: 'COMFY / RECRAFT', type: 'image', path: id => `../assets/processed/${id}-alpha-mask.png`, className: 'asset-card--mask' },
-  { index: '04', title: 'Runner RGBA', owner: 'COMFY / RECRAFT', type: 'image', path: id => `../assets/generated/${id}/runner-alpha.png`, className: 'checker' },
-  { index: '05', title: 'Validation composite', owner: 'COMFY / LAYER MERGE', type: 'image', path: id => `../assets/generated/${id}/comfy-composite.png` },
-  { index: '06', title: 'Finished static poster', owner: 'CODEX / GRAPHIC DESIGN', type: 'image', path: id => `../exports/previews/${id}.png`, className: 'asset-card--hero' },
-  { index: '07', title: 'Locked-plate warm-up', owner: 'COMFY / KLING 3.0 + BRIA', type: 'video', path: id => `../assets/generated/${id}/runner-warmup.mp4` },
-  { index: '08', title: 'Motion foreground matte', owner: 'COMFY / FOREGROUND MATTE', type: 'video', path: id => `../assets/generated/${id}/runner-motion-alpha-preview.webm`, className: 'checker' },
-  { index: '09', title: 'Final motion poster', owner: 'CODEX / HYPERFRAMES', type: 'video', path: id => `../videos/nrc-localized-motion-poster/renders/${id}-motion-poster.mp4`, className: 'asset-card--hero' },
-  { index: '10', title: 'Strategist handoff', owner: 'COMFY / GEMINI JSON', type: 'manifest', path: id => `../assets/generated/${id}/handoff.json` }
-];
-
 let activeMarket = 'mexico-city-es';
 let activeStage = 'city';
-const marketTabs = [...document.querySelectorAll('[role="tab"]')];
 const stageButtons = [...document.querySelectorAll('[data-stage]')];
 
 function setImage(selector, path, alt) {
@@ -134,77 +120,20 @@ function renderInspector() {
   document.querySelector('#stage-download').href = path;
 }
 
-function assetMedia(asset, market, path) {
-  const label = `${market.shortCity} ${asset.title.toLowerCase()}`;
-  if (asset.type === 'video') {
-    return `<video src="${path}" controls muted loop playsinline preload="metadata" aria-label="${label}"></video>`;
-  }
-  if (asset.type === 'manifest') {
-    return `<div class="manifest-keys" aria-label="${label}"><span>skyline_prompt</span><span>runner_prompt</span><span>locale</span><span>copy_direction</span><span>human_review</span></div>`;
-  }
-  return `<a href="${path}" target="_blank"><img src="${path}" loading="lazy" alt="${label}"></a>`;
-}
-
-function renderAssetPackages() {
-  const container = document.querySelector('#locale-packages');
-  if (!container) return;
-  container.innerHTML = Object.entries(markets).map(([id, market], marketIndex) => {
-    const cards = packageAssets.map(asset => {
-      const path = asset.path(id);
-      const action = asset.type === 'manifest' ? 'OPEN JSON ↗' : asset.type === 'video' ? 'DOWNLOAD VIDEO ↓' : 'DOWNLOAD PNG ↓';
-      return `<article class="asset-card ${asset.className || ''}">
-        <div class="asset-card__top"><span>${asset.index}</span><b>${asset.owner}</b></div>
-        <div class="asset-card__media">${assetMedia(asset, market, path)}</div>
-        <div class="asset-card__bottom"><strong>${asset.title}</strong><a href="${path}" ${asset.type === 'manifest' ? 'target="_blank"' : 'download'}>${action}</a></div>
-      </article>`;
-    }).join('');
-    return `<section class="locale-package" aria-labelledby="package-${id}">
-      <header class="package-heading"><span>0${marketIndex + 1} / 03</span><div><p>${market.locale}</p><h3 id="package-${id}">${market.city}</h3></div><b>10 TRACEABLE ASSETS</b></header>
-      <div class="asset-grid">${cards}</div>
-    </section>`;
-  }).join('');
-}
-
 function render() {
   renderGraph();
   renderInspector();
-  marketTabs.forEach(tab => {
-    const active = tab.dataset.market === activeMarket;
-    tab.setAttribute('aria-selected', String(active));
-    tab.tabIndex = active ? 0 : -1;
-  });
   stageButtons.forEach(button => {
     const active = button.dataset.stage === activeStage;
     button.classList.toggle('is-active', active);
     button.setAttribute('aria-pressed', String(active));
   });
-  document.querySelector('#market-viewer').setAttribute('aria-labelledby', `market-tab-${activeMarket}`);
   document.querySelector('#viewer-status').textContent = `${markets[activeMarket].shortCity}: ${stages[activeStage].title}`;
 }
-
-marketTabs.forEach((tab, index) => {
-  tab.addEventListener('click', () => {
-    activeMarket = tab.dataset.market;
-    render();
-  });
-  tab.addEventListener('keydown', event => {
-    if (!['ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown', 'Home', 'End'].includes(event.key)) return;
-    event.preventDefault();
-    let next = index;
-    if (['ArrowRight', 'ArrowDown'].includes(event.key)) next = (index + 1) % marketTabs.length;
-    if (['ArrowLeft', 'ArrowUp'].includes(event.key)) next = (index - 1 + marketTabs.length) % marketTabs.length;
-    if (event.key === 'Home') next = 0;
-    if (event.key === 'End') next = marketTabs.length - 1;
-    activeMarket = marketTabs[next].dataset.market;
-    render();
-    marketTabs[next].focus();
-  });
-});
 
 stageButtons.forEach(button => button.addEventListener('click', () => {
   activeStage = button.dataset.stage;
   render();
 }));
 
-renderAssetPackages();
 render();

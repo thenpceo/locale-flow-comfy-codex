@@ -34,8 +34,8 @@
           <p>“Localize this campaign for <strong>Mexico City, Sydney, and Shanghai</strong>. Generate every city, runner, mask, static, and motion layer, then return the complete review package.”</p>
           <ol aria-label="Prompt expansion">
             <li><b>03</b><span>LOCALES TESTED</span></li>
-            <li><b>× 10</b><span>TRACEABLE ASSETS</span></li>
-            <li><b>30</b><span>FILES SHOWN BELOW</span></li>
+            <li><b>× 02</b><span>FINAL FORMATS</span></li>
+            <li><b>06</b><span>HERO OUTPUTS</span></li>
           </ol>
         </div>
         <div class="hero-actions">
@@ -60,15 +60,13 @@
       <div class="section-shell flow-intro">
         <div>
           <p class="flow-kicker">THE PRODUCTION MAP</p>
-          <h2>ONE LOCALE RECORD.<br>THREE PRODUCTION BRANCHES.</h2>
+          <h2 id="production-map-title">ONE LOCALE RECORD.<br>FOUR PRODUCTION BRANCHES.</h2>
         </div>
         <p>Codex is the control plane. It expands the list into independent city jobs, batches them through Comfy, collects every intermediate, then routes stable layers to the static and HyperFrames finishing skills. One failed market retries without rerunning the other ninety-nine.</p>
       </div>
 
-      <div class="market-tabs" role="tablist" aria-label="Select a market for the production graph">
-        <button id="market-tab-mexico-city-es" type="button" role="tab" aria-selected="true" aria-controls="production-graph market-viewer" tabindex="0" data-market="mexico-city-es">MEXICO CITY <small>es-MX</small></button>
-        <button id="market-tab-sydney-en" type="button" role="tab" aria-selected="false" aria-controls="production-graph market-viewer" tabindex="-1" data-market="sydney-en">SYDNEY <small>en-AU</small></button>
-        <button id="market-tab-shanghai-zh" type="button" role="tab" aria-selected="false" aria-controls="production-graph market-viewer" tabindex="-1" data-market="shanghai-zh">上海 <small>zh-CN</small></button>
+      <div class="market-lock" aria-label="Production graph locale is locked to Mexico City">
+        <span>DEMO WALKTHROUGH LOCALE</span><strong>MEXICO CITY</strong><small>es-MX · the same locale drives A, B, C, and D</small>
       </div>
 
       <div id="production-graph" class="graph-shell" aria-live="polite">
@@ -209,6 +207,33 @@
             <div class="node-bottom"><strong>Only the runner moves</strong><small>1204 × 1720 · 5.04 seconds</small></div>
           </article>
         </div>
+
+        <div class="agent-motion-lane" aria-label="Agent and HyperFrames final motion finishing">
+          <div class="lane-heading"><b>D</b><span>AGENT MOTION FINISH</span><small>MEXICO CITY · APPROVED STATIC GEOMETRY IS THE SOURCE OF TRUTH</small></div>
+          <article class="flow-node node-video">
+            <div class="node-top"><span>12</span><b>COMFY HANDOFF</b></div>
+            <video src="../assets/generated/mexico-city-es/runner-warmup.mp4" controls muted loop playsinline preload="metadata" aria-label="Mexico City Comfy warm-up video passed to the agent"></video>
+            <div class="node-bottom"><strong>Locked plate + moving human</strong><small>Comfy MP4 · no campaign typography</small></div>
+          </article>
+          <div class="wire wire-agent" aria-hidden="true"><span></span><i>handoff</i></div>
+          <article class="flow-node node-agent-motion">
+            <div class="node-top"><span>13</span><b>CODEX + HYPERFRAMES</b></div>
+            <ol class="motion-layer-stack" aria-label="Static-faithful animated typography layers">
+              <li><span>05</span>Perimeter marquee</li>
+              <li><span>04</span>City + route lockup</li>
+              <li><span>03</span>Wavy CORRE LIBRE</li>
+              <li><span>02</span>Staggered type reveals</li>
+              <li><span>01</span>Approved static geometry</li>
+            </ol>
+            <div class="node-bottom"><strong>Animate the poster, do not redesign it</strong><small>frame-by-frame static comparison</small></div>
+          </article>
+          <div class="wire wire-agent" aria-hidden="true"><span></span><i>render</i></div>
+          <article class="flow-node node-video node-output">
+            <div class="node-top"><span>14</span><b>FINAL HYPERFRAMES MP4</b></div>
+            <video src="../videos/nrc-localized-motion-poster/renders/mexico-city-es-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Final Mexico City HyperFrames motion poster"></video>
+            <div class="node-bottom"><strong>Campaign-complete motion poster</strong><small>animated type + marquee + provenance</small></div>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -217,7 +242,7 @@
         <h2>INSPECT EVERY<br>HANDOFF.</h2>
         <p>The same active market drives this viewer and the graph above. Nothing is hidden behind a single “generated” thumbnail.</p>
       </div>
-      <div id="market-viewer" class="market-viewer" role="tabpanel" aria-labelledby="market-tab-mexico-city-es" tabindex="0">
+      <div id="market-viewer" class="market-viewer" aria-labelledby="production-map-title" tabindex="0">
         <div class="stage-view">
           <figure>
             <img id="stage-image" src="../assets/generated/mexico-city-es/city-plate.png" alt="Mexico City generated city plate">
@@ -246,7 +271,7 @@
     </section>
 
     <section id="outputs" class="outputs-section section-shell">
-      <div class="outputs-heading"><h2>THREE LOCALES.<br>EVERY ASSET.</h2><p>Mexico City, Sydney, and Shanghai each expose the complete production package. Every image, mask, prompt handoff, intermediate video, finished static, and final motion file is visible below.</p></div>
+      <div class="outputs-heading"><h2>THREE SHOWN.<br>NO PRACTICAL LOCALE LIMIT.</h2><p>Mexico City, Sydney, and Shanghai are three rows from the same fan-out. Each final static remains linked to its Comfy layers, strategist handoff, motion render, retry state, and human review status.</p></div>
       <div class="poster-grid">
         <figure><a href="../exports/previews/mexico-city-es.png" target="_blank"><img src="../exports/previews/mexico-city-es.png" alt="Mexico City final localized poster"></a><figcaption><b>MEXICO CITY</b><a href="../exports/previews/mexico-city-es.png" download>PNG ↓</a></figcaption></figure>
         <figure><a href="../exports/previews/sydney-en.png" target="_blank"><img src="../exports/previews/sydney-en.png" alt="Sydney final localized poster"></a><figcaption><b>SYDNEY</b><a href="../exports/previews/sydney-en.png" download>PNG ↓</a></figcaption></figure>
@@ -265,8 +290,6 @@
           <figure><video src="../videos/nrc-localized-motion-poster/renders/shanghai-zh-motion-poster.mp4" controls muted loop playsinline preload="metadata" aria-label="Final Shanghai motion poster"></video><figcaption><span>FINAL MP4</span><b>上海 / zh-CN</b></figcaption></figure>
         </div>
       </div>
-      <div class="package-intro"><p class="flow-kicker">THE COMPLETE DELIVERABLE LEDGER</p><h3>30 FILES.<br>NOT THREE THUMBNAILS.</h3><p>The sequence below follows the real handoff: generated plates and people, masks and alpha layers, Comfy composites and video, then deterministic static and motion finishing.</p></div>
-      <div id="locale-packages" class="locale-packages" aria-label="Complete asset packages for Mexico City, Sydney, and Shanghai"></div>
     </section>
 
     <section id="qa" class="qa-section">
