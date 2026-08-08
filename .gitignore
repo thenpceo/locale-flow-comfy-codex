@@ -25,6 +25,7 @@ videos/*/assets/runner-warmup.mp4
 
 # Cleared interview-demo media intentionally published with the presentation.
 !assets/source/campaign-background.png
+!assets/source/original-seattle-poster.png
 !assets/source/runner-cutout.png
 !assets/generated/paris-fr/
 !assets/generated/paris-fr/**
