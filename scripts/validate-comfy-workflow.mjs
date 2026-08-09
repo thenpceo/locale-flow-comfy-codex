@@ -149,5 +149,5 @@ if (errors.length) {
   console.error(errors.join('\n'));
   process.exitCode = 1;
 } else {
-  console.log(`Workflow package validation PASS: ${result.productionNodes}-node production graph, ${result.presentationNodes}-node interview graph.`);
+  console.log(`Workflow package validation PASS: ${result.productionNodes}-node API graph, ${result.presentationNodes}-node editable graph.`);
 }

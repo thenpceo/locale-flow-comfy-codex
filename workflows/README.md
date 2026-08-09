@@ -1,46 +1,82 @@
-# Comfy workflow
+# ComfyUI workflows
 
-Open the new, unambiguous interview graph in Comfy Cloud:
+This directory contains the editable ComfyUI graph and its agent-executable API form.
+
+## Canonical files
+
+| File | Nodes | Purpose |
+|---|---:|---|
+| `nike-run-localizer-codex-orchestrated-multi-locale-latest.json` | 29 | Editable workflow for ComfyUI import, inspection, and one-locale runs |
+| `nano-banana-pro-full-localizer.api.json` | 23 | Per-locale API graph for agent-controlled batch execution |
+| `manifest.json` | — | Stable paths, cloud workflow id, and output-node contract |
+
+The editable graph contains six reference-preview nodes that do not belong in automated production. The API
+graph contains only the 23 executable nodes.
+
+## Import
+
+1. Download `nike-run-localizer-codex-orchestrated-multi-locale-latest.json`.
+2. Use ComfyUI's workflow import control or drag the JSON onto the canvas.
+3. Replace both `LoadImage` selections with cleared files uploaded to your current workspace.
+4. Confirm all partner nodes and models are available.
+5. Change only the red `CITY INPUT · CHANGE ONLY THIS` field for an interactive one-locale run.
+
+The cloud reference is:
 
 https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5
 
-The saved workflow record is now on version 7 of the canonical graph. It contains one red
-`CITY INPUT · CHANGE ONLY THIS` node. Its value feeds a Gemini
-localization-strategist node, which returns strict JSON containing a detailed skyline prompt, fictional-runner
-prompt, probable locale, copy direction, and explicit human-review gates. Two core JSON extractor nodes route
-the appropriate prompts into separate Nano Banana Pro image branches.
+The checked-in JSON remains the portable, versioned source of truth.
 
-The skyline branch edits only a protected 570 × 365 module and reinserts it into the locked campaign plate.
-Its strategist treats the source Seattle silhouette as material to erase, validates a closed whitelist of
-target-city landmarks, places the primary landmark in the far-left 3–22% visibility zone, and requires one
-continuous red skyline mass across the lower-left 72%. This prevents source-city leakage such as the Space
-Needle appearing in New York and avoids empty lower-left compositions hidden by the runner.
-The person branch starts from the supplied green-screen pose and wardrobe reference and generates a new
-fictional runner on a required uniform `#00FF00` plate. The prompt enforces head, hand, elbow, hip, leg, and
-garment clearance so the body cannot be clipped. A tolerance chroma mask with explicit polarity saves the
-runner RGBA despite green luminance variation. RGB normalization before the mask prevents provider alpha from
-causing four-channel tensor mismatches. The graph composites the new person over the new city plate and saves
-the validation composite.
+## Graph stages
 
-The motion branch starts from the generated green-screen runner—not from the poster composite. Kling 3.0
-generates a five-second, locked-camera side stretch followed by a light run-in-place, athletic bounce, and
-subtle smile. Bria restores a clean chroma-green plate and `SaveVideo` writes the handoff MP4. This ordering is
-the protection mechanism: skyline, grids, arcs, mark, palette, and crop never enter the generative video model;
-HyperFrames later keys the moving runner over the exact approved static plate.
+1. **City input** supplies the requested city to the strategy node.
+2. **Localization strategy** returns strict JSON for skyline, fictional runner, locale, copy direction,
+   exclusions, and review gates.
+3. **Skyline branch** edits only the protected skyline module with Nano Banana Pro, resizes it to the exact
+   source module, and reinserts it into the locked campaign plate.
+4. **Runner branch** generates a new fictional athlete from a cleared pose/wardrobe reference on a uniform
+   `#00FF00` background with full body clearance.
+5. **Alpha and composite** normalize RGB, create a tolerance chroma mask, save the runner alpha, and build a
+   validation composite over the localized plate.
+6. **Motion branch** sends only the green-screen runner to Kling 3.0 for a side stretch, light run in place,
+   athletic bounce, and subtle smile.
+7. **Green normalization** uses Bria to restore a clean keyable background after video generation.
+8. **Handoff** saves the six declared outputs for downstream static and motion finishers.
 
-The executable portion is 23 nodes. The full 29-node interview graph also displays completed reference outputs.
-Change node `00` to a city such as `NEW YORK`, queue the graph, then walk left to
-right through the strategist, the two extracted prompts, the two image branches, alpha, still composite, Kling
-runner-only animation, Bria green normalization, MP4 output, and the strict-JSON handoff written by
-`SaveText` for Codex.
+## Skyline constraints
 
-For multiple locales, Codex clones the executable API graph in one batch request, changes the single city value
-and output prefixes for each clone, then downloads each locale's PNG, MP4, and JSON outputs into its run folder.
-This keeps the Comfy canvas readable while preserving per-locale provenance, retry, and review state. Codex then
-invokes the graphic-design finishing pass for statics and the HyperFrames finishing pass for motion.
+The strategy should treat source-city architecture as material to replace. It should use a closed target-city
+landmark whitelist, put the primary landmark in the far-left visibility zone, and create a continuous
+bottom-anchored skyline across the lower-left module. These constraints preserve recognizable architecture
+after the runner is composited.
 
-`nano-banana-pro-<market>.api.json` preserves the older explicit per-market graphs as production evidence. The
-primary demo file is `nano-banana-pro-interview-presentation.api.json`. Running the strategist workflow spends
-credits on one Gemini text node, two Nano Banana Pro image nodes, one Kling 3.0 node, and one Bria green-screen
-normalization node. The current checked batch covers Cairo, Rio de Janeiro, and San Francisco; each final MP4
-is finished downstream with the same deterministic HyperFrames composition used for the approved static.
+## Character constraints
+
+The runner prompt should create a fictional adult athlete appropriate to the locale without stereotyping or
+imitating an identifiable person. It must preserve wardrobe intent and leave visible green clearance around
+the head, hands, elbows, hips, and lower body. The raw runner output remains a required casting and anatomy
+review artifact.
+
+## Why Kling receives only the runner
+
+The protected plate, skyline, grids, arcs, marks, palette, and typography stay outside generative video. Kling
+animates only the isolated human. The motion finisher later keys that runner over the approved city plate and
+animates deterministic type. This prevents poster geometry and copy from drifting between frames.
+
+## Output nodes
+
+| Node | Output |
+|---:|---|
+| 9 | localized city plate PNG |
+| 15 | runner PNG with alpha |
+| 17 | validation composite PNG |
+| 18 | raw generated runner PNG |
+| 21 | green-screen runner warm-up MP4 |
+| 22 | strategist JSON |
+
+For multiple locales, the agent clones the API graph once per locale, changes node `1.value` and all output
+prefixes, submits bounded batches, waits for terminal completion, downloads original artifacts, and continues
+from the per-locale handoff manifest.
+
+Running the graph can spend credits on Gemini, Nano Banana Pro, Kling, and Bria. Always use the live cost
+estimate and require approval before submission.

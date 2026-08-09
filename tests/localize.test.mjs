@@ -8,7 +8,7 @@ const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '..');
 const localizations = JSON.parse(fs.readFileSync(path.join(root, 'data/localizations.json'), 'utf8'));
 const manifest = JSON.parse(fs.readFileSync(path.join(root, 'manifest.json'), 'utf8'));
 
-test('prototype includes twelve unique target markets', () => {
+test('locale catalog includes twelve unique target markets', () => {
   assert.equal(localizations.length, 12);
   assert.equal(new Set(localizations.map(item => item.id)).size, 12);
 });
@@ -25,7 +25,7 @@ test('each market carries complete localization and landmark contracts', () => {
   }
 });
 
-test('three current interview markets completed the paid static and motion flow', () => {
+test('three current regression markets completed the paid static and motion flow', () => {
   assert.equal(manifest.generation.spendApproved, true);
   const completed = new Set(manifest.generation.completedMarkets);
   for (const market of ['cairo-ar', 'rio-pt', 'san-francisco-en']) {

@@ -12,7 +12,7 @@ const byId = new Map(editor.nodes.map(node => [String(node.id), node]));
 editor.extra = editor.extra || {};
 editor.extra.comfy_mcp = {
   name: 'Nike Run Localizer - Codex Orchestrated Multi-Locale - Latest',
-  description: 'Latest 29-node interview workflow: one CITY input feeds a localization strategist, separate Nano Banana Pro skyline and green-screen fictional-person branches, RGB normalization, tolerance chroma alpha, still composite, Kling runner-only animation, Bria green normalization, JSON agent handoff, and visible completed references. Codex owns multi-locale fan-out and deterministic static/motion finishing.'
+  description: 'Canonical 29-node editable workflow: one CITY input feeds a localization strategist, separate Nano Banana Pro skyline and green-screen fictional-person branches, RGB normalization, tolerance chroma alpha, still composite, Kling runner-only animation, Bria green normalization, JSON agent handoff, and six reference-preview nodes. The operator agent owns multi-locale fan-out and deterministic static/motion finishing.'
 };
 
 const runner = byId.get('10');

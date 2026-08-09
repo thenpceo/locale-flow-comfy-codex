@@ -1,33 +1,39 @@
-# Product
-
-## Register
-
-brand
+# Product definition
 
 ## Users
 
-Adobe interviewers and enterprise creative leaders evaluating how an embedded creative technologist can translate a campaign system into a governed, repeatable localization workflow.
+- central creative and brand systems teams;
+- regional creative production teams;
+- creative technologists and automation engineers;
+- producers responsible for localization, QA, and asset delivery.
 
-## Product Purpose
+## Purpose
 
-Present one clear proof: a protected global campaign can become three locally specific posters through controlled Comfy generation, deterministic agent production, and visible human-review gates. Success means a viewer understands the operating model and the final quality within minutes.
+LocaleFlow makes a governed campaign system repeatable across markets. A user supplies a locale list once;
+the agent creates independent generation jobs, editable static posters, motion posters, manifests, and review
+records for every locale.
 
-## Brand Personality
+## Principles
 
-Kinetic, exacting, and candid. The page should feel like a creative review wall with the confidence of a finished campaign system, while remaining explicit that this is an independent prototype.
+1. Protect authored campaign geometry and marks from generative drift.
+2. Generate bounded media layers rather than flattened final artwork.
+3. Keep final copy, typography, legal text, and addresses deterministic and editable.
+4. Preserve one manifest, retry boundary, and review state per locale.
+5. Make source inputs, prompts, outputs, masks, composites, and approvals inspectable.
+6. Treat language, cultural context, casting, geography, brand, and rights as human decisions.
 
-## Anti-references
+## Success criteria
 
-Generic SaaS dashboards, rounded bento-card grids, purple-blue AI gradients, vague AI claims, stock iconography, and any presentation that implies the work is an authorized Nike or Adobe campaign.
+- an artist can import and understand the Comfy graph;
+- an agent can operate the full workflow from a locale-list prompt;
+- a failed locale can resume without rerunning successful paid stages;
+- final static and motion deliverables share the same approved layout;
+- every artifact can be traced to its workflow, prompt, model, and source;
+- the package can be adapted to another campaign by replacing assets, locale records, and composition rules.
 
-## Design Principles
+## Out of scope
 
-1. Show the artifact first, then turn the machinery into a visual production map rather than a prose case study.
-2. Make the division of labor visible: model for variable imagery, agent for deterministic type and packaging, humans for approval.
-3. Keep inputs, crops, prompts, masks, generated intermediates, composites, and reviewable outputs inspectable.
-4. Let one signal red carry status and movement without becoming decoration.
-5. State provenance, limitations, and review requirements with the same confidence as the creative result.
-
-## Accessibility & Inclusion
-
-Target WCAG 2.2 AA contrast, semantic landmarks, keyboard-operable city selection, visible focus states, descriptive image alternatives, 44-pixel touch targets, and a complete reduced-motion mode. Casting and copy remain human-review items for each market.
+- automatic brand, cultural, legal, or rights approval;
+- publishing without cleared source and generated-media rights;
+- trusting image or video models to reproduce final text or official marks;
+- hiding multi-locale state inside an opaque graph loop.

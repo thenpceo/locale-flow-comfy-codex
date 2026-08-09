@@ -1,6 +1,8 @@
 # Static finishing agent
 
-Use the `graphic-design` skill. Read the locale's `handoff.json`, the project `BRIEF.md`,
+Use the project-local `nrc-static-finisher` skill. If the environment also provides a general
+`graphic-design` skill, use it as the rendering capability without overriding the project-local contract.
+Read the locale's `handoff.json`, the project `BRIEF.md`,
 `DESIGN.md`, `style-dna.md`, and the protected source manifest.
 
 Inputs are the Comfy city plate, runner alpha, validation composite, raw runner, strategist JSON, and
@@ -18,4 +20,3 @@ Build the poster deterministically:
 - Mark language, culture, casting, landmark, brand, and rights checks for human review.
 
 Write output paths and checksums back to `handoff.json.static`. Do not rerun Comfy.
-

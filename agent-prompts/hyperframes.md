@@ -1,6 +1,7 @@
 # Motion finishing agent
 
-Use the `hyperframes` skill. Read the locale's `handoff.json`, completed static design tokens/source,
+Use the project-local `nrc-motion-finisher` skill together with the installed `hyperframes` skills. Read the
+locale's `handoff.json`, completed static design tokens/source,
 and `DESIGN.md`.
 
 Treat the approved static city plate as frozen. Chroma-key the Comfy green-screen warm-up MP4 and use the

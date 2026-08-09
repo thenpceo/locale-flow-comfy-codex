@@ -7,6 +7,9 @@ description: Turn the approved static poster into a HyperFrames motion poster wh
 
 Use only after the static poster for a locale is approved.
 
+This project-local skill defines the motion contract. Use the installed HyperFrames skills and CLI as the
+implementation capability without allowing them to redesign the approved static composition.
+
 ## Required inputs
 
 - Approved static poster and its exact design tokens/coordinates.
@@ -24,4 +27,5 @@ Use only after the static poster for a locale is approved.
 5. Run HyperFrames `check`, proof snapshots, and a static-versus-motion comparison before render approval.
 6. Render the final MP4 only after approval. Verify codec, dimensions, frame rate, duration, and a late rendered frame.
 
-The checked-in New York reference output is `videos/nrc-localized-motion-poster/renders/new-york-motion-poster.mp4`.
+Checked reference outputs under `videos/nrc-localized-motion-poster/renders/` are regression fixtures, not
+substitutes for rendering the requested locale.

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T18:46:26.969Z",
+  "generatedAt": "2026-08-09T00:35:12.596Z",
   "scope": "three-market production proof: Comfy city + persona generation, Comfy compositing, deterministic type, human review",
   "totals": {
     "pass": 0,
@@ -37,7 +37,7 @@
     }
   ],
   "workflow": {
-    "checkedAt": "2026-08-08T18:38:18.510Z",
+    "checkedAt": "2026-08-09T00:34:41.922Z",
     "workflowId": "21f30a93-e0fb-43d3-a620-e2065174cec5",
     "workflow": "workflows/nano-banana-pro-full-localizer.api.json",
     "productionNodes": 23,

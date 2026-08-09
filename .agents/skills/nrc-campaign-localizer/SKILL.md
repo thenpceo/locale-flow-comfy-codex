@@ -11,7 +11,7 @@ Use this skill when a user asks Codex to localize the poster system for one city
 
 - A comma-separated list of city or city-locale records.
 - The canonical 23-node API execution graph in `workflows/nano-banana-pro-full-localizer.api.json`.
-- The saved 29-node graph is for visible interview inspection only. Never execute its reference-preview pairs as part of a paid locale run.
+- The saved 29-node graph is the editable UI workflow. Never execute its six reference-preview nodes as part of an automated paid locale run.
 - Cleared campaign plate and runner reference assets in the user's Comfy workspace.
 
 ## Procedure
@@ -26,4 +26,4 @@ Use this skill when a user asks Codex to localize the poster system for one city
 8. Invoke `nrc-motion-finisher` after the static design is approved, so the motion design inherits the exact same type geometry.
 9. Run mechanical QA. Keep native-language, cultural, casting, landmark, brand, and rights decisions marked for human review.
 
-The user interface is Codex. Comfy is the inspectable media graph, not the place where the user manually repeats each locale.
+The user interface is the agent. Comfy is the inspectable media graph, not the place where the user manually repeats each locale.

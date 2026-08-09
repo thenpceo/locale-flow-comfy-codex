@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "editorWorkflow": {
+    "path": "workflows/nike-run-localizer-codex-orchestrated-multi-locale-latest.json",
+    "nodeCount": 29,
+    "purpose": "Editable single-locale ComfyUI graph with six reference preview nodes"
+  },
+  "apiWorkflow": {
+    "path": "workflows/nano-banana-pro-full-localizer.api.json",
+    "nodeCount": 23,
+    "purpose": "Per-locale API execution graph for agent-controlled batching"
+  },
+  "cityInputNodeId": "1",
+  "outputNodes": {
+    "cityPlate": "9",
+    "runnerAlpha": "15",
+    "validationComposite": "17",
+    "runnerRaw": "18",
+    "runnerWarmupVideo": "21",
+    "strategistJson": "22"
+  },
+  "cloudWorkflow": {
+    "id": "21f30a93-e0fb-43d3-a620-e2065174cec5",
+    "url": "https://cloud.comfy.org/#21f30a93-e0fb-43d3-a620-e2065174cec5"
+  }
+}

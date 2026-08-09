@@ -1,52 +1,50 @@
-# Nike Run Club city-localization prototype
+# Reference campaign brief
 
-This is an independent interview prototype built from user-supplied reference assets. It is not an
-authorized Nike campaign and must not be published or presented as approved brand work.
+## Objective
 
-## Outcome
+Use one protected campaign system to produce localized static and motion assets while keeping variable media,
+deterministic design, provenance, and human approval visibly separate.
 
-Demonstrate how a central creative team can protect a campaign system while regional teams localize one
-controlled image region, language, message, and local facts. The prototype starts in the supplied native
-poster ratio, 1055 x 1491. Other ratios are a later recomposition phase.
+The supplied reference implementation uses a portrait poster at 1055 × 1491. It is an independent workflow
+example built from user-supplied material and is not an authorized campaign. Replace the reference assets with
+cleared inputs before production or publication.
 
-## Locked
+## Protected elements
 
-- supplied background composition, including the authentic supplied Nike mark;
+- campaign plate geometry and supplied mark;
 - black, white, and signal-red palette;
-- circular motion device, white grid, hard grayscale runner treatment, and edge-copy rhythm;
-- one-second hierarchy: runner plus campaign energy;
-- deterministic typography, localized copy, marks, and production metadata.
-- Six Caps perimeter copy, self-hosted under SIL OFL 1.1, with locale fallbacks for unsupported glyphs.
+- circular motion device, grids, and edge-copy rhythm;
+- primary runner hierarchy;
+- deterministic typography, localized copy, and delivery metadata.
 
-## Variable
+Protected elements never enter an image or video generation model.
 
-- the lower skyline crop only;
-- city, language, and draft campaign phrase;
-- a newly generated fictional adult runner selected from a written casting brief with local-market review.
+## Variable elements
 
-The system does not transform the supplied person's race or ethnicity. It uses that image only as a
-pose, crop, garment, and graphic-treatment reference, then generates a new fictional adult runner for
-each market. Every casting brief requires human review for representation, cultural specificity,
-anatomy, wardrobe, resemblance, and rights.
+- the lower skyline module;
+- city, locale, language, and reviewed message;
+- a newly generated fictional adult runner based on pose, crop, wardrobe, and treatment constraints;
+- the isolated runner's warm-up motion.
+
+The source character is a structural reference, not a request to transform an identifiable person's ethnicity
+or imitate their identity. Every generated runner requires casting, representation, anatomy, resemblance, and
+rights review.
 
 ## Production split
 
-Comfy regenerates the protected skyline crop and generates a fictional runner on a required, uniform
-`#00FF00` plate with enough clearance to preserve the whole visible body during still and motion work.
-A tolerance-based chroma mask exports the alpha asset and validation composite. Kling animates that green-screen
-runner; HyperFrames keys it over the approved static plate. Copy, layout, and review labels remain
-deterministic.
+Comfy generates the localized skyline, fictional green-screen runner, runner alpha, validation composite,
+runner-only Kling motion plate, and strategy JSON. The static skill applies editable type and exact copy. The
+motion skill keys the runner over the approved plate and animates the deterministic type. The operator agent
+owns batching, file movement, provenance, retries, and review state.
 
-## Three current completed markets
+## Quality standard
 
-Cairo, Rio de Janeiro, and San Francisco. Nine additional city briefs remain packaged as future workflow
-inputs or earlier production evidence rather than current presentation outputs.
+- target-city architecture is recognizable and geographically plausible;
+- the skyline occupies the intended lower-left visibility zone after the runner is composited;
+- the fictional runner has complete anatomy, usable clearance, and a clean key;
+- settled motion frames match the approved static design;
+- copy remains editable and comes only from the locale record;
+- every automated and human review state is explicit.
 
-Translations are creative drafts, not market-approved copy. All event/location lines are explicitly
-fictional placeholders and must be replaced before any external use.
-
-## Design thesis
-
-Because an enterprise localization system must scale without surrendering authorship, the poster keeps a
-severe black field and an invariant runner/mark hierarchy while one protected skyline window and one
-language layer change, so a reviewer can see both campaign consistency and legitimate local difference.
+Translations and event/location lines in the reference data are drafts and placeholders until reviewed by the
+appropriate market and legal teams.

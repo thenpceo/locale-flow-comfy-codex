@@ -20,11 +20,11 @@
   },
   "stages": {
     "static": {
-      "skill": "graphic-design",
+      "skill": "nrc-static-finisher",
       "guide": "agent-prompts/graphic-design.md"
     },
     "motion": {
-      "skill": "hyperframes",
+      "skill": "nrc-motion-finisher",
       "guide": "agent-prompts/hyperframes.md"
     }
   }

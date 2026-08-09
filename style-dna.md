@@ -32,6 +32,6 @@ repeated edge copy.
 ## Permitted secondary collisions
 
 - Headline letters may act as a repeatable vertical module.
-- Edge copy may become a modular frame, but it must carry real prototype/legal status.
+- Edge copy may become a modular frame, but it must carry real campaign or disclosure information.
 
 This is not a generic sports-social template or an imitation of a specific living designer.

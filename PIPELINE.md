@@ -1,15 +1,15 @@
-# Codex → Comfy → Graphic Design → HyperFrames
+# Agent → Comfy → Static Design → HyperFrames
 
 ## System boundary
 
-Comfy generates variable media. Codex orchestrates locale fan-out and file movement. The graphic-design
-agent owns deterministic static composition. The HyperFrames agent owns deterministic motion typography.
+Comfy generates variable media. The operator agent orchestrates locale fan-out and file movement. The static
+finisher owns deterministic composition. The HyperFrames motion finisher owns deterministic motion typography.
 
 ```text
 USER LOCALE LIST
       │
       ▼
-CODEX RUN PLANNER
+AGENT RUN PLANNER
       │
       ├── one locale ───────────────┐
       └── many locales → BATCH ─────┤
@@ -30,7 +30,7 @@ CODEX RUN PLANNER
                              QA + HUMAN REVIEW
 ```
 
-The visible Comfy graph is a per-locale unit on purpose. Multi-locale looping lives in Codex because
+The visible Comfy graph is a per-locale unit on purpose. Multi-locale looping lives in the agent because
 each market must have its own cost record, retry boundary, asset folder, provenance, and approval state.
 Embedding an opaque loop inside the image graph would make failures and cultural review harder to trace.
 
@@ -39,7 +39,7 @@ Embedding an opaque loop inside the image graph would make failures and cultural
 - Locale ids from `data/localizations.json`, such as `paris-fr,london-en,tokyo-ja`.
 - Protected background and runner reference already uploaded to the configured Comfy workspace.
 - Explicit approval for paid Comfy partner nodes.
-- Codex with the Comfy Cloud connector and local skills installed.
+- An agent with a Comfy connector or API integration and the project-local skills installed.
 
 ## Comfy outputs per locale
 
@@ -59,14 +59,14 @@ localized typography is not generated in Comfy.
 ## Run lifecycle
 
 1. Plan: `npm run pipeline:plan -- --locales paris-fr,london-en,tokyo-ja`.
-2. Codex estimates and confirms Comfy spend.
-3. Codex divides the locale list into bounded batches of at most two full graphs, waiting for each
+2. The agent estimates and confirms Comfy spend.
+3. The agent divides the locale list into bounded batches of at most two full graphs, waiting for each
    batch to finish before starting the next. The user still supplies one locale-list prompt.
-4. Codex waits for terminal completion and downloads originals into the generated run directory.
-5. Codex completes each `handoff.json` against `contracts/handoff.schema.json`.
-6. Codex invokes `graphic-design` once per locale.
-7. Codex invokes `hyperframes` once per locale with the Comfy MP4 and static design tokens.
-8. Codex verifies dimensions, durations, checksums, and required review statuses.
+4. The agent waits for terminal completion and downloads originals into the generated run directory.
+5. The agent completes each `handoff.json` against `contracts/handoff.schema.json`.
+6. The agent invokes `nrc-static-finisher` once per locale.
+7. The agent invokes `nrc-motion-finisher` once per locale with the Comfy MP4 and static design tokens.
+8. The agent verifies dimensions, durations, checksums, and required review statuses.
 
 ## Retry semantics
 
